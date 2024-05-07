@@ -1,0 +1,29 @@
+<div class="container-fluid" id="superfooter">
+	<div class="row" id="footer"  style='padding: 1rem 10rem;display: flex;flex-direction: row;justify-content: space-around;'>
+		<% if (modulo.fl_layout_alternativo) { %>
+			<div class="col-md-2 logo"><img src="<%- globalizeToClient.defaultStaticFileService%>/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg"></div>
+			<div class="col-md-2 logo"><img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/Logos rodape Cursos ITPS-02-Logo Abrasco.svg"></div>
+			<div class="col-md-2 logo"><img style="max-width: 225px" src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/Logos rodape Cursos ITPS-03-Logo UNASUS.svg"></div>
+			<div class="col-md-2 logo" style="max-width: 100px"><img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/Logos rodape Cursos ITPS-04-Logo Fiocruz.svg"></div>
+			<div class="col-md-2 logo"><img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/Logos rodape Cursos ITPS-05-Logo UFPel.svg"></div>
+			<div class="col-md-2 logo" style="max-width: 100px"><img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/Logos rodape Cursos ITPS-06-Logo UFSC.svg"></div>
+		<% } else { %>
+			<div class="col-md-2 ufpel logo">
+				<img src="<%- globalizeToClient.defaultStaticFileService%>/img/marcas/dms_branco.svg"
+					alt="Logo da Departamento de Medicina Social da UFPEL">
+			</div>
+			<div class="col-md-2 aquares logo">
+				<img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/logo_aquares.svg">
+			</div>
+			<div class="col-md-2 unasus logo">
+				<img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/unasus_branco.svg">
+			</div>
+			<!--div class="col-md-2 fiocruz logo">
+				<img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/fiocruz_bco.svg">
+			</div-->
+			<div class="col-md-2 ms logo">
+				<img src="<%- globalizeToClient.defaultStaticFileService %>/img/marcas/ms_bco.svg">
+			</div>
+		<% } %>
+	</div>
+</div>

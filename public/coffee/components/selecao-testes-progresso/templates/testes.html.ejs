@@ -1,0 +1,82 @@
+    <div class='row'>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Testes</h1>
+        </div>
+    </div>
+    <div class="row testes">
+        <% window.modulo.ofertasAbertas.forEach(function(o){ 
+                    var conteudo = o.conteudo.slice(0,1).toUpperCase()+o.conteudo.slice(1);
+
+                %>
+        <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+            <div class="panel panel-default teste-inicial ">
+              <div class="panel-body">
+                <div class='col-xs-5 col-sm-3 col-md-3 col-lg-3'>
+                    <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/preTeste.svg" alt="">
+                </div>
+                <div class='col-xs-7 col-sm-9 col-md-9 col-lg-9'>
+                    <div class='titulo' style="color: #f05b26;">Teste Inicial</div>
+                    <div class="teste-dica-inicial text-left">Descubra o quanto você sabe 
+                        <br>sobre abordagem de problemas respiratórios no adulto em APS
+                    </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="row teste-block teste-block-item teste-liberado">
+                    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div><b>Conteúdo de <%= conteudo %></b></div>
+                        <button class='btn btn-primary gotoInicial<%= conteudo %>'>Começar</button>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+            <div class="panel panel-default teste-inicial ">
+                <div class="panel-body">
+                    <div class='col-xs-5 col-sm-3 col-md-3 col-lg-3'>
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/posTeste.svg" alt="">
+                    </div>
+                    <div class='col-xs-7 col-sm-9 col-md-9 col-lg-9'>
+                        <div class='titulo' style="color: #2b8fb2;">Teste Final</div>
+                        <div class="teste-dica-inicial text-left">Descubra o quanto você sabe 
+                            <br>sobre abordagem de problemas respiratórios no adulto em APS
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row teste-block teste-block-item <% if(App['masterFinalLock'+conteudo]()){%> teste-bloqueado<%}else{%> teste-liberado<%}%>">
+                        <% if(App['masterFinalLock'+conteudo]()){%>
+                        <div class=" col-xs-12 col-sm-2 col-md-2 col-lg-2">  
+                           <span class="mdi mdi-lock-outline" <%
+                                    if(navigator.userAgent.toLowerCase().includes('firefox')){
+                                        %>style="top: -38px; left: 35px;"<%
+                                    }
+                                    %>
+                                ></span>
+                        </div>
+                        <div class=" col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                            <% if(modulo.fl_layout_alternativo) { %>
+                                <b>Teste final bloqueado</b>
+                                <p>Para desbloquear você precisa concluir 70% dos casos interativos com 70% de acerto.</p>
+                            <% } else { %>
+                                <b>Teste Final de <%= conteudo %> Bloqueado</b>
+                                <p>Para desbloquear você precisa concluir 70% dos casos clínicos de <%= conteudo %> com 70% de acerto.</p>
+                            <% } %>
+                        </div>
+                        <%}else{%>
+                        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                            <div><b>Conteúdo de <%= conteudo %></b></div>
+                            <button class='btn btn-primary gotoFinal<%= conteudo %>'>Começar</button>
+                        </div>
+                        <%}%>
+                    </div>
+               
+
+                </div>
+            </div>
+
+        </div>
+         <%})%>
+    </div>

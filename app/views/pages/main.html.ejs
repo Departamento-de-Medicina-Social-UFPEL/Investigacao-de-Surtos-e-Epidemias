@@ -1,0 +1,39 @@
+<% include ../functions.ejs %>
+<%
+    var appCache = false;
+    var rurl = rootUrl = 'casca';
+%>
+<!DOCTYPE html>
+<html<% if(appCache){ %> manifest='<%=rurl%>/appCacheManifest/<%-moduloId%>?<%-Date.now()%>'<% } %>>
+  <head>
+  
+    <title>Sandbox Módulo</title>
+    <% include ./helpers/header.html.ejs %>
+    <link href="<%=rurl%>/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="<%=rurl%>/lib/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
+    <link type="text/css" href="<%=rurl%>/lib/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link type="text/css" href="<%=rurl%>/lib/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+    <link type="text/css" href="<%=rurl%>/css/screen.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+
+        <% include ./helpers/top-menu.html.ejs %>
+    </header>
+    <main id='mainStage'></main>
+    <% include ./helpers/footer.html.ejs %>
+    <footer class="" style="display: block;">
+    
+
+    </footer>
+    
+    <div id="fb-root"></div>
+    <script src="<%=rurl%>/lib/requirejs/require.js" data-main="<%=rurl%>/js/app/boot.js?v=3" type="text/javascript"></script>
+    <script type="text/javascript">
+        <%- dumpGlobalsToWindow( {
+            'modulo': modulo
+        } )%>
+    </script>
+        <%- dumpTemplates(templates) %>
+  </body>
+</html>

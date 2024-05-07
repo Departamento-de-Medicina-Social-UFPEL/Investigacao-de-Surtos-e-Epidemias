@@ -1,0 +1,27 @@
+<%
+    console.log(obj);
+%>
+<div class="badgeContainer">
+    <a href="#" class="nucleoTexto"><i class="mdi mdi-chevron-left"></i> Voltar para a Seleção</a>
+</div>
+<h1><% if(pro[0]){%>
+    <span class='badge-nucleo medicina' style='<%if (pro[0] && pro[1]){%>top:0<%}%>'>M</span><%}%>
+<% if(pro[1]){%>
+    <span class='badge-nucleo enfermagem' style='<%if (pro[0] && pro[1]) {%>top:0<%}%>'>E</span><%}%>
+<% if(pro[2]){%>
+    <span class='badge-nucleo odontologia'>O</span><%}%><%=titulo%></h1>
+<div class="container-static">
+    <h4><%=slides[0].conteudo.texto%></h4>
+</div>
+<small class="dataPubTop">Publicado em <%=dataLongaPub.data.getDate()%> de <%=dataLongaPub.mes%> de <%=dataLongaPub.data.getFullYear()%></small>
+<small class="autoresTop">
+    <div class="container-static listaPess">
+        <strong>Autores</strong> <%=typeof(autor) === 'object' ? autor.join(', ') : autor %>
+    </div>
+    <div class="container-static listaPess">
+        <strong>Editores Associados</strong> <%= editores.join(', ') %>
+    </div>
+    <div class="container-static listaPess">
+        <strong>Editores</strong> Anaclaudia Fassa e Luiz Augusto Facchini
+    </div>
+</small>

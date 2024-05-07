@@ -1,0 +1,98 @@
+.item.calculadoras.clinica-espirometrica .checkbox label {
+  /* position: relative; */
+  /* top: 0; */
+}
+.item.calculadoras.clinica-espirometrica .checkbox label.simples {
+  position: relative;
+  top: 0;
+  left: 60px;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.item.calculadoras.clinica-espirometrica .item {
+  min-height: 300px;
+}
+.item.calculadoras.clinica-espirometrica .radio {
+  margin: 10px 0px 13px;
+  padding: 0;
+}
+.item.calculadoras.clinica-espirometrica input[type="radio"]:focus {
+  outline: none;
+}
+.item.calculadoras.clinica-espirometrica input[type="radio"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  margin-left: 0;
+  position: relative;
+  top: -6px;
+}
+.item.calculadoras.clinica-espirometrica .checkbox label.simples input[type="checkbox"] {
+  position: relative;
+  top: -3px;
+}
+.item.calculadoras.clinica-espirometrica .radio.first {
+  margin-top: 30px;
+}
+.item.calculadoras.clinica-espirometrica .checkbox {
+  margin: 20px 0px 15px 20px;
+  padding: 0;
+}
+.item.calculadoras.clinica-espirometrica input[type="checkbox"]:focus {
+  outline: none;
+}
+.item.calculadoras.clinica-espirometrica input[type="checkbox"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.item.calculadoras.clinica-espirometrica label input[type='checkbox'][disabled] {
+  opacity: .4;
+}
+.item.calculadoras.clinica-espirometrica .checkbox label small {
+  white-space: pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.clinica-espirometrica .checkbox label small:before {
+  content: '\A';
+}
+.item.calculadoras.clinica-espirometrica .titulo-calc {
+  color: #333 ;
+}
+.item.calculadoras.clinica-espirometrica .panel-body {
+  /*padding: 0;*/
+}
+.item.calculadoras.clinica-espirometrica .panel {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.item.calculadoras.clinica-espirometrica .titulo {
+  color: #333 ;
+}
+.item.calculadoras.clinica-espirometrica .descricao-resultado {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+/*novo*/
+.item.calculadoras.clinica-espirometrica .sub-titulo-calc{
+	background-color: var(--corpadrao)!important;
+	padding:4px 4px 4px 8px;
+}
+
+.item.calculadoras.clinica-espirometrica .sub-titulo-calc small{
+	color:white!important;
+}
+.item.calculadoras.clinica-espirometrica .resultado-titulo {
+	color:var(--corpadrao)!important;
+}
+.item.calculadoras.clinica-espirometrica .resultado {
+    background-color: var(--corpadrao)!important;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}

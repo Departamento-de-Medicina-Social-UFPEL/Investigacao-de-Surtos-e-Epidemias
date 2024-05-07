@@ -1,0 +1,275 @@
+.container.slide-admissao{
+	max-width: 970px;
+	
+}
+.admissao .titulo{
+    margin-bottom: 40px;
+}
+.admissao .introducao{
+    text-align: justify;
+    font-size: 16px;
+}
+
+.admissao .admissaoIntroducao.carousel{
+    min-height: 300px;
+}
+
+.admissao .margin-conteudo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.admissao .margin-conteudo i{
+    float: right;
+}
+.admissao .conteudo{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.admissao .doc-item {
+    font-size: 44px;
+    float: left;
+    margin-right: 12px;
+}
+.admissao .doc-item small {
+    font-size: 12px;
+    margin-left: -3em;
+    vertical-align: -1.1em;
+}
+.admissao .listalink{
+    margin-top: 20px;
+    font-size: 20px;
+    float: left;
+}
+.admissao .nav-tabs {
+    background: none!important;
+}
+.admissao .nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    background-color: transparent !important;
+    border: 0 !important;
+    /*color: #FFFFFF !important;*/
+    color: #337ab7!important;
+    font-weight: 500;
+}
+.admissao .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555!important;
+    cursor: default;
+    background-color: #fff!important;
+}
+.admissao .carousel-indicators {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.admissao .carousel-indicators li{
+      border: 1px solid var(--corpadrao)!important;
+}
+.admissao .carousel-indicators .active {
+    background-color: var(--corpadrao);
+}
+.admissao .carousel-control .glyphicon-chevron-left,
+.admissao .carousel-control .glyphicon-chevron-right {
+    font-size: 32px!important;
+    top: calc(50% - 25px);
+    color: var(--corpadrao);
+    margin: 0px;
+}
+.admissao .carousel-control .glyphicon-chevron-right {
+  margin-right: 0px!important;
+}
+.admissao .glyphicon-chevron-right {
+  right: 0;
+}
+.admissao .item{
+  padding: 10px;
+}
+.admissao .carousel-control.left,
+.admissao .carousel-control.right {
+  background: none;
+  width: 35px;
+}
+.admissao .item.admissaoIntroducao {
+  margin-top: 4%;
+}
+.admissao .item.admissaoIntroducao .container {
+  min-height: 300px;
+  max-width: 960px;
+}
+.admissao .item.admissaoIntroducao a.right.carousel-control {
+  right: -8px;
+}
+.admissao .item.admissaoIntroducao a.left.carousel-control {
+  left: -8px;
+}
+.admissao .item.admissaoIntroducao a.carousel-control span {
+  font-size: 30px;
+}
+.admissao .item.admissaoIntroducao .container .row h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  color: #808080;
+}
+.admissao .item.admissaoIntroducao .container .row h3 {
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #808080;
+}
+.admissao .item.admissaoIntroducao .container .row h4 {
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #333;
+}
+.admissao .item.admissaoIntroducao .big-box,
+.admissao .item.admissaoIntroducao .small-box {
+  padding: 5px;
+}
+.admissao .item.admissaoIntroducao .big-content {
+  background-color: #551f79;
+  color: #fff;
+  height: 70px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  position: relative;
+}
+.admissao .item.admissaoIntroducao .big-content .glyphicon-chevron-right {
+  font-size: 24px;
+
+  top: 20px;
+  position: absolute;
+}
+.admissao .item.admissaoIntroducao .small-content {
+  background-color: rgba(85, 31, 121, 0.34);
+  color: #551f79;
+  height: 70px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 25px;
+  position: relative;
+}
+.admissao .item.admissaoIntroducao .small-content .glyphicon-chevron-right {
+  font-size: 24px;
+  top: 20px;
+  position: absolute;
+}
+.admissao .item.admissaoIntroducao .glyphicon-chevron-down {
+  text-align: center;
+  font-size: 24px;
+  color: #808080;
+  margin: -11px;
+}
+.admissao .item.admissaoIntroducao .numero {
+  font-size: 90px;
+  font-weight: bolder;
+  background-color: #F15A24;
+  color: #fff;
+  vertical-align: middle;
+  padding: 30px;
+  text-align: center;
+}
+.admissao .item.admissaoIntroducao .texto-proporcao {
+  font-size: 16px;
+  color: #333;
+  vertical-align: middle;
+}
+.admissao .item.admissaoIntroducao .seta-up {
+  border: 2px solid;
+  height: 60px;
+  color: #808080;
+  border-bottom: none;
+  position: relative;
+  margin-bottom: 1em;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 24px;
+  font-weight: 500;
+}
+.admissao .item.admissaoIntroducao .seta-up .glyphicon-chevron-down {
+  font-size: 18px;
+      left: 2px;
+    top: 61px;
+  position: absolute;
+}
+.admissao .item.admissaoIntroducao .seta-vertical {
+  position: absolute;
+  right: -52px;
+  bottom: 48px;
+  width: 38px;
+  height: 205px;
+  border: solid 1px;
+  border-left: none;
+  color: #808080;
+}
+.admissao .item.admissaoIntroducao .seta-vertical .glyphicon-chevron-left {
+  position: absolute;
+  left: -2px;
+  top: -10px;
+}
+.admissao .item.admissaoIntroducao .carousel-indicators .active {
+  width: 10px;
+  height: 10px;
+  background-color: var(--corpadrao);
+  top: -1px;
+  position: relative;
+}
+
+/*.carousel-control .glyphicon-chevron-left {
+  left: 15px;
+}
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}*/
+
+/*.carousel-inner>.item>img {
+    display: inline-block;
+}
+
+@media (max-width:767px) {
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .glyphicon-chevron-right {
+        font-size: 30px;
+        top: calc(50% - 15px);
+    }
+}
+.carousel-caption {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: hsla(0, 0%, 0%, .4);
+}*/

@@ -1,0 +1,66 @@
+
+    <h2>Materiais de Apoio</h2>
+    <%
+        var capitaliseFirstLetter = function(string){
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        };
+        var a = _.groupBy(resource, 'tipo');
+        var b = [];
+        var k = [];
+        for(var i in a){
+            k.push(i);
+        }
+        k = _.sortBy(k)
+        k.forEach(function(i){
+            b.push(a[i])
+        })
+
+        b = _.sortBy(b, function(it){  return - it.length });
+        a = {};
+        for(var k in b){
+            a[b[k][0].tipo] = b[k];
+        }
+    %>
+
+    <%
+    var zero = "class='active'";
+    for(var i in a){
+        var ca = a[i];
+        ca = _.sortBy(ca, 'nome');
+        %>
+        <div class="col-md-6">
+          <% if(!modulo.fl_layout_alternativo) { %><h3><%=capitaliseFirstLetter(i == 'apoio' ? 'Impressos' : i)%></h3><% } %>
+          <%for(var m in ca){
+            var o = ca[m];
+            if(o.tipo != 'video'){
+                if(o.url){
+                
+            %>
+                    <p class="material-item">
+                        <i style="<%- modulo.fl_layout_alternativo ? 'font-size: 25px;' : '' %>" class="mdi mdi-file-document"></i>
+                        <a style="<%- modulo.fl_layout_alternativo ? 'font-size: 20px;' : '' %>" href="<%-defaultStaticFileService%>/bib/apoio/<%=o.url%>" target='_blank' class='apoio-link'><%=o.nome%></a>
+                        <br><small>&nbsp;<%-o.filesize.replace('.',',')%></small>
+                    </p>
+            <%
+                }else{
+%>
+                    <p class="material-item">
+                        <i class="mdi mdi-file-document"></i>
+                        <a href="<%=o.urlOri%>" target='_blank' class='apoio-link'><%=o.nome%></a>
+                        <br><small>&nbsp;<%-o.filesize.replace('.',',')%></small>
+                    </p>
+            <%
+                }
+            }else{
+                %>
+                <p class="material-item">
+                <i class="mdi mdi-file-video"></i>
+                <a href="<%= o.url %>" class='apoio-link'><%=o.nome%></a>
+                <br><small>&nbsp;<%- o.filesize %></small>
+                </p>
+                <%
+            }
+        }%>
+        </div>
+    <%}%>
+

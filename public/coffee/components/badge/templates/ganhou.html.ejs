@@ -1,0 +1,17 @@
+<%
+	console.log("obj", obj);
+%>
+
+<div class="bbm-modal__topbar">
+	<div class="bbm-modal__title">Parabéns você ganhou <%if(items.length <= 1){%>um distintivo!<%} else {%><%-items.length%> distintivos<%}%></div>
+</div>
+<div class="bbm-modal__section row text-center">
+        <%items.forEach( function(item){%>
+    		<div class="col-md-4 badge-row">
+                <img width="100" height="100" src="<%-defaultStaticFileService%>/img/badges/<%-item.icon%>" /><br><span><%=item.name%></span>
+    		</div>
+        <%})%>
+</div>
+<div class="bbm-modal__bottombar">
+    <a href="#" class="bbm-button close-modal">Fechar</a>
+</div>

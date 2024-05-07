@@ -1,0 +1,525 @@
+<div class="container">
+	<style type="text/css">
+		.item.calculadoras.imc .calc-footer {
+			padding-bottom: 1px;
+		}
+
+		.form-group .alert {
+			margin-top: 10px;
+			padding: 10px;
+			display: none;
+		}
+
+		.condutaBox {
+			display: none;
+		}
+
+		.list-group-item {
+			overflow: initial !important;
+			display: revert !important;
+		}
+		.processos{
+			margin-left: 20px;
+			margin-bottom: 0px;
+		}
+		.recomendacoes{
+			margin-left: 20px;
+			margin-bottom:0px;
+		}
+		.quatrorem{
+			width:4rem!important;
+			text-align:center;
+		}
+		.radio input[type=radio]:checked ~ .circle, .radio-default input[type=radio]:checked ~ .circle {
+			border-color: #0d6efd!important;
+		}
+		.radio label .circle {
+			border: 2px solid #0d6efd!important;
+		}
+		.radio label .circle {
+			border: 2px solid #0d6efd!important;}
+			.radio label .check:after {
+
+			background-color:  #0d6efd;}
+			.radio input[type=radio]:checked ~ .check, .radio-default input[type=radio]:checked ~ .check {
+			background-color: #0d6efd;
+		}
+		.radio label .check{
+			background-color:#0d6efd;
+		}
+		.condutaBox h2{
+			background-color: darkgrey;
+    padding: 10px;
+		}
+		.titulo{
+			    color: #0d6efd;
+    font-weight: 600;
+		}
+
+	</style>
+	<div class='panel panel-default'>
+		<div class='panel-heading'>
+			<h3 class="titulo-calc">
+				Calculadora da Covid-19: período para realização de isolamento e testes
+			</h3>
+		</div>
+		<div class='panel-body'>
+			<div class="col-sm-12">
+				<div class='form-group'>
+					<label for='dt-atual'>Data atual</label>
+					<div class="input-group" style=" display: flex;">
+						<input type="text" id="dt-atual-dia" maxlength="2" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input type="text" id="dt-atual-mes" maxlength="2" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input type="text" id="dt-atual-ano" maxlength="4" class='form-control input input-lg quatrorem'>
+					</div>
+					<div class='alert alert-danger' id='dt-atual-msg'></div>
+				</div>
+				<div class='form-group'>
+					<label for='idade'>Idade</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosIdade" class="idade" value="1" checked>11 anos ou mais
+						</label>
+
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosIdade" class="idade" value="0"> 10 anos ou menos
+						</label>
+					</div>
+				</div>
+				<h3 class='titulo'>Sintomas</h3>
+
+				<div class='form-group' >
+					<label for='tevesintomas'>Tem ou teve pelo menos 2 dos seguintes sintomas?</label>
+					<p class='sintomas'>Febre, calafrios, dor de garganta, dor de cabeça, tosse, coriza<span class='10anos' style='display:none;'>, obstrução nasal</span>, perda de paladar, perda de olfato</p>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optiontevesintomas10" class="categoria tevesintomas" value="0"
+								checked> Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optiontevesintomas10" class="categoria tevesintomas" value="1">Sim
+						</label>
+					</div>
+				</div>
+				
+				<div class='form-group'>
+					<label for='gastrointestinais'>Tem ou teve sintomas gastrointestinais (diarreia, vômito ou dor abdominal), sem outra causa aparente?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosGastrointestinais" class="categoria gastrointestinais"
+								value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosGastrointestinais" class="categoria gastrointestinais"
+								value="1">Sim</label>
+					</div>
+				</div>
+				<div class='form-group paladarolfato' style='display:none'>
+					<label for='perdaolfato'>Tem ou teve perda de olfato, sem causa pregressa?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPerdaolfato" class="categoria perdaolfato" value="0"
+								checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPerdaolfato" class="categoria perdaolfato"
+								value="1">Sim </label>
+					</div>
+				</div>
+				<div class='form-group paladarolfato' style='display:none'>
+					<label for='perdapaladar'>Tem ou teve perda de paladar, sem causa pregressa?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPerdaPaladar" class="categoria perdapaladar" value="0"
+								checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPerdaPaladar" class="categoria perdapaladar"
+								value="1">Sim</label>
+					</div>
+				</div>
+				<div class='form-group questoes5a8' style='display:none;'>
+					<label for='faltadear'>Tem ou teve falta de ar/desconforto respiratório?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosFaltadear" class="categoria faltadear" value="0"
+								checked> Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosFaltadear" class="categoria faltadear" value="1">Sim
+						</label>
+					</div>
+				</div>
+
+				<div class='form-group questoes5a8' style='display:none;'>
+					<label for='pressaotorax'>Tem ou teve pressão ou dor persistente no tórax?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPressaoTorax" class="categoria pressaotorax" value="0"
+								checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPressaoTorax" class="categoria pressaotorax"
+								value="1">Sim
+						</label>
+					</div>
+				</div>
+				<div class='form-group questoes5a8' style='display:none;'>
+					<label for='saturacao'>Tem ou teve saturação de O2 menor que 95% em ar ambiente?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosSaturacao" class="categoria saturacao" value="0"
+								checked> Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosSaturacao" class="categoria saturacao" value="1">Sim
+						</label>
+					</div>
+				</div>
+				<div class='form-group questoes5a8' style='display:none;'>
+					<label for='coloracaoazulada'>Tem ou teve coloração azulada (cianose) dos lábios ou rosto?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosColoracaoAzulada" class="categoria coloracaoazulada"
+								value="0" checked> Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosColoracaoAzulada" class="categoria coloracaoazulada"
+								value="1">Sim</label>
+					</div>
+				</div>
+				<div class='form-group q10anos ' style='display:none;'>
+					<label for='batimentosasanariz'>Tem ou teve batimentos de asa de nariz?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosBatimentosAzaNariz"
+								class="categoria batimentosasanariz" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosBatimentosAzaNariz"
+								class="categoria batimentosasanariz" value="1">Sim </label>
+					</div>
+				</div>
+				<div class='form-group q10anos ' style='display:none;'>
+					<label for='tiragemintercostal'>Tem ou teve tiragem intercostal?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadioTiragemIntercostal"
+								class="categoria tiragemintercostal" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadioTiragemIntercostal"
+								class="categoria tiragemintercostal" value="1">Sim</label>
+					</div>
+				</div>
+
+
+				<div class='form-group dataprimeirosintoma' style='display:none'>
+					<label for='dt-sintoma-dia'>Data do 1º sintoma?</label>
+					<div class="input-group" style=" display: flex;">
+						<input maxlength='2' type="text" id="dt-sintoma-dia" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='2' type="text" id="dt-sintoma-mes" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='4' type="text" id="dt-sintoma-ano" class='form-control input input-lg quatrorem' placeholder='2021'placeholder='2021'placeholder='2021'>
+					</div>
+					<div class='alert alert-danger' id='dt-sintoma-msg'></div>
+				</div>
+
+				<div class='form-group'>
+					<h3 class='titulo'>Contato Próximo e Testes</h3>
+					<label for='contato'>Teve contato próximo com caso suspeito ou confirmado de Covid-19?</label>
+					<button type="button" class="btn btn-info btn-help" data-placement='bottom' data-toggle="popover" title="" 
+						data-content="São consideradas contato próximo de um caso de Covid-19:<ul>
+<li>pessoas que estiveram a menos de um metro de distância, por um período mínimo de 15 minutos, sem ambos utilizarem máscara facial ou utilizarem de forma incorreta;</li>
+<li>pessoas que tiveram contato físico direto, como abraço, aperto de mão ou</li>
+<li>pessoas que são contato domiciliar ou residem na mesma casa, ou no mesmo ambiente, como dormitório, creche, alojamento, de um caso de Covid-19;</li></ul>
+no período de transmissibilidade da doença, ou seja, 48 horas antes até 10 dias após o início dos sintomas, se for caso sintomático, ou da coleta do exame, se for caso assintomático.
+<br>
+O profissional de saúde é considerado contato próximo quando prestar assistência ao caso de Covid-19 sem utilizar equipamentos de proteção individual, conforme preconizado, ou com EPI danificados."
+					>?</button>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosContato" class="teve-contato" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosContato" class="teve-contato" value="1">Sim </label>
+					</div>
+				</div>
+				<div class='form-group contato' style='display:none'>
+					<label for='dt-contato-dia'>Data do ultimo contato?</label>
+					<div class="input-group" style=" display: flex;">
+						<input maxlength='2' type="text" id="dt-contato-dia" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='2' type="text" id="dt-contato-mes" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='4' type="text" id="dt-contato-ano" class='form-control input input-lg quatrorem' placeholder='2021'>
+					</div>
+					<div class='alert alert-danger' id='dt-contato-msg'></div>
+				</div>
+				<div class='form-group blocoexameimagem' style='display:none'>
+					<label for='exameimagem'>Realizou exame de imagem?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExameImagem" class="rexameimagem" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExameImagem" class="rexameimagem" value="1">Sim
+						</label>
+					</div>
+				</div>
+				<div class='form-group exameimagem' style='display: none;'>
+					<label for='exameimagemcompativel'>O resultado do exame de imagem teve resultado compatível com
+						Covid-19 (opacidade em vidro fosco, sinal de halo reverso)?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExameImagemCompativel" class="exameimagemcompativel"
+								value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExameImagemCompativel" class="exameimagemcompativel"
+								value="1">Sim
+						</label>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label for='examepcr'>Fez teste para detecção de vírus (RT-PCR, RT Lamp)?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExamePcr" class="rexamepcr" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExamePcr" class="rexamepcr" value="1">Sim </label>
+					</div>
+				</div>
+				<div class='form-group examepcr' style='display:none'>
+					<label for='dt-exame-pcr-dia'>Qual a data da coleta da amostra para o teste RT-PCR ou RT
+						Lamp?</label>
+					<div class="input-group" style=" display: flex;">
+						<input maxlength='2' type="text" id="dt-exame-pcr-dia" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='2' type="text" id="dt-exame-pcr-mes" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='4' type="text" id="dt-exame-pcr-ano" class='form-control input input-lg quatrorem' placeholder='2021'>
+					</div>
+					<div class='alert alert-danger' id='dt-pcr-msg'></div>
+				</div>
+
+				<!-- (calcular para a lógica, o prazo varia se é SG/caso suspeito, SRAG caso suspeito, ou contato de caso confirmado, não mostrar questão)-->
+				<div class='form-group examepcr' style='display:none'>
+					<label for='examepcrresultado'>Qual o resultado do RT-PCR ou RT Lamp?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExamePcrResultado" class="examepcrresultado" value="0"
+								checked>
+							Não Detectável
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosExamePcrResultado" class="examepcrresultado"
+								value="1">Detectável
+						</label>
+					</div>
+				</div>
+
+				<!-- (calcular para a lógica, o prazo varia se é SG/caso suspeito, SRAG caso suspeito, ou contato de caso confirmado, não mostrar questão) -->
+				<div class='form-group'>
+					<label for='testeantigeno'>Fez teste de antígeno?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosTesteAntigeno" class="testeantigeno" value="0"
+								checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosTesteAntigeno" class="testeantigeno" value="1">Sim
+						</label>
+					</div>
+				</div>
+				<div class='form-group exameantigeno' style='display:none'>
+					<label for='dt-exame-antigeno-dia'>Qual a data da coleta da amostra para o teste Antígeno?</label>
+					<div class="input-group"  style=" display: flex;">
+						<input maxlength='2' type="text" id="dt-exame-antigeno-dia" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='2' type="text" id="dt-exame-antigeno-mes" class='form-control input input-lg quatrorem'>
+						<span class="input-group-addon">/</span>
+						<input maxlength='4' type="text" id="dt-exame-antigeno-ano" class='form-control input input-lg quatrorem' placeholder='2021'>
+					</div>
+					<div class='alert alert-danger' id='dt-antigeno-msg'></div>
+				</div>
+
+				<!--(calcular para a lógica, o prazo varia se é SG/caso suspeito, SRAG caso suspeito, ou contato de caso confirmado, não mostrar questão)-->
+				<div class='form-group exameantigeno' style='display:none'>
+					<label for='testeantigenoresultado'>Qual o resultado do teste de antígeno?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosTesteAntigenoResultado" class="testeantigenoresultado"
+								value="0" checked>
+							Não Reagente
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosTesteAntigenoResultado" class="testeantigenoresultado"
+								value="1">Reagente
+						</label>
+					</div>
+				</div>
+				<!--(calcular para a lógica, , o prazo varia se é SG/caso suspeito, SRAG caso suspeito, ou contato de caso confirmado, não mostrar questão)-->
+				<div class='form-group fezalgumteste' style='display:none'>
+					<label for='fezpesquisaagenteetinologico'>Fez pesquisa para identificação de outro agente
+						etiológico?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPesquisaAgenteEtinologico"
+								class="optionRadiosPesquisaAgenteEtinologico" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPesquisaAgenteEtinologico"
+								class="optionRadiosPesquisaAgenteEtinologico" value="1">Sim
+						</label>
+					</div>
+				</div>
+				<div class='form-group agenteetinologico' style='display:none'>
+					<label for='resultadoagenteetinologico'>Foi identificado outro agente etiológico?</label>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPesquisaAgenteEtinologicoResultado"
+								class="resultadoagenteetinologico" value="0" checked>
+							Não
+						</label>
+					</div>
+					<div class='radio'>
+						<label class="h4">
+							<input type="radio" name="optionRadiosPesquisaAgenteEtinologicoResultado"
+								class="resultadoagenteetinologico" value="1">Sim
+						</label>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<div class='alert alert-danger' id='error-msg' style='display:none'>Verifique o preenchimento do formulário adequando aos requisitos!</div>
+					<button id='zeraEscore' class="btn btn-lg btn-info">Zerar</button>
+					<a href='#'><button id='zeraEscore' class="btn btn-lg btn-info"><i class="mdi mdi-home"></i></button></a>
+					<button id='calculaEscore' class="btn btn-lg btn-info">Calcular</button>
+				</div>
+			</div>
+			<div class="col-sm-12 condutaBox">
+				<div class='row'><h2>Resultado</h2></div>
+				<div style='padding-left:20px'>
+					<h3 class='resultado alert'></span>
+					<h3 id='recomendacoes-title'><b>Recomendações:</b></h3>
+	
+					<ul class='list-group recomendacoes'>
+						<li class="isolamento" style='display:none'>Realizar isolamento até dia
+							<span class="dt-isolamento"></span>.
+						</li>
+						<li class="quarentena" style='display:none'>Realizar quarentena até dia
+							<span class="dt-isolamento"></span>.
+						</li>
+						
+						<li class="realizar-pcr" style='display:none'>Realizar teste RT-PCR / RT Lamp 
+							<span class='umdia'>até dia</span>
+							<span class='doisdias'  style='display:none'>nos dias</span>
+							<span class="dt-realizar-pcr"></span>.
+						</li>
+						<li class="nao-realizar-pcr" style='display:none'>
+							<b>Está fora do prazo para realizar teste RT-PCR / RT Lamp. </b>
+						</li>
+						<li class="realizar-antigeno" style='display:none'>
+							<span class='rou'>OU</span> Realizar teste de antígeno 
+							<span class='umdia'>até dia</span>
+							<span class='doisdias'  style='display:none'>nos dias</span>
+							<span class="dt-realizar-antigeno"></span>.</br>
+						</li>
+						<li class="nao-realizar-antigeno" style='display:none'>
+							<b>Está fora do prazo para realizar Teste de Antígeno.</b></br>
+						</li>
+
+					</ul>
+					<ul class='list-group processos'>
+					</ul>
+					<ul class='list-group ' style='margin-left: 20px;'>
+					<li>O diagnóstico e a notificação de Covid-19 são de responsabilidade dos profissionais de saúde. As recomendações podem ser alteradas pelos profissionais de saúde em função de situações específicas.</li>
+
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='container calc-footer'>
+	<div class="col-md-12">
+		<dl>
+			<dt>
+				<a href="/static/bib/apoio/Calculadora_MemoriadeCalculoCovid.pdf" target="_blank"><span class='h4'><i class="mdi mdi-file-pdf"></i>
+					</span>
+					Calculadora da Covid-19: período para realização de isolamento e testes</a>
+			</dt>
+			<dd>
+				<small>1.1 MB</small>
+			</dd>
+		</dl>
+          <h5>Créditos:</h5>
+          <div style='padding:1rem'>
+              <b>Autores:</b>
+              <span class='px-1'>Anaclaudia Gastal Fassa</span><br>
+              <span class='px-1'>Mirelle de Oliveira Saes</span><br>
+              <span class='px-1'>Everton Fantinel</span><br>
+              <span class='px-1'>Denise Silva da Silveira</span>
+              <br>
+              <b>Programador:</b> Vanderson Oliveira da Silva<br>
+              <b>Webdesigner:</b> Bruna das Neves<br>
+          </div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+<%
+    var it = obj,
+        pref = it.titulo === "Teste Inicial" ? "pre" : "pos";
+%>
+
+    <div class="col-md-6 text-center">
+        <div class="col-sm-12 teste-block-inicial teste-<%-pref=='pos'?'final gotoFinal':'inicial gotoInicial'%> teste" data-id='<%-it._id%>'>
+            <img class="" src="<%-defaultStaticFileService%>/img/<%-pref%>Teste.svg" alt="<%=it.titulo%>">
+            <% if (pref == 'pre'){%>
+                <div class="teste-dica-inicial text-left">Descubra o quanto você sabe sobre <br><% if(window.modulo){%><%= window.modulo.area %><%}else{%>Cuidado Paliativo<%} %></div>
+            <%} else {%>
+                <span class="teste-img-inicial-box"><%
+                    if(lockTesteFinal){%>
+                    <span class="mdi mdi-lock-outline"></span><%
+                    }%>
+                </span>
+                <div class="teste-dica-inicial text-left"><%
+                    if(lockTesteFinal){
+                        %>Teste Final Bloqueado<%
+                    } else {
+                        %><span class="h3">Faça o Teste Final</span><%
+                    }%>
+                </div>
+            <%}%>
+        </div>
+        <div class="text-center">
+            <% if(it.respostas){
+
+                var quests = _.filter(it.slides, function(sl){ return sl.tipo.match(/quest/im); }),
+                    coi = it.respostas.length;
+                if(coi > 0){
+                    %><%-it.respostas.length%> / <%-quests.length%> Questões respondidas<%
+                    %><div class="progress" style="height:20px; width: 100%">
+                        <div class="progress-bar" style="width: <%-(it.respostas.length/quests.length).toFixed(2)*100%>%; height: 25px"><%-(it.respostas.length/quests.length*100).toFixed(2)%>%</div>
+                    </div>
+                    <%
+
+                    var ehFinal = pref == 'pos',
+                        Teste = ehFinal ? 'Pos' : 'Pre',
+                        FouI = ehFinal ? 'Final' : 'Inicial',
+                        propName = 'percAcerto' + Teste +'Teste',
+                        acertosTeste = App.progresso.geral[propName].toFixed(2);
+                        console.log(Teste, propName, acertosTeste);
+                    %>
+                    Média de Acerto no Teste <%-FouI%>: <%-acertosTeste%>%<%
+                    %><div class="progress" style="height:20px; width: 100%">
+                        <div class="progress-bar" style="width: <%-acertosTeste%>%; height: 25px"><%-acertosTeste%>%</div>
+                    </div><%
+                }
+            } else {%>
+
+            <%}
+            %>
+        </div>
+    </div>

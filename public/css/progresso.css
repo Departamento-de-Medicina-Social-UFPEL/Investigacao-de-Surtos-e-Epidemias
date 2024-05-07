@@ -1,0 +1,143 @@
+
+/* xs */
+@media (max-width:767px) {
+	.concluinte{
+		min-height: 175px;
+	}
+	.progresso .num-badges {
+	    left: 1rem;
+	    top: -55px;
+	}
+	.badge-link{
+	    min-height: 30px;
+	}
+	.link-lista-badge-inicial{
+	    font-size: 2rem;
+	}
+}
+/* sm */
+@media (min-width:768px) {
+	.concluinte{
+		min-height: 175px;
+	}
+	.progresso .num-badges {
+	    left: 1.5rem;
+	    top: -60px;
+	}
+	.link-lista-badge-inicial{
+		margin-top: 15px;
+	    font-size: 2rem;
+	}
+}
+/* md */
+@media (min-width:992px) {
+	.concluinte{
+		min-height: 140px;
+	}
+	.progresso .num-badges {
+	    left: 2rem;
+	    top: -68px;
+	}
+	.link-lista-badge-inicial{
+		margin-top: 15px;
+	    font-size: 2rem;
+	}
+}
+/* lg */
+@media (min-width:1200px) { 
+
+	.progresso .num-badges {
+	    left: 2rem;
+	    top: -7rem;
+	}
+	.badge-link{
+	    min-height: 50px;
+	    margin-top: 15px;
+	}
+	.link-lista-badge-inicial{
+		margin-top: 0px;
+	    font-size: 3rem;
+	}
+}
+.concluinte{
+	display: none;padding:10px;
+}
+.progresso .link-lista-badge-inicial {
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+}
+.progresso .num-badges {
+    font-weight: 200;
+    font-size: 1.8em;
+    color: #f5821f;
+    position: relative;
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+   
+}
+.badge-container{
+    max-height: 70px;
+    max-width: 100px;
+}
+.check-success{
+	color: #3c763d;
+}
+.check-danger{
+	color: #a94442;
+}
+a.link-inscricao {
+    text-decoration: underline;
+    color: #a94442;
+}
+
+.progresso .btn{
+	width: 100%;
+	background-color: var(--corpadrao)!important;
+	color: white;
+}
+.progresso .mdi{
+	color: rgba(255, 255, 255, 0.84)
+}
+.progresso .glyphicon{
+	color: var(--corpadrao)
+}
+.progresso .glyphicon-dashboard{
+	margin-right: 10px;
+}
+.enfermagem .progress-bar{
+	background-color: #3c763d;
+}
+.medicina .progress-bar{
+	background-color: #03a9f4;
+}
+
+.indicador-objetivo{
+    border-right: 1px solid #d3d3d3;
+    margin-top: -32px;
+    display: inline-block;
+    vertical-align: bottom;
+    padding-top: 31px;
+    min-height: 51px;
+    color: #8c8c8c;
+    max-height: 99px;
+}
+.progress-mark {
+    width: calc(100% - 6px);
+    padding-right: calc(30% - 6px);
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 11px;
+}
+.progress-mark label {
+    font-weight: 100;
+    padding-right: 5px;
+}
+.bbm-wrapper{
+	top:50px!important;
+}
+.stepper-vertical li .step-content{
+	padding:0px!important;
+}
+

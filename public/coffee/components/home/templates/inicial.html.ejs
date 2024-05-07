@@ -1,0 +1,335 @@
+
+
+<div class="container no-pad">
+    <div class="row cabecalho"  >
+        <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+            <% if(!App.user){ %>
+                    <h2 class="username-label hidden-xs">
+                        <span class="h2" style="font-weight: 100;">Bem-vindo,</span>
+                    </h2>
+                        <div class="lead">Este é o seu primeiro acesso ao <%- modulo.fl_layout_alternativo ? 'curso' : 'módulo'%>.</div>
+            <%
+                } else {
+            %>
+                    <h1 class="username-label hidden-xs">
+                        Olá, <%-App.user.nome.split(' ')[0]%>
+                    </h1>
+            <%
+                }
+            %>
+        </div>
+    </div>
+
+    <div class="row inscricoes">
+    </div>
+
+    <div class="row introducao">
+        <div class="col-xs-12 container-titulo">
+            <% if(modulo.fl_layout_alternativo) { %>
+                <div class='text-center'>
+                    <img style="width: 32%" class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/logo_cursosintegrados_ITPS_verde.svg">
+                </div>
+                <div class="title" style="font-size: 44px; <%- modulo.corPadraoCurso ? ('color: #' + modulo.corPadraoCurso) : '' %>" ><%- modulo.name %></div>
+                <div class="sub-title" style="font-size: 22px"><%- modulo.subtitle ? modulo.subtitle : "Módulo de Autoaprendizagem" %></div>
+            <% } else { %>
+                <div class="title" style="<%- modulo.corPadraoCurso ? ('color: #' + modulo.corPadraoCurso) : '' %>" ><%- modulo.name %></div>
+                <div class="sub-title"><%- modulo.subtitle ? modulo.subtitle : "Módulo de Autoaprendizagem" %></div>
+            <% } %>
+        </div>
+        <% 
+            if(modulo.img_video_apresentacao){
+        %>
+            <div class="col-xs-12 container-video">
+                <div class="no-pad text-center video-poster-inicial gotoVideo" style="background-image: url('<%-defaultStaticFileService%>/img/<%- modulo.img_video_apresentacao %>')">
+                    <div class="h3 dica-assista-video-inicial">Assista ao vídeo de apresentação</div>
+                    <div class="mdi mdi-play-circle-outline play text-center"></div>
+                </div>
+            </div>
+        <% 
+            } 
+        %>
+    </div>
+
+    <% if(modulo.videos_extra  && false) { %>
+        <div class="row introducao">
+
+        <% modulo.videos_extra.forEach( function(row) { %>
+            <div class="row col-12 center-block">
+
+                <% row.videos.forEach( function(v) { %>
+                    <div class="row <%- row.col %> center-block pl-0 pr-0">
+                        <div class="col-xs-12 container-titulo">
+                            <div class="title"><%- v.title %></div>
+                            <div class="sub-title"><%- v.subtitle %></div>
+                        </div> 
+                        <div class="col-xs-12 container-video pl-0 pr-0">
+                            <div class="no-pad text-center video-poster-inicial gotoVideo" data-source="<%- v.source %>" style="height: 200px; width: 100%; background-image: url('<%-defaultStaticFileService%>/img/<%- v.img %>')">
+                                <div class="h3 dica-assista-video-inicial"><%- v.tip %></div>
+                                <div class="mdi mdi-play-circle-outline play text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+
+            </div>
+        <% }); %>
+
+        </div>
+    <% } %>
+
+    <% if(modulo.videos_extra) { %>
+        <div class="row chamdas" style="margin-top: 40px; margin-bottom: 35px">
+
+        <% modulo.videos_extra.forEach( function(row) { %>
+            <div class="col-12">
+
+                <% row.videos.forEach( function(v) { %>
+                    <div class="row <%- row.col %> center-block">
+                        <div class="col-xs-12 container-titulo">
+                            <div class="title"><%- v.title %></div>
+                            <div class="sub-title"><%- v.subtitle %></div>
+                        </div> 
+                        <div class="col-xs-12 container-video" style="padding-left: 0; padding-right: 0">
+                            <div class="no-pad text-center video-poster-inicial gotoVideo" data-source="<%- v.source %>" style="height: 200px; width: 100%; background-image: url('<%-defaultStaticFileService%>/img/<%- v.img %>')">
+                                <% if(v.tip) { %><div class="h3 dica-assista-video-inicial"><%- v.tip %></div><% } %>
+                                <div class="mdi mdi-play-circle-outline play text-center" style="<%- v.tip ? '' : 'top: calc(25% - 0px);' %>"></div>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+
+            </div>
+        <% }); %>
+
+        </div>
+    <% } %>
+
+    <% 
+    unidades = _.where(window.modulo.components, {folder: 'unidade-progresso'});
+    if(unidades){%>
+        <div class="row unidades">
+            <% unidades.forEach(function(o){ 
+                if(o.tipo == 'integrador' || o.short == "Unidade extra"){
+                    return
+                }
+                estilo = "";
+                if(o.unidade){
+                    uni = _.findWhere(window.modulo.components, {folder: 'unidade-progresso', unidade: o.unidade});
+                    if(uni.cor){
+                        estilo = "background-color:#"+uni.cor+"!important";
+                    }
+                }
+                console.log((unidades.length % 2) ,'teste modulo', unidades.length);
+
+            %>
+                
+                <div class="<%if((unidades.length % 2) > 0){%>col-sm-12 col-md-6 <%}else{%> col-md-12 <%}%>">
+                    <a href='#comp/unidade-progresso/<%= o.short%>'  class='gotoUnidade'>
+                    <div class="panel panel-default chamada-unidade no-pad " >
+                        <div class="panel-body descricao" style="<%- estilo %>">
+                            <div class='col-xs-2 col-sm-1 col-md-1 col-lg-1 no-pad'>
+                                <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/chamada-materiaisapoio.svg" alt="">
+                            </div>
+                            <div class='col-xs-10 col-sm-11 col-md-11 col-lg-11' > 
+                            <% if(o.bloqueada){ %><span class="new badge alert-danger pull-right">Em breve</span><%}%>
+                            <%= o.title %>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            <% });%>
+        </div>
+    <% }%>
+    <% if(modulo.fl_por_unidade) {%>
+        <div class="row chamadas">
+            <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+                <div class="panel panel-default chamada no-pad gotoMaterial">
+                <div class="panel-body descricao">
+                    <div class='col-xs-2 col-sm-2 col-md-2 col-lg-2 no-pad'>
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/chamada-materiaisapoio.svg" alt="">
+                    </div>
+                    <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10 titulo' >Materiais de Apoio</div>
+                </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+                <div class="panel panel-default chamada no-pad gotoCalculadoras">
+                <div class="panel-body descricao">
+                    <div class='col-xs-2 col-sm-2 col-md-2 col-lg-2 no-pad'>
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/chamada-calculadoras.svg" alt="">
+                    </div>
+                    <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10 titulo' >Calculadoras</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    <%} else if(modulo.fl_layout_alternativo) {%>
+        <div class="row chamadas" style="margin-bottom: 35px">
+            <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+                <div class="panel panel-default chamada no-pad gotoCasos">
+                    <div class="panel-body descricao" style="<%- modulo.corPadraoCurso ? ('background-color: #' + modulo.corPadraoCurso) : '' %>">
+                    <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3 no-pad'>
+                        <img style="padding: 0" src="<%-defaultStaticFileService%>/img/Icone_casosinterativos_Prancheta 1.svg" alt="">
+                    </div>
+                    <div class='col-xs-9 col-sm-9 col-md-9 col-lg-9 titulo' style="display:flex; justify-content:center; align-items: center; flex-flow: column;">Casos Interativos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+                <div class="panel panel-default chamada no-pad gotoMaterial">
+                    <div class="panel-body descricao" style="<%- modulo.corPadraoCurso ? ('background-color: #' + modulo.corPadraoCurso) : '' %>">
+                    <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3 no-pad'>
+                        <img style="padding: 0" src="<%-defaultStaticFileService%>/img/Icone_materiaisdeapoio-02.svg" alt="">
+                    </div>
+                    <div class='col-xs-9 col-sm-9 col-md-9 col-lg-9 titulo' style="display:flex; justify-content:center; align-items: center; flex-flow: column;">Materiais de Apoio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%} else {%>
+        <div class="row chamadas">
+            <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 ">
+                <div class="panel panel-default chamada no-pad gotoCasos">
+                <div class="panel-body descricao">
+                    <div class='col-xs-3 col-sm-4 col-md-4 col-lg-4 no-pad'>
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/chamada-casosclinicos.svg" alt="">
+                    </div>
+                    <div class='col-xs-9 col-sm-8 col-md-8 col-lg-8 titulo' >Casos<br>Clínicos</div>
+                </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+                <div class="panel panel-default chamada no-pad gotoMaterial">
+                <div class="panel-body descricao">
+                    <div class='col-xs-3 col-sm-4 col-md-4 col-lg-4 no-pad'>
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/chamada-materiaisapoio.svg" alt="">
+                    </div>
+                    <div class='col-xs-9 col-sm-8 col-md-8 col-lg-8 titulo' >Materiais<br>de Apoio</div>
+                </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+                <div class="panel panel-default chamada no-pad gotoCalculadoras">
+                <div class="panel-body descricao">
+                    <div class='col-xs-3 col-sm-4 col-md-4 col-lg-4 no-pad'>
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/chamada-calculadoras.svg" alt="">
+                    </div>
+                    <div class='col-xs-9 col-sm-8 col-md-8 col-lg-8 titulo' >Calculadoras</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    <%}%>
+
+    <% if(!modulo.fl_por_unidade){%>
+    <div class='row'>
+        <% if(!modulo.fl_layout_alternativo) { %>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Testes</h1>
+            </div>
+        <% } %>
+    </div>
+    <div class="row testes">
+        <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+            <div class="panel panel-default teste-inicial ">
+              <div class="panel-body" style="align-items: center;display: flex;">
+                <div class='col-xs-7 col-xs-offset-3  col-sm-offset-0 col-sm-4 col-md-3 col-lg-3' style="display: flex; justify-content: center">
+                    <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/preTeste.svg" alt="">
+                </div>
+                <div class='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
+                    <div class='titulo' style="color: #f05b26;">Teste Inicial</div>
+                    <div class="teste-dica-inicial text-left">Descubra o quanto você sabe 
+                        <br>sobre  <%- modulo.name %>
+                    </div>
+                </div>
+              </div>
+              <div class="">
+                <% window.modulo.ofertasAbertas.forEach(function(o){ 
+                    var conteudo = o.conteudo.slice(0,1).toUpperCase()+o.conteudo.slice(1);
+                    if(o.tipo =='integrador'){
+                        return
+                    }
+                %>
+                <div class="row teste-block teste-block-item teste-liberado">
+                    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div>
+                        <% if(o.tipo == 'unidade'){%>
+                                <b><%= o.nome %></b>
+                            <%}else if(o.tipo == 'integrador'){%>
+                                <b>Módulo integral</b>
+                            <%}else{%>
+                                <b>Conteúdo de <%= conteudo %></b>
+                            <%}%>
+                        </div>
+                        <button class='btn btn-primary gotoInicial<%= conteudo %>'>Começar</button>
+                    </div>
+                </div>
+                <%})%>
+              </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+            <div class="panel panel-default teste-inicial">
+                <div class="panel-body" style="align-items: center;display: flex;">
+                    <div class='col-xs-7 col-xs-offset-3  col-sm-offset-0 col-sm-4 col-md-3 col-lg-3' style="display: flex; justify-content: center">
+                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/posTeste.svg" alt="">
+                    </div>
+                    <div class='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
+                        <div class='titulo' style="color: #2b8fb2;">Teste Final</div>
+                        <div class="teste-dica-inicial text-left">Descubra o quanto você sabe 
+                            <br>sobre <%- modulo.name %>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <% window.modulo.ofertasAbertas.forEach(function(o){ 
+                    var conteudo = o.conteudo.slice(0,1).toUpperCase()+o.conteudo.slice(1);
+                    if(o.tipo =='integrador'){
+                        return
+                    }
+
+                %>
+                    <div class="row teste-block teste-block-item <% if(App['masterFinalLock'+conteudo]()){%> teste-bloqueado<%}else{%> teste-liberado<%}%>">
+                        <% if(App['masterFinalLock'+conteudo]()){%>
+                        <div class=" col-xs-12 col-sm-2 col-md-2 col-lg-2">  
+                           <span class="mdi mdi-lock-outline" <%
+                                    if(navigator.userAgent.toLowerCase().includes('firefox')){
+                                        %>style="top: -38px; left: 35px;"<%
+                                    }
+                                    %>
+                                ></span>
+                        </div>
+                        <div class=" col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                            <% if(modulo.fl_layout_alternativo) { %>
+                                <b>Teste final bloqueado</b>
+                                <p>Para desbloquear você precisa concluir 70% dos casos interativos com 70% de acerto.</p>
+                            <% } else { %>
+                                <b>Teste Final de <%= conteudo %> Bloqueado</b>
+                                <p>Para desbloquear você precisa concluir 70% dos casos clínicos de <%= conteudo %> com 70% de acerto.</p>
+                            <% } %>
+                        </div>
+                        <%}else{%>
+                        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                            <div>
+                            <% if(o.tipo == 'unidade'){%>
+                                    <b><%= o.nome %></b>
+                                <%}else if(o.tipo == 'integrador'){%>
+                                    <b>Módulo integral</b>
+                                <%}else{%>
+                                    <b>Conteúdo de <%= conteudo %></b>
+                                <%}%>
+                            </div>
+                            <button class='btn btn-primary gotoFinal<%= conteudo %>'>Acessar</button>
+                        </div>
+                        <%}%>
+                    </div>
+                <%})%>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <%}%>
+</div>

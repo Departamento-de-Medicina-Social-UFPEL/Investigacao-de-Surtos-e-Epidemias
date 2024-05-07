@@ -1,0 +1,39 @@
+<%
+    var capitalize = function(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+%>
+ <% if(sexo){ %>
+
+        <h3>Caso</h3>
+
+        <div class="row">
+
+            <div class="pacienteInfoBlock col-md-1">
+                <i class="mdi mdi-gender-<%= sexo == "masculino" ? "male" : "female"%> <%=sexo%> iconeSexoPaciente"></i>
+                <%if(cor){%>
+                    <div class="text-left"><%=capitalize(cor).trim()%></div>
+                <%}%>
+            </div>
+
+            <div class="pacienteInfoBlock col-md-3">
+                <h1><%= iniciais.split('').join('.') + '.'%></h1>
+            </div>
+            <div class="pacienteInfoBlock col-md-8">
+                <div class="textoIdadePaciente"><%=strIdade()%></div>
+                <div class="textoIdadePaciente"><%if(ocupacao){%><%=capitalize(ocupacao)%><%}%></div>
+            </div>
+
+            <%if(queixa.problemas){%>
+                <%if(queixa.problemas.length>0){%>
+                    <div class="pacienteInfoBlock col-md-12">
+                        <% for(rw in queixa.problemas) {
+                            %><div class="pacienteQueixa"><%= queixa.problemas[rw] %></div><%
+                        } %>
+                    </div>
+                <%}%>
+            <%}%>
+
+        </div>
+
+<% } %>

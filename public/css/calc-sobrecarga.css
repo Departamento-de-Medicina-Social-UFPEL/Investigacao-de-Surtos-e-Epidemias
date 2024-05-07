@@ -1,0 +1,93 @@
+.item.calculadoras.sobreCuida .checkbox label {
+  /* position: relative; */
+  /* top: 0; */
+}
+.item.calculadoras.sobreCuida .item {
+  min-height: 300px;
+}
+.item.calculadoras.sobreCuida .checkbox label.simples {
+  position: relative;
+  top: 0;
+  left: 60px;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.item.calculadoras.sobreCuida .pagination li a:hover {
+  background-color: #fff;
+  color: #428bca;
+  cursor: default;
+}
+.item.calculadoras.sobreCuida .pagination li a.sensivel:hover {
+  background-color: #eee;
+  color: #2a6496;
+  cursor: pointer;
+}
+.item.calculadoras.sobreCuida .radio {
+  margin: 10px 0px 13px;
+  padding: 0;
+}
+.item.calculadoras.sobreCuida input[type="radio"]:focus {
+  outline: none;
+}
+.item.calculadoras.sobreCuida input[type="radio"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  margin-left: 0;
+  position: relative;
+  top: -6px;
+}
+.item.calculadoras.sobreCuida .checkbox label.simples input[type="checkbox"] {
+  position: relative;
+  top: -3px;
+}
+.item.calculadoras.sobreCuida .radio.first {
+  margin-top: 30px;
+}
+.item.calculadoras.sobreCuida .checkbox {
+  margin: 20px 0px 15px 20px;
+  padding: 0;
+}
+.item.calculadoras.sobreCuida input[type="checkbox"]:focus {
+  outline: none;
+}
+.item.calculadoras.sobreCuida input[type="checkbox"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.item.calculadoras.sobreCuida label input[type='checkbox'][disabled] {
+  opacity: .4;
+}
+.item.calculadoras.sobreCuida .checkbox label small {
+  white-space: pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.sobreCuida .checkbox label small:before {
+  content: '\A';
+}
+.item.calculadoras.sobreCuida .titulo-calc {
+  color: #333 ;
+}
+.item.calculadoras.sobreCuida .panel-body {
+  /*padding: 0;*/
+}
+.item.calculadoras.sobreCuida .panel {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.item.calculadoras.sobreCuida .titulo {
+  color: #333 ;
+}
+.item.calculadoras.sobreCuida .gravidade {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.item.calculadoras.sobreCuida .resultado {
+  padding: 40px;
+}

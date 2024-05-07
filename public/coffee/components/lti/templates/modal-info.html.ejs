@@ -1,0 +1,46 @@
+<%
+var dic = { "instructor": "Instrutor" },
+_i18n = function(key) { return dic[key.toLowerCase()]; },
+fullName = lti.lis_person_name_full,
+email = lti.lis_person_contact_email_primary,
+origin = lti.tool_consumer_instance_guid,
+papel = _i18n(lti.roles[0]);
+%>
+<style type="text/css">
+.user-big-icon::before{
+font-size: 3em;
+}
+.user-big-icon{
+line-height: 5em;
+margin-right: 15px;
+}
+</style>
+<div class="bbm-modal__topbar container-static">
+    <h3 class="bbm-modal__title"><%=lti.resource_link_title%><br><small>via <%=lti.tool_consumer_instance_name%></small></h3>
+</div>
+<div class="bbm-modal__section row">
+    <div class="row">
+
+        <div class="col-sm-7">
+            <div class="">
+                <i class="mdi mdi-account pull-left mdi-48"></i> <span class="v-mid"><%=fullName%></span>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="">
+                <i class="mdi mdi-clipboard-account mdi-36 v-mid"></i><span><%=papel%></span><br><span class="h6"><%=origin%></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Acessando o Recurso Educadional Aberto da UFPEL</p>
+            <span><%=modulo.name%></span>
+            <span><%=lti.tool_consumer_instance_name%> [<%=lti.tool_consumer_info_product_family_code%>] ()</span>
+            <span><%=lti.context_title%></span>
+        </div>
+    </div>
+</div>
+<div class="bbm-modal__bottombar">
+    <a href="#" class="bbm-button close-modal">Ok</a>
+</div>

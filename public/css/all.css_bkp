@@ -1,0 +1,1027 @@
+@import "./mdi-fix.css";
+@import "./screen.css";
+@import "./intro.css";
+
+.item.caso .panel-default {
+  padding-top: 50px;
+}
+.item.caso .caso-itemView {
+  margin-top: 20px;
+}
+.item.caso .badge.quest {
+  background: #f1f1f1;
+  border: 1px solid #555;
+  font-size: 11px;
+  border-radius: 11px;
+  color: #222;
+  padding: 3px 5px;
+  font-weight: normal;
+}
+.item.caso .badge.quest.lista {
+  border-radius: 0px;
+  border: none;
+  background-color: #e9e9e9;
+  box-shadow: 0 1px #888;
+}
+.item.caso .badge.quest.lista:first-child {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+.item.caso .badge.quest.lista:last-child {
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+.item.caso .badge.quest.corrigido {
+  border: none;
+  background: #196090;
+  color: #000;
+}
+.item.caso .badge.quest.corrigido.errado {
+  box-shadow: 0 1px #c90b00;
+  background-color: #ff3b30;
+}
+.item.caso .badge.quest.corrigido.correto {
+  box-shadow: 0 1px #219e37;
+  background-color: #4cd964;
+}
+.item.caso .badge.quest.corrigido.meio {
+  box-shadow: 0 1px #997a00;
+  background-color: #ffcc00;
+}
+.item.caso .medicina {
+  background-color: #27AE60;
+}
+.item.caso .enfermagem {
+  background-color: #3498DB;
+}
+.item.caso .odontologia {
+  background-color: #C0392B;
+}
+.item.caso .caso-lista-item {
+  padding: 10px;
+  background: #f3f3f3;
+  margin: 12px;
+  min-height: 115px;
+  position: relative;
+}
+.item.caso .caso-lista-item a {
+  font-size: 18px;
+  line-height: 18px;
+}
+.item.caso .caso-lista-item .questoes {
+  position: absolute;
+  bottom: 9px;
+}
+.item.caso .caso-lista-item .badge-nucleo {
+  font-size: 21px;
+  padding: 0 5px;
+  font-weight: 600;
+  color: #ededed;
+  display: inline-block;
+  height: 32px;
+  margin-right: 5px;
+  top: -4px;
+  position: relative;
+  left: 10px;
+  float: right;
+  min-width: 29px;
+  text-align: center;
+}
+.caso-main {
+  padding: 0px 30px 180px 30px;
+  overflow-y: scroll;
+}
+.caso-main .resposta p {
+  font-size: 18px;
+}
+.caso-main #estadoResposta {
+  padding: 20px;
+  background-color: #ECF0F1;
+  margin: 20px 0;
+}
+.caso-main #estadoResposta .mensagem {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.caso-main #estadoResposta .row .btn-info {
+  margin-left: 20px;
+}
+.caso-main .checkbox input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: -9px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  float: left;
+}
+.caso-main .badge.esc-multipla {
+  background: #3498db;  /*color: hsl(204, 70%, 15%);*/
+  float: right;
+}
+.caso-main .badge.esc-simples {
+  background: #53d76a;  /*color: hsl(130, 62%, 15%);*/
+  float: right;
+}
+.caso-main .caso-rodape {
+  color: #f7f7f7;
+  background-color: #f5821f;
+}
+.caso-main .caso-rodape .titulo {
+  font-size: 30px;
+  margin-top: 22px;
+}
+.caso-main .caso-rodape .badge-box .badge-nucleo-pq {
+  font-size: 13px;  /* float: left; */
+  color: #f7f7f7;
+  line-height: 25px;
+}
+.caso-main .caso-rodape .navbar-collapse.collapse {
+  height: 75px !important;
+}
+.caso-main .caso-rodape .nav.navbar-nav.navbar-right {
+  margin-right: 0;
+}
+.caso-main .caso-rodape .navbar-header h4.tit-questoes {
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: 24px;
+  position: relative;
+  top: -5px;
+  left: 2px;
+}
+.caso-main .caso-rodape li.navbar-brand {
+  height: 20px;
+  line-height: 5px;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left {
+  display: inline-block;
+  float: none;
+  vertical-align: -19px;
+  margin-left: -71px;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.score {
+  margin-right: -100%;
+  margin-left: 20px;
+  font-size: 25px;
+  margin-top: 36px;
+  border-radius: 6px;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.score .tit-conceito {
+  font-size: 10px;
+  margin-top: -3px;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.score .conceito {
+  margin-top: -7px;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest {
+  cursor: pointer;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge {
+  background: #f1f1f1;
+  font-size: 20px;
+  color: #222;
+  padding: 10px 14px;
+  border-radius: 0px;
+  border: none;
+  background-color: #e9e9e9;
+  box-shadow: 0 1px #888;
+  opacity: .8;
+  font-weight: normal;
+  border-left: 1px solid #cfcfcf;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge:first-child {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-left: none;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge:last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge.corrigido {
+  border: none;
+  background: #196090;
+  color: #f1f1f1;
+  font-weight: 400;
+  opacity: 1;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge.corrigido:hover {
+  border: none;
+  background: #196090;
+  color: #f1f1f1;
+  font-weight: 400;
+  opacity: 0.3;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge.corrigido.errado {
+  box-shadow: 0 1px #c90b00;
+  background-color: #ff3b30;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge.corrigido.correto {
+  box-shadow: 0 1px #219e37;
+  background-color: #4cd964;
+}
+.caso-main .caso-rodape .box-nucleo-quests-left li.quest.badge.corrigido.meio {
+  box-shadow: 0 1px #997a00;
+  background-color: #ffcc00;
+}
+.caso-main .caso-rodape .badge-nucleo-pq {
+  font-size: 30px;
+  padding: 22px 17px;
+  font-weight: bold;
+  color: #ededed;
+  display: inline-block;
+  height: 76px;
+  margin-top: -1px;
+}
+.caso-main ol.referencia li {
+  margin-top: 10px;
+}
+.caso-main .checkbox input[type="checkbox"]:checked {
+  box-shadow: inset 0px 0px 0px 20px #3498DB;
+}
+.caso-main .container .jumbotron {
+
+  /*padding-top: 10px;*/
+
+  border-radius: 0;
+}
+.caso-main .slide .form-group {
+  margin-bottom: 0;
+}
+.caso-main form, .caso-main .form {
+  margin: 0;
+  padding: 0;
+}
+.caso-main .well {
+  margin-left: 0;
+  margin-right: 0;
+}
+.caso-main .option-space {
+  margin: 14px;
+}
+.caso-main .slide {
+  padding: 20px 30px 20px;
+  margin-top: 20px;
+  background: #f7f7f7;
+}
+.caso-main .slide .alert > .container-fluid {
+  padding-right: 0;
+  padding-left: 6px;
+}
+.caso-main .fenotipo {
+  background-image: url(/img/fenoSprite.png);
+  background-repeat: no-repeat;
+  width: 130px;
+  height: 420px;
+  display: inline-block;
+  vertical-align: top;
+}
+.caso-main .slide h3 {
+  color: #34495E;
+  padding: 0px;
+  font-size: 25px;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.caso-main .slide h4 {
+  color: #2980B9;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.caso-main .resposta h2 {
+  padding: 25px 0 10px 0px;
+  font-size: 36px;
+}
+.caso-main .resposta i.glyphicons {
+  font-size: 60px;
+  opacity: .4;
+}
+.caso-main .slide.slide-questaoSimples, .caso-main .slide.slide-questaoMulti {
+  padding: 10px 30px 30px 30px;
+  background: blanchedalmond;
+  margin-top: 20px;
+}
+.caso-main .slide.slide-questaoSimples .checkbox, .caso-main .slide.slide-questaoMulti .checkbox {
+  margin-bottom: 1.8em;
+}
+.caso-main .slide.slide-questaoSimples .radio, .caso-main .slide.slide-questaoMulti .radio {
+  margin-bottom: 1.8em;
+}
+.caso-main .slide .questao h4 {
+  color: #34495E;
+  font-weight: 300;
+}
+.caso-main .slide .questao h3 {
+  color: #2C3E50;
+  font-weight: bold;
+}
+.caso-main .iconeCorrige {
+  opacity: .4;
+  vertical-align: middle;
+}
+.caso-main .iconeCorrige:before {
+  font-size: 43px;
+}
+.caso-main .slide p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.caso-main h2.acerto {
+  display: inline-block;
+  margin: 0;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.caso-main h2.porcentagem {
+  display: inline-block;
+  margin: 0;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.caso-main h2.porcentagem span {
+  vertical-align: middle;
+  font-size: 38px;
+  color: white;
+}
+.caso-main h2.porcentagem small {
+  vertical-align: middle;
+  color: #f1f1f1;
+}
+.caso-main .slide .questao h4 .badge {
+  vertical-align: 4px;
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: 300;
+  text-shadow: none;
+  background-color: #95A5A6;
+}
+.caso-main section.slide {
+
+  /*box-shadow: 0 1px 12px -4px #2C3E50;
+        background-color: #fff;*/
+}
+.caso-main .introbox-container {
+  position: relative;
+  background-color: #ECF0F1;
+  margin: 0;
+}
+@media (min-width:768px) {
+  .caso-main .introbox-container {
+    padding: 40px;
+  }
+}
+@media (max-width:768px) {
+  .caso-main .introbox-container {
+    padding: 20px;
+  }
+}
+.caso-main .introbox-container .listaPess {
+  margin-top: 10px;
+}
+.caso-main .introbox-container .listaPess strong {
+  margin-right: 10px;
+  color: #34495E;
+}
+.caso-main .introbox-container .listaPess li {
+  margin: 0 5px;
+}
+.caso-main .introbox-container h1 {
+  margin-bottom: 10px;
+  margin-top: 17px;
+  font-size: 39px;
+}
+.caso-main .introbox-container h1 .badge-nucleo:last-child {
+  margin-left: 10px;
+}
+.caso-main .introbox-container .dataPubTop {
+  vertical-align: 7px;
+  color: #34495E;
+}
+.caso-main .introbox-container .badgeContainer {
+  text-align: left;
+}
+.caso-main .introbox-container .badge-nucleo {
+  font-size: 20px;
+  padding: 10px 16px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #ededed;
+  display: inline-block;
+  vertical-align: 5px;
+  float: right;
+}
+.caso-main .slide .opcoes {
+  margin-top: 15px;
+}
+.caso-main .navbar-header .nav-brand {
+  color: #ECF0F1;
+}
+.caso-main .navbar-header .badge-nucleo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -1px;
+}
+.caso-main .navbar-header .badge-nucleo.affix-top {
+  opacity: 0;
+}
+.caso-main .navbar-header .badge-nucleo.affix {
+  opacity: 1;
+}
+.caso-main .titApp.affix {
+  opacity: 0;
+}
+.caso-main .titApp.affix-top {
+  opacity: 1;
+  margin-left: 0;
+  color: #ECF0F1;
+}
+.caso-main .titApp.affix-top:hover {
+  color: #BDC3C7;
+}
+.caso-main .titCaso {
+  position: absolute;
+  left: 90px;
+  color: #ECF0F1;
+}
+.caso-main .titCaso.affix {
+  opacity: 1;
+  color: #ECF0F1;
+}
+.caso-main .titCaso.affix-top {
+  opacity: 0;
+  color: #ECF0F1;
+}
+.caso-main section:not([style*="display:none"]):last-child {
+  box-shadow: none;
+}
+.caso-main .medicina {
+  background-color: #27AE60;
+}
+.caso-main .enfermagem {
+  background-color: #3498DB;
+}
+.caso-main .odontologia {
+  background-color: #C0392B;
+}
+.caso-main .fenoBebe {
+  background-position: -370px 0;
+}
+.caso-main .fenoCrianca {
+  background-position: -114px 0;
+  height: 320px;
+}
+.caso-main .fenoMulher {
+  background-position: 0;
+}
+.caso-main .container.caso main section {
+  margin-top: 20px;
+}
+.caso-main label.radio.opcao {
+  line-height: 32px;
+  font-size: 18px;
+  padding-bottom: 9px;
+  font-weight: normal;
+}
+.caso-main label.radio.opcao .icons {
+  line-height: 43px;
+  vertical-align: 2px;
+}
+.caso-main .radio label.opcao, .caso-main .checkbox label.opcao {
+  font-size: 1.5rem;
+  line-height: 2.7rem;
+}
+.caso-main label.radio.opcao input {
+  margin-right: 20px;
+}
+.caso-main .alert {
+  border-radius: 0;
+  margin-top: 15px;
+}
+.caso-main .navbar.navbar-fixed-top {
+  height: 73px;
+  border-radius: 0;
+}
+.caso-main a:focus {
+  color: #337ab7;
+}
+.caso-main .resposta.well {
+  border-radius: 4px;
+  background: #f7f7f7;
+  color: #333;
+  font-size: 16px;
+}
+.caso-main .resposta {
+  padding: 20px;
+  background: #f1f1f1;
+}
+.caso-main label.checkbox {
+  line-height: 34px;
+  font-size: 18px;
+  padding-bottom: 9px;
+  font-weight: normal;
+}
+.caso-main label.checkbox .icons {
+  line-height: 43px;
+  vertical-align: 2px;
+}
+.caso-main .paciente {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.caso-main .paciente h1 {
+  margin: 0;
+}
+.caso-main .nucleoTexto {
+  font-size: 16px;
+  color: #34495E;
+}
+.caso-main .pacienteQueixa {
+  font-size: 26px;
+  font-weight: bold;
+}
+.caso-main .iconeSexoPaciente {
+  margin-top: 40px;
+}
+.caso-main .iconeSexoPaciente:before {
+  font-size: 52px;
+}
+.caso-main .pacienteInfoBlock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 25px;
+}
+.caso-main .pacienteInfoBlock h1 {
+  font-size: 60px;
+}
+.caso-main .textoIdadePaciente {
+  font-size: 25px;
+}
+.caso-main .iconeSexoPaciente.masculino:before {
+  color: #3498DB;
+}
+.caso-main .iconeSexoPaciente.feminino:before {
+  color: #E74C3C;
+}
+.caso-main .autoresTop {
+  margin-top: 30px;
+  display: block;
+  font-size: 13px;
+}
+.caso-main .fadded-off {
+  opacity: 0;
+}
+.caso-main .modal-open, .caso-main .modal-open .navbar-fixed-top {
+  margin-right: 0 !important;
+}
+.caso-main .slide-saibaMais {
+  background: #f1f1f1;
+}
+.caso-main .btn.responder {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+}
+.caso-main section.slide h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 0;
+  margin-left: 0px;
+}
+.caso-main .inImgSexoIdadeBox {
+  height: 27px;
+  margin-top: 48px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.caso-main .inImgSexoIdadeBox.m {
+  background: -webkit-linear-gradient(top, rgba(155, 185, 232, 0) 0%, rgba(158, 221, 250, 0.4) 100%);
+  background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(158, 221, 250, 0.4) 100%);
+}
+.caso-main .inImgSexoIdadeBox.f {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(250, 158, 206, 0.4) 100%);
+  background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, rgba(250, 158, 206, 0.4) 100%);
+}
+.caso-main .paciente .dadosPaciente {
+  margin-left: 15px;
+}
+.caso-main .pacienteImagem {
+  background: url(/img/paciente.png);
+  border: 2px solid #737373;
+  border-radius: 4px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: #222;
+  font-weight: 600;
+  display: block;
+  height: 108px;
+  width: 140px;
+  margin-left: 15px;
+}
+.caso-main .pacienteImagem .iniciais {
+  font-size: 28px;
+  margin: 0px 3px 0 5px;
+}
+.caso-main .pacienteImagem .idade {
+  font-size: 22px;
+  width: 100px;
+  text-align: right;
+  display: inline-block;
+  margin-top: -45px;
+}
+.caso-main .pacienteImagem .sexo {
+  font-size: 22px;
+  margin-left: 6px;
+  display: inline-block;
+  margin-top: -8px;
+}
+.caso-main .slide-bibliografia em {
+  word-break: break-all;
+}
+.caso-main .paciente {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: #222;
+  font-weight: 600;
+  display: block;
+  width: 181px;
+  vertical-align: top;
+  padding: 15px 10px 10px;
+}
+.selecao-main .panel-default {
+  padding-top: 50px;
+}
+.selecao-main .caso-itemView {
+  margin-top: 20px;
+}
+.selecao-main .badge.quest {
+  background: #f1f1f1;
+  border: 1px solid #555;
+  font-size: 11px;
+  border-radius: 11px;
+  color: #222;
+  padding: 3px 5px;
+  font-weight: normal;
+}
+.selecao-main .badge.quest.lista {
+  border-radius: 0px;
+  border: none;
+  background-color: #e9e9e9;
+  box-shadow: 0 1px #888;
+}
+.selecao-main .badge.quest.lista:first-child {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+.selecao-main .badge.quest.lista:last-child {
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+.selecao-main .badge.quest.corrigido {
+  border: none;
+  background: #196090;
+  color: #000;
+}
+.selecao-main .badge.quest.corrigido.errado {
+  box-shadow: 0 1px #c90b00;
+  background-color: #ff3b30;
+}
+.selecao-main .badge.quest.corrigido.correto {
+  box-shadow: 0 1px #219e37;
+  background-color: #4cd964;
+}
+.selecao-main .badge.quest.corrigido.meio {
+  box-shadow: 0 1px #997a00;
+  background-color: #ffcc00;
+}
+.selecao-main .caso-lista-item {
+  cursor: pointer;
+}
+.selecao-main .caso-lista-item h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+.selecao-main .casos-lista {
+  list-style: none;
+}
+.selecao-main .medicina {
+  background-color: #27AE60;
+}
+.selecao-main .enfermagem {
+  background-color: #3498DB;
+}
+.selecao-main .odontologia {
+  background-color: #C0392B;
+}
+.selecao-main .caso-lista-item {
+  padding: 10px;
+  background: #f3f3f3;
+  padding-bottom: 20px;
+  margin: 12px;
+  min-height: 80px;
+  position: relative;
+}
+.selecao-main .caso-lista-item a {
+  font-size: 18px;
+  line-height: 18px;
+}
+.selecao-main .caso-lista-item .questoes {
+  position: absolute;
+  bottom: 9px;
+}
+.selecao-main .caso-lista-item .badge-nucleo {
+  font-size: 21px;
+  padding: 0px 5px;
+  font-weight: 600;
+  color: #ededed;
+  display: inline-block;
+  vertical-align: -1px;
+  height: 31px;
+  margin-right: 5px;
+  top: -10px;
+  position: relative;
+  left: 15px;
+  float: right;
+}
+.impressos-container {
+  font-size: 1.3em;
+}
+.impressos-container .doc-item:before {
+  color: dimgrey;
+}
+.popover-title {
+  padding: 12px 12px 2px;
+  margin: 0;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+}
+.item.quedas {
+
+  /*piscar*/
+}
+.item.quedas .ambiente {
+  padding: 0;
+}
+.item.quedas .full-msg, .item.quedas .concluiu-msg {
+  color: #fefefe;
+  z-index: 90;
+  width: 100%;
+  height: 100%;
+  background: rgba(67, 71, 185, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 150px;
+  font-size: 3.2em;
+  text-shadow: 0px 0px 53px black;
+}
+@media (max-width:992px) {
+  .item.quedas .full-msg, .item.quedas .concluiu-msg {
+    padding: 100px;
+    font-size: 1.8em;
+  }
+}
+@media (max-width:768px) {
+  .item.quedas .full-msg, .item.quedas .concluiu-msg {
+    padding: 60px;
+    font-size: 1.1em;
+  }
+}
+.item.quedas .contador {
+  padding: 6px 12px;
+  background-color: #f3f3f3;
+  color: #5264AE;
+  bottom: -52px;
+  position: relative;
+  z-index: 9;
+  width: 70px;
+}
+.item.quedas .contador .feitos {
+  vertical-align: 10px;
+  font-weight: 600;
+}
+.item.quedas .contador .barrinha {
+  font-weight: 200;
+}
+.item.quedas .contador .total {
+  vertical-align: -10px;
+  font-weight: 600;
+}
+.item.quedas h3 {
+  margin-top: 20px;
+}
+.item.quedas h3 small {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  color: #808080;
+}
+.item.quedas .orientacao {
+  display: none;
+  background: #ededed;
+  font-weight: 400;
+  padding-left: 30px;
+}
+.item.quedas .orientacao h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.item.quedas div.descQueda {
+  color: #808080;
+  margin-bottom: -40px;
+  line-height: 1.4;
+  letter-spacing: -0.1px;
+}
+.item.quedas .fundo {
+  width: 100%;
+}
+.item.quedas svg {
+  width: 100%;
+  height: 100%;
+}
+.item.quedas .orientacao {
+  display: block;
+}
+.item.quedas .slices {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+}
+.item.quedas .image-pile {
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+.item.quedas .image-pile img {
+  position: absolute;
+}
+.item.quedas .image-pile .prev-ori, .item.quedas .image-pile .prox-ori {
+  position: absolute;
+  top: calc(50% - 20px);
+  padding: 9px 16px;
+  background: #eee;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  z-index: 999;
+  box-shadow: 1px 1px #444;
+}
+.item.quedas .image-pile .prev-ori {
+  left: -20px;
+}
+.item.quedas .image-pile .prox-ori {
+  right: -20px;
+}
+.item.quedas .image-pile .fundo {
+  position: relative;
+  max-width: 100%;
+}
+.item.quedas .pisca {
+  -webkit-animation: piscar 1s ease-in -1s infinite alternate forwards;
+  animation: piscar 1s ease-in -1s infinite alternate forwards;
+}
+.item.quedas .pisca.alt-1 {
+  -webkit-animation: alternareste 1s ease-in-out -1s infinite alternate-reverse forwards;
+  animation: alternareste 1s ease-in-out -1s infinite alternate-reverse forwards;
+}
+.item.quedas .pisca.alt-0 {
+  -webkit-animation: alternaraquele 1s ease-in-out -1s infinite alternate-reverse forwards;
+  animation: alternaraquele 1s ease-in-out -1s infinite alternate-reverse forwards;
+}
+@-webkit-keyframes alternareste {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes alternareste {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes alternaraquele {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes alternaraquele {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+.item.quedas .sombra {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(-20%);
+  display: none;
+}
+.item.quedas .lista-outras-quesdas {
+  margin-top: 12px;
+}
+.item.quedas .descricao-quedas {
+  color: #808080;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.1px;
+}
+.item.quedas .lista-quedas {
+  border: 15px #eee solid;
+  margin: 0;
+  padding: 0;
+}
+.item.quedas .queda-item {
+
+  /* margin-top: 10px; */
+
+  /* margin-left: -20px; */
+
+  /* margin-right: 20px; */
+
+  padding: 10px 13px;
+  height: 290px;  /* background-position-x: -200px; */
+  border: 15px #eee solid;
+  position: relative;
+  cursor: pointer;
+}
+.item.quedas .queda-item:hover {
+  filter: grayscale;
+  filter: brightness(105%);
+  -webkit-filter: grayscale;
+  -webkit-filter: brightness(105%);
+}
+.item.quedas .uma-queda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  padding-top: 120px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.7, #ffffff));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0) 0%, #ffffff 70%);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0) 0%, #ffffff 70%);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 0%, #ffffff 70%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, #ffffff 70%);
+}
+.item.quedas .uma-queda .descricao {
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.1px;
+}
+.item.quedas span.nome {
+  display: block;
+  font-size: 30px;
+  top: 1px;
+  position: relative;
+  color: #494949;
+  text-shadow: 2px 2px 2px whitesmoke;
+}
+.item.quedas span.nome i.mdi {
+  vertical-align: 0px;
+  zoom: 1.5;
+}
+.popover-content {
+  font-size: 14px;
+}

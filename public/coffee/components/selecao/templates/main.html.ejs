@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12 info">
+    <h1><%-App.selecao.titulo%></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 caixa-casos">
+        <ol class="listaCasos list-group">
+        <% App.casos.forEach(function(caso){
+            var pro = [/enf/img, /med/img, /odo/img].map(function(regex){
+                var r = regex.test(caso.profissional);
+                return r;
+            });
+        %>
+        <style type="text/css">
+            li.caso.list-group-item{
+                padding: 10px 0;
+            }
+        </style>
+            <li class="caso list-group-item">
+                    <a href="#comp/caso/<%-caso._id%>" class="item-caso">
+                    <small>
+                        <%
+                        var ref = [['info','E'], ['success','M'], ['danger','O']];
+                        for( i in pro ){
+                            if(pro[i]){
+                            %>
+                            <span class="label label-<%-ref[i][0]%>"><%-ref[i][1]%></span>
+                            <%}
+                        }
+                    %>
+                    </small><%-caso.titulo%></a>
+            </li>
+        <% }); %>
+        </ol>
+    </div>
+</div>

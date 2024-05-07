@@ -1,0 +1,245 @@
+<style>
+    .gray-border { border: 1px solid #646464 !important; height: 30px !important }
+    .hcenter { display: flex; flex-flow: row wrap; justify-content: center }
+    .vcenter { display: flex; align-items: center }
+    .title { font-size: 28px; color: #646464 }
+    .sub-title { font-size: 22px; color: #646464 }
+
+    label { font-size: 16px; color: #646464 !important; text-transform: none !important }
+    .oferta { line-height: 30px; margin: 3px 0px 0px 0px; padding-right: 0; padding-left: 0.5em }
+
+    input[type=date] { height: 38px !important }
+
+    .header-grafico { background-color: #ecf0ff !important; color: #0f464d !important }
+
+    .btn-group { margin: 0px }
+    .btn-primary { border: 1px solid #646464; background-color: rgba(0,0,0,0) !important; font-weight: bold !important; }
+    .btn { font-size: 16px; font-weight: normal; height: 39px; padding: 0; display: flex; align-items: center; justify-content: center }
+    .btn-buscar { background-color: #646464 !important; color: #fff !important; font-weight: bold !important; }
+
+    .div-select-oferta { padding-left: 0; padding-right: 0.5em }
+    select {
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        appearance:none;
+        border: none !important;
+
+        text-align-last: right;
+        padding-right: 1em !important;
+        background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat !important;
+        background-position: calc(100%) center !important;
+
+        font-size: 16px !important;
+    }
+    option { direction: rtl }
+
+    .pl-0 { padding-left: 0 !important }
+    .px-0 { padding-left: 0 !important; padding-right: 0 !important}
+    .pr-0 { padding-right: 0 !important }
+</style>
+
+<div class="container no-pad">
+    <div class="row" style="margin-top: 75px">
+        <div class="col-xs-12 container-titulo">
+            <div class="title text-center" style="">
+                Perfil dos estudantes do Curso de Investigação de Surtos e Epidemias
+            </div>
+            <div class="sub-title text-center" style="">
+                Departamento de Medicina Social - Universidade Federal de Pelotas
+            </div>
+        </div>
+
+        <div class="row hcenter col-xs-12" style="margin-top: 100px">
+            <div class="col-xs-6 form-group gray-border" style="margin-bottom: 30px; padding: 0">
+                <label class="col-xs-4 control-label oferta" for="oferta">Oferta</label>
+                <div class="col-xs-8 div-select-oferta">
+                    <select class="form-control" name="oferta" id="oferta">
+                        <option value="">Todas as ofertas</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="col-xs-6 form-group pl-0">
+                <div class="col-xs-5 pr-0 vcenter"><label>Periodo de inscrição:</label></label></div>
+                <div class="col-xs-7 px-0 vcenter">
+                    <div class="col-xs-2 px-0 hcenter"><label for="inicio_inscricao">de</label></div>
+                    <div class="col-xs-4 px-0 gray-border" style="height: 38px !important"><input type='date' class="form-control" name="inicio_inscricao" id="inicio_inscricao"></div>
+                    <div class="col-xs-2 px-0 hcenter"><label for="fim_inscricao">a</label></div>
+                    <div class="col-xs-4 px-0 gray-border" style="height: 38px !important"><input type='date' class="form-control" name="fim_inscricao" id="fim_inscricao"></div>
+                </div>
+            </div>
+            <div class="col-xs-6 form-group">
+                <div class="col-xs-12 px-0 btn-group btn-toggle" data-toggle="buttons">
+                    <label class="col-xs-6 btn btn-primary active"><input type="radio" name="filtro_inscritos" value="todos" checked style="display: none">Todos Inscritos</label>
+                    <label class="col-xs-6 btn"><input type="radio" name="filtro_inscritos" value="certificados" style="display: none">Somente certificados</label>
+                </div>
+            </div>
+            <div class="col-xs-6 form-group pl-0">
+                <div class="col-xs-5 pr-0 vcenter"><label>Periodo de certificação:</label></div>
+                <div class="col-xs-7 px-0 vcenter">
+                    <div class="col-xs-2 px-0 hcenter"><label for="inicio_certificacao">de</label></div>
+                    <div class="col-xs-4 px-0 gray-border" style="height: 38px !important"><input type='date' class="form-control" name="inicio_certificacao" id="inicio_certificacao"></div>
+                    <div class="col-xs-2 px-0 hcenter"><label for="fim_certificacao">a</label></div>
+                    <div class="col-xs-4 px-0 gray-border" style="height: 38px !important"><input type='date' class="form-control" name="fim_certificacao" id="fim_certificacao"></div>
+                </div>
+            </div>
+            <div class="col-xs-6 form-group">
+                <div class="col-xs-12 px-0 btn-group btn-toggle" data-toggle="buttons">
+                    <label class="col-xs-4 btn btn-primary active"><input type="radio" name="filtro_profissao" value="todos" checked style="display: none">Todos</label>
+                    <label class="col-xs-4 btn"><input type="radio" name="filtro_profissao" value="estudante" style="display: none">Somente estudante</label>
+                    <label class="col-xs-4 btn"><input type="radio" name="filtro_profissao" value="trabalhador" style="display: none">Somente trabalhador</label>
+                </div>
+            </div>
+        </div>
+        <!--
+            <div class="row hcenter col-xs-12" style="margin-top: 1em">
+                <div class="col-xs-6 form-group pl-0">
+                    <div class="col-xs-5 pr-0 vcenter"><label>Porcentagem de conclusão:</label></label></div>
+                    <div class="col-xs-7 px-0 vcenter">
+                        <div class="col-xs-2 px-0 hcenter"><label for="percent_min">de</label></div>
+                        <div class="col-xs-4 px-0 gray-border" style="height: 38px !important"><input type='number' min="0" max="100" class="form-control" name="percent_min" id="percent_min"></div>
+                        <div class="col-xs-2 px-0 hcenter"><label for="percent_max">a</label></div>
+                        <div class="col-xs-4 px-0 gray-border" style="height: 38px !important"><input type='number' min="0" max="100" class="form-control" name="percent_max" id="percent_max"></div>
+                    </div>
+                </div>
+            </div>
+        -->
+
+        <div class="col-xs-12" style="display: flex; flex-flow: row wrap; justify-content: center">
+            <div class="col-xs-6 form-group">
+                <label class="col-xs-12 btn btn-buscar" id="buscar">Buscar</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Gráficos</div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-numero-inscritos-title">Número de estudantes certificados em relação ao número de inscritos</div>
+                <div class="panel-body"><div id="grafico-numero-inscritos"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-distribuicao-etaria-title">Distribuição etária em anos</div>
+                <div class="panel-body"><div id="grafico-distribuicao-etaria"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-nucleo-profissional-title">Núcleo profissional</div>
+                <div class="panel-body"><div id="grafico-nucleo-profissional"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-uf-title">Estado de residência</div>
+                <div class="panel-body"><div id="grafico-uf"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-raca-cor-title">Raça/Cor</div>
+                <div class="panel-body"><div id="grafico-raca-cor"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-genero-title">Gênero</div>
+                <div class="panel-body"><div id="grafico-genero"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-profissao-title">Vínculo</div>
+                <div class="panel-body"><div id="grafico-profissao"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-tempo-setor-saude-title">Tempo que os trabalhadores atuam no setor de saúde em anos</div>
+                <div class="panel-body"><div id="grafico-tempo-setor-saude"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-qual-profissao-title">Profissão ou o que está estudando</div>
+                <div class="panel-body"><div id="grafico-qual-profissao"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-local-de-atuacao-title">Local de atuação</div>
+                <div class="panel-body"><div id="grafico-local-de-atuacao"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-atuou-vigilancia-sus-title">Atua ou atuou na vigilância em saúde</div>
+                <div class="panel-body"><div id="grafico-atuou-vigilancia-sus"></div></div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading header-grafico" id="grafico-anos-vigilancia-sus-title">Tempo que atua ou atuou na vigilância em saúde</div>
+                <div class="panel-body"><div id="grafico-anos-vigilancia-sus"></div></div>
+            </div>
+
+            <!--
+                <div class="panel panel-default">
+                    <div class="panel-heading header-grafico" id="grafico-percent-conclusao-title">Porcentagem de conclusão do curso</div>
+                    <div class="panel-body"><div id="grafico-percent-conclusao"></div></div>
+                </div>
+            -->
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Tabela</div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">n</th>
+                        <th scope="col">%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Número de inscritos</th>
+                        <td id="td-ninscritos"></td>
+                        <td id="td-prcntinscritos"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Profissionais de enfermagem</th>
+                        <td id="td-nprofenfermagem"></td>
+                        <td id="td-prcntprofenfermagem"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trabalha ou trabalhou na vigilância em saúde</th>
+                        <td id="td-ntraboutrabvigsaude"></td>
+                        <td id="td-prcnttraboutrabvigsaude"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trabalha atualmente na vigilância em saúde</th>
+                        <td id="td-ntrabvigsaude"></td>
+                        <td id="td-prcnttrabvigsaude"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Trabalhou no passado na vigilância em saúde</th>
+                        <td id="td-ntrabalhouvigsaude"></td>
+                        <td id="td-prcnttrabalhouvigsaude"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Agentes comunitários da área de saúde</th>
+                        <td id="td-nagentecomunitario"></td>
+                        <td id="td-prcntagentecomunitario"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Agentes comunitários de endemias</th>
+                        <td id="td-nagentecomunitarioendemia"></td>
+                        <td id="td-prcntagentecomunitarioendemia"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Certificados já emitidos</th>
+                        <td id="td-ncert"></td>
+                        <td id="td-prcntcert"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

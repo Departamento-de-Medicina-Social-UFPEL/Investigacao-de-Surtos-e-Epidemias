@@ -1,0 +1,53 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse-top">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)"><%=modulo.name%></a>
+    </div>
+    <div class="navbar-collapse collapse navbar-inverse-collapse navbar-inverse-collapse-top    ">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Componentes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <%
+                        modulo.components.forEach(function(comp) {
+                            if(comp.hidemenu) return;
+                            %><li><a href="#comp/<%-comp.folder%>"><%-comp.short%></a></li><%
+                        });
+                    %>
+                </ul>
+            </li>
+            <li class="dropdown disabled">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Administração <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="disabled"><a href="javascript:void(0)">Módulos</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">Componentes</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">Recursos</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Acesso Especial</li>
+                    <li class="disabled"><a href="javascript:void(0)">Acessar como outro usuário</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">Link de download do APK para Google Android</a></li>
+                    <li class="dropdown-header">Ferramentas</li>
+                    <li class="disabled"><a href="javascript:void(0)">Bancos de dados salvos</a></li>
+                    <li class="disabled"><a href="javascript:void(0)">Link de download do APK para Google Android</a></li>
+                </ul>
+            </li>
+        </ul>
+<!--         <form class="navbar-form navbar-left">
+            <input type="text" class="form-control col-lg-8" placeholder="Buscar">
+        </form> -->
+        <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="javascript:void(0)">Link</a></li> -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Offline <i class="mdi-file-cloud-off main-net-stats-ico"></i> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0)"><i class="mdi-file-cloud-queue itemIcon"></i> Identifique-se</a></li>
+                    <li class="disabled"><a href="javascript:void(0)"><i class="mdi-file-cloud-upload itemIcon"></i> Sincronizar dados</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,203 @@
+<div class="navbar navbar-fixed-top navbar-inverse" style="<%- modulo.fl_layout_alternativo ? 'min-height: 62px;' : '' %>">
+    <div class="navbar-header">
+    <% if(modulo.customMenu) {
+        var menuTitle = modulo.customMenuTitle || 'Menu';
+        %>
+    <span class='menu-mobile-icon navbar-brand' id='botaoInicial' style='display:none;padding-top: 20px;' onclick='ativaMenu()'>
+          <i class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></i>
+    </span>
+    <%}else{%>
+        <button type="button"  class="navbar-toggle" style="float: left;" data-toggle="collapse" data-target=".navbar-inverse-collapse-top">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    <%}%>
+        <%
+  
+
+        var titulo = modulo.name;
+        if(lti_tc){
+            titulo = lti_tc.resource_link_title
+        }
+        var partes = titulo.split('Módulo de').map(function(a){
+            return a.trim();
+        });
+        if(partes[0].replace(/s/img, '').length == 0){
+            titulo = "<span class='hidden-sm'>Módulo de</span> " + partes[1]
+        }
+        if(modulo.customTitleBrand){
+            %><a class="navbar-brand" href="#"><%-modulo.customTitleBrand %></a><%
+        }
+        else {
+            %><a class="navbar-brand" href="#"><%-titulo%></a><%
+        }%>
+    </div>
+    <div class="navbar-collapse collapse navbar-inverse-collapse navbar-inverse-collapse-top    ">
+    
+        <ul class="nav navbar-nav main-menu">
+            <% var apparentMenu = modulo.components.reduce(function(memo, item){
+
+                if (memo === true) return memo;
+                return !item.hidemenu;
+            }, false);
+            var menuTitle = modulo.menuTitle || 'Conteúdos';
+            if(lti_tc){
+                var l = lti_tc.custom_settings;
+                if(l){
+                    l = JSON.parse(l);
+                    if(l.menuTitle){
+                        menuTitle = l.menuTitle;
+                    }
+                }
+            }
+            if(apparentMenu && modulo.showComponentMenu) { %>
+                <li class="dropdown dropdown-componentes">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><%-menuTitle%> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <%
+                            modulo.components.forEach(function(comp) {
+                                if(comp.hidemenu) return;
+                                %><li><a href="#comp/<%-comp.folder%>"><%-comp.short%></a></li><%
+                            });
+                        %>
+                    </ul>
+                </li>
+            <% }
+            if(modulo.customMenu) {
+                var menuTitle = modulo.customMenuTitle || 'Menu';
+                %>
+                <button type="button" class="navbar-toggle collapsed"  aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <%}else{%>
+                <ul class="nav navbar-nav navbar-right user-menu"> </ul>
+            <%}%>            
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="<%- modulo.fl_layout_alternativo ? 'margin-right: 10rem;' : 'margin-right: 10px;' %> ">
+            <% if(modulo.fl_layout_alternativo) { %>
+                <img src="/static/img/marcas/dms_branco.svg" alt="Logo da Departamento de Medicina Social da UFPEL" style="padding-right: 0px; padding-top: 0px; height: 62px;">
+            <% } else { %>
+                <li class="ufpel logo" style="">
+                    <img src="/static/img/marcas/dms_branco.svg" alt="Logo da Departamento de Medicina Social da UFPEL" style="padding-right: 0px; padding-top: 5px;">
+                </li>
+                <li class="unasus logo" style="padding-right: 0px; max-width: 150px; padding-top: 13px; margin-left: 15px;">
+                    <img src="/static/img/marcas/unasus_branco.svg" alt="Logo da Universidade Aberta do Sistema Único de Saúde">
+                </li>
+            <% } %>
+        </ul>
+
+    </div>
+
+
+</div>
+<% 
+    if(modulo.customMenu) {
+        var menuTitle = modulo.customMenuTitle || 'Menu';
+%>
+    <% include ./customMenu.html.ejs %>
+    <style>
+    #mainStage{
+      overflow: hidden;
+      width: 100%;
+      z-index: 1;
+      height: 100%;
+    }
+  </style>
+    <%}
+    if(modulo.customMenu) {
+    %>
+    <script type="text/ejs" id="user-drop-menu-template">
+        <div class="user-info-block dados-pessoais">
+            <h3 class="titulo-block"><i class="glyphicon glyphicon-user"></i><@- label @> 
+            <i class="mdi drop-icon main-net-stats-ico mdi-<@-statsIco@>" title="Conectado a https://dms.ufpel.edu.br"></i>
+            </h3>
+            <div class="content">
+                <div class="menu-top-right open">
+                    <ul class="menu lista-conteudos" style="list-style: none">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="user-info-block progresso">
+            <h3 class="titulo-block"><i class="glyphicon glyphicon-dashboard"></i><span>Progresso</span></h3>
+            <div class="extra-right"></div>
+            <div class="content ">
+                <span>Você ainda não possui progressos!</span>
+                <span>Que tal fazer um <a href="#menu/caso">caso clínico</a>?</span>
+            </div>
+        </div>
+    </script>
+    <script type="text/ejs" id="item-menu-drop-template">
+        <a class='main-menu-link' href="<@-link@>"><i class="mdi mdi-<@-icone@> itemIcon"></i> <@-texto@></a>
+    </script>
+
+<%}else{%>
+
+    <script type="text/ejs" id="user-drop-menu-template">
+        <a href="javascript:void(0)" class="dropdown-toggle drop-label" data-toggle="dropdown">
+        <@-label@> <i class="mdi mdi-<@-statsIco@> drop-icon main-net-stats-ico"></i> <b class="caret"></b></a>
+        <ul class="dropdown-menu menu"></ul>
+    </script>
+    <script type="text/ejs" id="item-menu-drop-template">
+        <a class='main-menu-link' href="<@-link@>"><i class="mdi mdi-<@-icone@> itemIcon"></i> <@-texto@></a>
+    </script>
+<%}%>
+<script type="text/javascript">
+var ativaMenu = function(){
+  var animando, visivel;
+
+
+  if (typeof $('.lista-conteudos') === 'object') {
+    visivel = $('.lista-conteudos').is(':visible');
+    animando = $('.lista-conteudos').data("animating");
+    if (visivel && !animando) {
+      if ($('.lista-conteudos').hasClass('in')) {
+        $('.lista-conteudos').removeClass('in').addClass('out');
+      } else {
+        $('.lista-conteudos').removeClass('out').addClass('in');
+        $('.userBar-wrap').removeClass('in').addClass('out');
+      }
+    }
+  }
+}
+var ativaMenuUser = function(){
+  var animando, visivel;
+
+
+  if (typeof $('.userBar-wrap') === 'object') {
+    visivel = $('.userBar-wrap').is(':visible');
+    animando = $('.userBar-wrap').data("animating");
+    if (visivel && !animando) {
+      if ($('.userBar-wrap').hasClass('in')) {
+        $('.userBar-wrap').removeClass('in').addClass('out');
+      } else {
+        $('.userBar-wrap').removeClass('out').addClass('in');
+        $('.lista-conteudos').removeClass('in').addClass('out');
+      }
+    }
+  }
+}
+
+var escondeMenus = function(){
+    if (typeof $('.lista-conteudos') === 'object') {
+        var visivel = $('.lista-conteudos').is(':visible');
+        var animando = $('.lista-conteudos').data("animating");
+        if (visivel && !animando) {
+          if ($('.lista-conteudos').hasClass('in'))
+            $('.lista-conteudos').removeClass('in').addClass('out');
+        }
+    }
+    if (typeof $('.userBar-wrap') === 'object') {
+        var visivel2 = $('.userBar-wrap').is(':visible');
+        var animando2 = $('.userBar-wrap').data("animating");
+        if (visivel2 && !animando2) {
+          if ($('.userBar-wrap').hasClass('in'))
+            $('.userBar-wrap').removeClass('in').addClass('out');
+        }
+    }
+}
+</script>

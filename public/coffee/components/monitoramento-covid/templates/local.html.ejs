@@ -1,0 +1,324 @@
+
+<style type='text/css'>
+.legenda-local ul{
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin: 0px 10px 40px 10px;
+}
+ .btn{
+    font-size:1.2rem;
+    padding:6px 20px!important;
+}
+.resultado{
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: white;
+}
+.local-heading{
+    background-color: #CCE1EF!important;
+}
+
+.panel-heading.local-heading-group{
+    background-color: #ebf6fc!important;
+}
+.panel-heading h3{
+    color:#2C5A7A!important;
+    font-weight: 600;
+}
+
+.linha-legenda{
+    border-bottom: 1px solid #ddd;
+     background-color: #eee;
+    display: flex;
+    align-items: center;
+}
+.legenda{
+       /*margin-top:30px; */
+}
+.legenda li{
+    margin:1.2rem!important;
+    padding:2rem!important;
+    background-color: #fff!important;
+    border:none!important;
+    border-radius:4px!important;
+}
+
+.resultados h1,h2,h4{
+    color:#2a78a1!important;
+    font-weight: 600;
+}
+.highcharts-data-table {
+    display:none!important;
+}
+.btn-success{
+    background-color:#69bd76!important;
+}
+.btn-primary{
+    background-color:#337AB7!important;
+}
+.btn-info{
+    background-color:#4bace8!important;
+}
+.btn-save{
+    background-color:#0f9d58!important;
+}
+.btn-danger{
+    background-color:#e56565!important;
+
+}
+.col-sm-12.legenda:before{
+    position: relative;
+    top: -30px;
+    left: 200px;
+    display: inline-block;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #eee ;
+    content: " ";
+}
+
+.col-sm-12.resultado:after{
+    position: absolute;
+    top: 449px;
+    left: 214px;
+    display: inline-block;
+    border-left: 31px solid transparent;
+    border-right: 31px solid transparent;
+    border-bottom: 31px solid #ddd;
+    content: " ";
+}
+.col-sm-6.legenda:before{
+    position: relative;
+    top: 100px;
+    left: -17px;
+    display: inline-block;
+    border-top: 30px solid transparent;
+    border-left: 0 solid #fff;
+    border-right: 30px solid #fff;
+    border-bottom: 30px solid transparent;
+    content: " ";
+    border-left-width: 20px;
+    border-right-width: 0;
+}
+.glyphicon .glyphicon-chevron-up{
+    top:-2px;
+    font-size:8px;
+}
+.glyphicon .glyphicon-chevron-down{
+    top:-2px;
+    font-size:8px;
+}
+.panel-heading{
+    color: #2C5A7A!important;
+    font-weight: 600;
+}
+.btn-default{
+    color:#c9c8c8!important;
+    background-color: #fff!important;
+    border: 1px solid #c9c8c8!important;
+    pointer-events: none!important;
+    
+}
+.btn-navegar{
+    background-color:#2c5a7a!important;
+}
+
+
+.list-group {
+    border-radius: 0;
+}
+.list-group {
+    padding-left: 2rem!important;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px!important;
+}
+</style>
+      <div class='row ' style='margin:2rem'>
+            <div class='col-sm-12'>
+                <h3>Calculadora de Indicadores para Avaliação do Monitoramento dos Contatos de Casos de Covid-19</h3>
+            </div>
+        </div>
+<a href='#comp/monitoramento-covid' class='btn btn-primary btn-navegar'>
+    <i class='glyphicon glyphicon-arrow-left'> Voltar </i>
+</a>
+<div class='panel panel-default'>
+    <div class='panel-heading local-heading'>
+        <h3><%= local %> - <%= municipio %>/<%= uf %> </h3>
+    </div>
+</div>
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        <div class='row'>
+            <div class='col-xs-6'><h3>Períodos em Avaliação <small>(<%= tipo %>)</small></h3></div>
+            <div class='col-xs-6 text-right'>
+                <a href='#comp/monitoramento-covid/local/<%= id%>/amostragem/nova' class='btn btn-primary'>
+                        <i class='glyphicon glyphicon-plus-sign'> Inserir Dados </i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class='panel-body' style='padding:0px'>
+        <style type='text/css'>
+        .amostras li{
+            border-top: 1px solid #ddd!important;
+        }
+
+        </style>
+        <ul class='list-group amostras'>
+            
+        </ul>
+    </div>
+</div>
+<div class='panel panel-default'>
+    <div class='panel-heading '>
+    <div class='row'>
+        <div class='col-sm-6 '>
+        <h3>Evolução Temporal</h3>
+        </div>
+        <div class='col-sm-6 text-right'>
+        <a class='btn  btn-graficos <% if(dados.length == 0){%>btn-default<%}else{%>btn-success<%}%>' style="">
+                <i class='glyphicon glyphicon-print '> Gráficos <i class="glyphicon glyphicon-chevron-up icon-grafico-local"></i></i>
+        </a>
+    </div>
+    </div>
+    </div>
+    <div class='panel-body graficos-locais' style='display:none'>
+        <div class='panel panel-default'>
+            <div class='panel-body' style="padding: 0px 15px;">
+                <div class='row linha-legenda'> 
+                    <style type='text/css'>
+                        #media-contatos .highcharts-color-0 {
+                            fill: #2A78A1!important;
+                        }
+                        #media-contatos .highcharts-color-0 rect{
+                            fill: #2A78A1!important;
+                        }
+                    </style>
+                    <div id='media-contatos' class='resultado col-sm-12'></div>
+                </div>
+                <div class='row linha-legenda'>   
+                    <div class='col-sm-12 legenda'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>Entre 3 a 10 contatos por caso.</li>
+                            <li class='list-group-item'>Busque atingir a meta de 5 contatos por caso.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='panel panel-default'>
+            <div class='panel-heading local-heading-group'>Entre Todos os Contatos
+            </div>
+            <div class='panel-body' style="padding: 0px 15px;">
+                <div class='row linha-legenda'>
+                    <style type='text/css'>
+                        
+                    </style>
+                    <div id='situacao' class='resultado col-sm-12'>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <div class='col-sm-12 legenda'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'><b>Atenção ao quantitativo com situação em andamento!</b></li>
+                            <li class='list-group-item'>Avalie se a estrutura disponível é adequada.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <style type='text/css'>
+                      
+                       
+                    </style>
+                    <div id='relacao' class='resultado col-sm-12'>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <div class='col-sm-12 legenda'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'><b>Atenção ao percentual de contatos extradomiciliares!</b></li>
+                            <li class='list-group-item'>Com a retomada das atividades o percentual de contatos extradomiciliares deve aumentar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='panel panel-default'>
+            <div class='panel-heading local-heading-group'>Entre Contatos Encerrados
+            </div>
+            <div class='panel-body' style="padding: 0px 15px;">
+                <div class='row linha-legenda'>
+                    <style type='text/css'>
+                       
+                    </style>
+                    <div id='motivos-encerramento' class='resultado col-sm-12'>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <div class='col-sm-12 legenda'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'><b>Busque a redução do percentual de monitoramento incompleto!</b></li>
+                            <li class='list-group-item'>Atenção ao percentual de contatos suspeitos e casos confirmados de covid-19!</li>
+                            <li class='list-group-item'> Seu aumento pode indicar recrudescimento da epidemia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='panel panel-default'>
+            <div class='panel-heading local-heading-group'>Entre Contatos Descartados
+            </div>
+            <div class='panel-body' style="padding: 0px 15px;">
+                <div class='row linha-legenda'>
+                    <style type='text/css'>
+
+        
+                    </style>
+                    <div id='motivos-contato-descartado-segundo-dia' class='resultado col-sm-12'>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <div class='col-sm-12 legenda'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>O início precoce do monitoramento permite identificar mais rapidamente contatos suspeitos ou confirmados de covid-19 e realizar a testagem em tempo oportuno.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <style type='text/css'>
+ 
+        
+                    </style>
+                    <div id='motivos-contato-descartado-decimo-quarto-dia' class='resultado col-sm-12'>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <div class='col-sm-12 legenda'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>A comunicação no último dia preconizado indica que o monitoramento foi completado.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                    <style type='text/css'>
+                       
+        
+                    </style>
+                    <div id='vezes-monitoradas' class='resultado col-sm-12'>
+                    </div>
+                </div>
+                <div class='row linha-legenda'>
+                        <div class='col-sm-12 legenda'>
+                            <ul class='list-group'>
+                                <li class='list-group-item'>Quanto maior a frequência de comunicações com os contatos maior a possibilidade de detectar casos precocemente e realizar a testagem em tempo oportuno.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

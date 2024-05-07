@@ -1,0 +1,173 @@
+
+.item.calculadoras.dpoc .checkbox label{
+    position: relative;
+    top: -3px;
+}
+
+.item.calculadoras.dpoc .checkbox label.simples{
+    position: relative;
+    top: 0;
+    left: 60px;
+    margin-top: 12px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.item.calculadoras.dpoc .checkbox label.simples  input[type="radio"]{
+    position: relative;
+    top: -3px;
+}
+.item.calculadoras.dpoc .radio {
+  margin: 10px 0px -7px;
+  padding: 0;
+}
+.item.calculadoras.dpoc input[type="radio"]:focus {
+  outline: none;
+}
+
+.item.calculadoras.dpoc input[type="radio"]{
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.item.calculadoras.dpoc .checkbox label.simples  input[type="checkbox"]{
+    position: relative;
+    top: -3px;
+}
+
+
+.item.calculadoras.dpoc .checkbox {
+  margin: 10px 0px -7px;
+  padding: 0;
+}
+.item.calculadoras.dpoc input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.item.calculadoras.dpoc input[type="checkbox"]{
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.item.calculadoras.dpoc label input[type='checkbox'][disabled] {
+    opacity: .4;
+}
+
+.item.calculadoras.dpoc .checkbox label small {
+  white-space:pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.dpoc .checkbox label small:before {
+  content: '\A';
+}
+
+.item.calculadoras.dpoc .titulo-calc{
+  color: #333 ;
+}
+
+
+.item.calculadoras.dpoc .panel-body{
+  /*padding: 0;*/
+}
+
+.item.calculadoras.dpoc .panel{
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.item.calculadoras.dpoc .titulo{
+  color: #333 ;
+}
+.item.calculadoras.dpoc .list-group-item{
+  position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.item.calculadoras.dpoc .checkbox label {
+  /* position: relative; */
+  /* top: 0; */
+}
+.item.calculadoras.dpoc .checkbox label.simples {
+  position: relative;
+  top: 0;
+  left: 60px;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.item.calculadoras.dpoc .radio {
+  margin: 10px 0px 13px;
+  padding: 0;
+}
+.item.calculadoras.dpoc input[type="radio"]:focus {
+  outline: none;
+}
+.item.calculadoras.dpoc input[type="radio"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  margin-left: 0;
+  position: relative;
+  top: -6px;
+}
+.item.calculadoras.dpoc .checkbox label.simples input[type="checkbox"] {
+  position: relative;
+  top: -3px;
+}
+.item.calculadoras.dpoc .radio.first {
+  margin-top: 30px;
+}
+.item.calculadoras.dpoc .checkbox {
+  margin: 20px 0px 15px 20px;
+  padding: 0;
+}
+.item.calculadoras.dpoc input[type="checkbox"]:focus {
+  outline: none;
+}
+.item.calculadoras.dpoc input[type="checkbox"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.item.calculadoras.dpoc label input[type='checkbox'][disabled] {
+  opacity: .4;
+}
+.item.calculadoras.dpoc .checkbox label small {
+  white-space: pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.dpoc .checkbox label small:before {
+  content: '\A';
+}
+.item.calculadoras.dpoc .titulo-calc {
+  color: #333 ;
+}
+.item.calculadoras.dpoc .panel-body {
+  /*padding: 0;*/
+}
+.item.calculadoras.dpoc .panel {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.item.calculadoras.dpoc .titulo {
+  color: #333 ;
+}
+.item.calculadoras.dpoc .gravidade {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

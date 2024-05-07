@@ -1,0 +1,22 @@
+<h3><%=titulo%></h3>
+<div class="row">
+    <%
+    if(conteudo.queixaPrincipal!='') { %>
+    <div class="col-md-12">
+        <h4>Queixa principal</h4>
+        <p><%=conteudo.queixaPrincipal%></p>
+    </div>
+    <% }
+    if(conteudo.histProbAtual!='') { %>
+    <div class="col-md-12">
+        <h4>Histórico do problema atual</h4>
+        <p><%=conteudo.histProbAtual%></p>
+    </div>
+    <% }
+    if(conteudo.revisaoSistemas!='') { %>
+    <div class="col-md-12">
+        <h4>Revisão de sistemas</h4>
+        <p><%=conteudo.revisaoSistemas%></p>
+    </div>
+    <% } %>
+</div>

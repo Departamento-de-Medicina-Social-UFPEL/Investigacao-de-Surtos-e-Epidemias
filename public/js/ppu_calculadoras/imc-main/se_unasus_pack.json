@@ -1,0 +1,73 @@
+{
+    "Package": "C1",
+    "Institution": {
+        "AroucaID": 1,
+        "Acronym": "UFPEL",
+        "Name": "Universidade Federal de Pelotas"
+    },
+    "Resource": {
+        "Name": "Calculadora de IMC",
+        "Language": "pt-BR",
+        "CreationDate": "2016-06-28",
+        "Review": 1,
+        "ReviewDate": "2016-07-08",
+        "CoverImage": "capa.png",
+        "ThumbnailImage": "capa_thumb.png"
+    },
+    "Reviews": [
+        {
+            "Review": 0,
+            "ReviewDate": "2016-07-08",
+            "Info": "Versão inicial do recurso"
+        }
+    ],
+    "SupportedDevices": [
+        "SmartPhone",
+        "Tablet",
+        "Desktop"
+    ],
+    "Video": {
+        "Formats": [],
+        "Resolutions": []
+    },
+    "Persistence": {
+        "InstitutionAcronym": "UFPEL",
+        "Version": "0001",
+        "Name": "CALCIMC",
+        "LTIValue": true
+    },
+    "Dictionary": [
+        {
+            "Variable": "STATUS",
+            "Info": "Variável padrão, indica o status do recurso.",
+            "Attributes": [
+                {
+                    "status": "Valor nominal textual do status podendo ter os seguintes valores 'attended', 'attempted', 'completed', 'passed', 'failed'"
+                },
+                {
+                    "percentage": "Valor inteiro entre 0 e 100, formado por 20% para o acesso a cada unidade e 10% para a visualização completa de cada video"
+                },
+                {   
+                    "average": "Valor ponto flutuante, indicando a média das respostas dos itens.",
+                },
+                {
+                    "LTIvalue": "Valor ponto flutuante entre 0 e 1, dado pela soma total de pontos das unidades + 10 pontos para cada video visualizado completamente, dividido por 100"
+                }
+            ]
+        },
+        {
+        "Variable": "ANSWER",
+        "Description": "Indica informações acerca das respostas feitas pelo usuário durante o caso.",
+        "Format": {
+            "activity": "Valor do id do caso que o usuário está interagindo.",
+            "questions": [
+                { "atividade": "Identificação da atividade." },
+                { "seqid": "Id sequencial da questão - Primeira questão começa com 0." },
+                { "marcadas": "Salva o id sequencial da alternativa marcada na questão." },
+                { "escore": "Valor percentual de acerto na questão." },
+                { "ts": "Timestamp da resposta" }
+            ]
+          }
+        }
+    ]
+}

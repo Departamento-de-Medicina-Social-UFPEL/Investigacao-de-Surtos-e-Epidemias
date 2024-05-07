@@ -1,0 +1,71 @@
+<!-- <div id='modal-badge' class="modal fade modal-badge" tabindex="-1" role="dialog" aria-labelledby="modal-modal-badge" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content modulo-modal-content">
+      <div class="modal-header modulo-modal-header">
+        <div class="texto-modal"> -->
+        <%
+          var badges = App.progresso.badgesConcedidos.reduce(function(mem, este){
+            console.log(mem);
+            var query = {'_id': este.get('_id')},
+              existe = mem.findWhere(query);
+            if(!existe){
+              este.set('qtd', 1);
+              mem.add(este);
+            } else {
+              existe.set('qtd', existe.get('qtd') + 1);
+            }
+            return mem
+          },(new Backbone.Collection()));
+
+        %>
+      <div class="bbm-modal__topbar">
+        <div class="bbm-modal__title">
+        <% if(badges.length >0){%>
+          <h3>Você conquistou <% if(badges.length >1){%> <%-App.progresso.badgesConcedidos.length%> distintivos! <% }else { %> um distintivo! <%} %> </h3>
+        <% } else {
+            %><h3>Você ainda não conquistou nenhum distintivo.</h3><%
+          } %>
+        <% var total = badges.length; var grupo = 0; var dentro=0; var resto = total % 3; var tam = 4; %>
+        </div>
+      </div>
+      <div class="bbm-modal__section row">
+        <div class='row' >
+            <% badges.forEach(function(umBadge){
+                dentro++
+                grupo++
+                if((total - dentro < 3 && grupo == 4) || total < 3){
+                    if(resto == 1){
+                      tam = 12;
+                }else if(resto == 2){
+                  tam = 6;
+                }else{
+                  tam=4;
+                }
+            }
+            if(grupo == 4){
+              grupo=1 %>
+              </div>
+              <div class='row badge-row' >
+                <%
+                    }
+                %>
+                <div class="col-md-<%= tam %> text-center icon-badge ">
+                  <img width="100" height="100" src='<%-defaultStaticFileService%>/img/badges/<%= umBadge.get('icon') %>' />
+                  <br>
+                  <p class='texto-modal'>
+                    <%= umBadge.get('name') %>
+                <% if (umBadge.get('qtd') > 1) {%>
+                  <div class='qtd-badges-modal badge label-success'>
+                    x <%= umBadge.get('qtd') %>
+                  </div>
+                <% } %>
+                  </p>
+                </div>
+                   <%}) %>
+                </div>
+            <div class="bbm-modal__bottombar">
+              <a href="#" class="bbm-button close-modal">Fechar</a>
+            </div>
+  <!--   </div>
+  </div>
+</div> -->

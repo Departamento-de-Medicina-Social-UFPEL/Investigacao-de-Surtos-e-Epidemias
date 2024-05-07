@@ -1,0 +1,67 @@
+<div class="container">
+    <style type="text/css">
+        .item.calculadoras.imc .calc-footer{
+            padding-bottom: 1px;
+        }
+    </style>
+    <div class='panel panel-default'>
+        <div class='panel-heading'>
+            <h3 class="titulo-calc">
+                <span class="nomeCalc">Informações do paciente</span>                
+            </h3>
+        </div>
+        <div class='panel-body'>
+            <div class="col-sm-6">
+                <div class='form-group'>
+                    <label for='pesoId'>Peso</label>
+                    <div class="input-group">
+                      <input type="text" id="pesoId" class='form-control input input-lg' >
+                      <span class="input-group-addon">Kg</span>
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <div class='radio'>
+                        <label class="h4">
+                            <input type="radio" name="optionRadios1" class="ehCri" value="1"  checked >6 meses a 7 anos incompletos
+                        </label>
+                    </div>
+                    <div class='radio'>
+                        <label class="h4">
+                            <input type="radio" name="optionRadios1" class="ehCri" value="0">7 a 10 anos
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-info">Calcular</button>
+                </div>
+            </div>
+            <div class="col-sm-6 condutaBox">
+                <span class='h4'>Resultado</span><br>
+                <span class="faixa"></span> <span class="altuRes"></span><br/>
+                <h3>IMC =
+                    <span class='resultado'></span>
+                </h3>
+                <div class='infomacao'>
+                    <h4 class='classificacao'></h4>
+                    <span class='descricao'></span>
+                    <div class='intervaloIdeal'>
+                        Peso ideal <span class='idealMenor'></span> - <span class='idealMaior'></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='container calc-footer'>
+    <div class="col-md-12">
+        <h4>Referências:</h4>
+        <dl>
+            <dt>Costa PSS, Costa LRRS. Analgésicos e antimicrobianos. In: Correa MSNP. Odontopediatria na primeira infancia. 3.ed. São Paulo: Santos, 2009.942p.</dt>           
+        </dl>
+        <dl>
+            <dt>Campos CC et al. Clínica odontológica infantil : passo a passo.– Goiânia: UFG/FO: FUNAPE, 2010. 
+            v. 1, 50 p.</dt>
+            <dd><p>Disponível em: <a href="https://pahpe.odonto.ufg.br/up/299/o/Passo_a_passo_Clinica_Odontologica_Infantil_completo.pdf?1364314039" target="_blank">https://pahpe.odonto.ufg.br/up/299/o/Passo_a_passo_Clinica_Odontologica_Infantil_completo.pdf?136431403</dd>
+        </dl>
+    </div>
+</div>

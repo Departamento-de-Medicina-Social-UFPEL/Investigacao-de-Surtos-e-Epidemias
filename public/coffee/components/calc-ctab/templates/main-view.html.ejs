@@ -1,0 +1,177 @@
+<div class="container">
+    <style type="text/css">
+            .item.calculadoras.ctab {
+
+                .radio label{
+                    position: relative;
+                    top: -3px;
+                }
+
+                .radio label.simples{
+                    position: relative;
+                    top: 0;
+                    left: 60px;
+                    margin-top: 12px;
+                    display: inline-block;
+                    margin-bottom: 30px;
+                }
+
+                .radio label.simples  input[type="radio"]{
+                    position: relative;
+                    top: -3px;
+                }
+
+                @media (min-width: 768px){
+                  .escoreBox{
+                    width: auto;
+                    margin-left: -80px;
+                  }
+                }
+
+
+                /*.radio.idade{
+                    position: relative;
+                    margin-left: 59px;
+                }*/
+
+                .radio {
+                  margin: 10px 0px -7px;
+                  padding: 0;
+                }
+                input[type="radio"]:focus {
+                  outline: none;
+                }
+
+                input[type="radio"]{
+                  /* float: none; */
+                  /* vertical-align: -8px; */
+                  margin-right: 10px;
+                  position: relative;
+                  top: 4px;
+                }
+                /*
+                label>input[type='radio'][disabled] {
+                    opacity: .4;
+                }
+                */
+                label input[type='radio'][disabled] {
+                    opacity: .4;
+                }
+
+                .radio label small {
+                  white-space:pre;
+                  position: relative;
+                  top: -4px;
+                }
+                .item.calculadoras.ctab .radio label small:before {
+                  content: '\A';
+                }
+
+                .item.calculadoras.ctab .titulo-calc{
+                  color: #333 ;
+                }
+
+                .item.calculadoras.ctab .escoreBox{
+                  text-align: center;
+                  margin-bottom: -40px;
+                  margin-left: 0px;
+                }
+
+                .item.calculadoras.ctab .condutaBox h4{
+                  display: inline-block;
+                }
+
+                .ctab-tag{
+                  float: left;
+                  font-size: 30px;
+                  /* vertical-align: -4px; */
+                  /* display: inline-block; */
+                  margin-right: 38px;
+                  position: relative;
+                  top: -4px;
+                }
+
+                .ctab-tag.idade{
+                  float: left;
+                  font-size: 18px;
+                  /* vertical-align: -4px; */
+                  /* display: inline-block; */
+                  margin-right: 38px;
+                  position: relative;
+                  top: 5px;
+                }
+
+                .item.calculadoras.ctab .panel-body{
+                  /*padding: 0;*/
+                }
+
+                .item.calculadoras.ctab .panel{
+                  background: none;
+                  border: none;
+                  box-shadow: none;
+                }
+
+                .item.calculadoras.ctab .titulo{
+                  color: #333 ;
+                } 
+
+            }
+
+
+    </style>
+
+    <div class='panel panel-default'>
+        <div class='panel-heading'>
+            <h3 class="titulo-calc">
+                <span class="nomeCalc">Carga Tabágica</span>                
+            </h3>
+        </div>
+        <div class='panel-body'>
+              <div class="col-md-7 col-sm-8 col-xs-12">
+
+                    <label for=''>Média de cigarros fumados ao dia</label>
+                    <div class="input-group">
+                      <input type="text" id="cigadia" pattern="[0-9]" class='form-control input input-lg' >
+                      
+                    </div>
+
+                    <label for=''>Anos de Tabagismo</label>
+                    <div class="input-group">
+                      <input type="text" id="anostab" pattern="[0-9]+$" class='form-control input input-lg' >
+                      
+                    </div>
+
+
+          </div>
+          
+          <div class="col-md-5 col-sm-4 col-xs-12 " style="">
+            <div class="escoreBox">
+              <h3>Resultado</h3>
+            </div>
+            <div class="condutaBox">
+              <h3 class="fat_1"></h3>
+              <h4><span class="resultado"></span></h4>
+              <small></small>
+
+             
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div><div class='container calc-footer'>
+    <div class="col-md-12">
+        <h4>Referências:</h4>
+        <dl>
+            <dt>BRASIL. Ministério da Saúde. Doenças respiratórias crônicas. Brasília: Ministério da Saúde, 2010.p.48. Disponível em: 
+            <em> 
+               <a href="http://dab.saude.gov.br/portaldab/biblioteca.php?conteudo=publicacoes/cab25" target="_blank"> 
+                   http://dab.saude.gov.br/portaldab/biblioteca.php?conteudo=publicacoes/cab25</a> 
+            </em>
+               .Acesso em: Out. 2017.
+            </dt>           
+        </dl>
+
+
+    </div>
+</div>

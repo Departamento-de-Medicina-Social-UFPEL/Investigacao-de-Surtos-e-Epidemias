@@ -1,0 +1,70 @@
+{
+  "waitSeconds": 100,
+  "paths": {
+    "utils": "js/lib/utils",
+    "bson": "js/lib/bson",
+    "uf_municipios": "js/lib/uf_municipios",
+    "text": "lib/requirejs-text/text",
+    "async": "lib/requirejs-plugins/src/async",
+    "jquery": "lib/jquery/dist/jquery",
+    "underscore": "lib/lodash/lodash",
+    "backbone": "lib/backbone/backbone",
+    "backbone.marionette": "lib/backbone.marionette/lib/backbone.marionette",
+    "backbone.modal": "lib/backbone-modal/backbone.modal",
+    "marionette.modals": "lib/backbone-modal/backbone.marionette.modals",
+    "bootstrap": "lib/bootstrap/dist/js/bootstrap",
+    "socketio": "lib/socket.io/socket.io",
+    "ripples": "lib/bootstrap-material-design/dist/js/ripples",
+    "material": "lib/bootstrap-material-design/dist/js/material",
+    "jknob": "lib/jknob/js/jquery.knob",
+    "lzs": "lib/lz-string-bower/lz-string",
+    "casca": "js/app/main",
+    "unasus": "js/app/se_unasus_pack",
+    "boot": "js/app/ppuInit",
+    "router": "js/app/router",
+    "controller": "js/app/controller"
+  },
+  "map": {
+    "*": {
+      "marionette": "backbone.marionette"
+    }
+  },
+  "shim": {
+    "socketio": {
+      "exports": "io"
+    },
+    "lzs": {
+      "exports": "LZString"
+    },
+    "bootstrap": {
+      "deps": [
+        "jquery"
+      ]
+    },
+    "material": {
+      "deps": [
+        "bootstrap"
+      ]
+    },
+    "ripples": {
+      "deps": [
+        "bootstrap",
+        "material"
+      ]
+    },
+    "casca": {
+      "deps": [
+        "backbone.marionette",
+        "material",
+        "ripples",
+        "bson"
+      ]
+    },
+    "boot": {
+      "deps": [
+        "casca",
+        "unasus"
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+#public/js/
+app/scripts/makePpuConfigObjCasoAntesOnivaldo.coffee
+public/ppu/
+sftp-config.json

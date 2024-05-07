@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <title>Biblio</title>
+    <style type="text/css">
+        .bib-info{
+            padding-top: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <textarea class="bib-in form-control form-control-lg navbar-fixed-top"></textarea>
+    <div class="container bib-info">
+        <div class="lead content"></div>
+        <a class="h5 externo" target="_blank"><i class="fa fa-external-link"></i> link externo</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a  class="h5 local" target="_blank"><i class="fa fa-archive"></i> copia local</a>
+    </div>
+    <div class="mode-display"></div>
+    <textarea class="bib-out out form-control form-control-lg navbar-fixed-bottom"></textarea>
+    <script type ="text/javascript"
+        src ="/casca/lib/requirejs/require.js"
+        data-main ="/casca/js/misc/biblio">
+    </script>
+</body>
+</html>

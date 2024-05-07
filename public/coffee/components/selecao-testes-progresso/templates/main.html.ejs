@@ -1,0 +1,39 @@
+<style>
+     .teste-block-inicial{
+        margin: 0.5em 0;
+        cursor: pointer;
+    }
+     .teste-dica-inicial{
+        font-size: 1.3em;
+        vertical-align: super;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .teste-final .teste-img-inicial-box span{
+        height: 150px;
+        width: 150px;
+        background-color: hsla(0, 0%, 0%, .5);
+        margin-left: -71px;
+        top: -34px;
+        position: relative;
+        border-radius: 3px;
+        left: -78px;
+    }
+    .teste-final .teste-img-inicial-box span:before{
+        font-size: 5em;
+        position: absolute;
+        top: 64px;
+        left: 37px;
+        color: white;
+    }
+</style>
+<div class="row">
+    <div class="info">
+    <h2><%-App.selecaoTestes.titulo%></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="caixa-casos">
+        <div class="listaCasos list-group"></div>
+    </div>
+</div>

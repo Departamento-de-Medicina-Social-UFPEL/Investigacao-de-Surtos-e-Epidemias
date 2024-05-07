@@ -1,0 +1,93 @@
+.item.caso {
+
+    .panel-default{
+        padding-top: 50px;
+    }
+
+    .caso-itemView{
+        margin-top: 20px;
+    }
+
+    .badge.quest{
+        background: #f1f1f1;
+        border: 1px solid #555;
+        font-size: 11px;
+        border-radius: 11px;
+        color: #222;
+        padding: 3px 5px;
+        font-weight: normal;
+    }
+    .badge.quest.lista{
+        border-radius: 0px;
+        border: none;
+        background-color: #e9e9e9;
+        box-shadow: 0 1px #888;
+    }
+    .badge.quest.lista:first-child{
+        border-top-left-radius: 11px;
+        border-bottom-left-radius: 11px;
+    }
+    .badge.quest.lista:last-child{
+        border-top-right-radius: 11px;
+        border-bottom-right-radius: 11px;
+    }
+    .badge.quest.corrigido{
+        border: none;
+        background: darken(#3498db, 20%);
+        color: #000;
+    }
+    .badge.quest.corrigido.errado{
+        box-shadow: 0 1px darken(#ff3b30, 20%);
+        background-color: #ff3b30;
+    }
+    .badge.quest.corrigido.correto{
+        box-shadow: 0 1px darken(#4cd964, 20%);
+        background-color: #4cd964;
+    }
+    .badge.quest.corrigido.meio{
+        box-shadow: 0 1px darken(#ffcc00, 20%);
+        background-color: #ffcc00;
+    }
+
+    .caso-listaItem {
+    }
+    .medicina{
+        background-color: #27AE60;
+    }
+    .enfermagem{
+        background-color: #3498DB;
+    }
+    .odontologia{
+        background-color: #C0392B;
+    }
+    .caso-lista-item {
+        padding: 10px;
+        background: #f3f3f3;
+        margin: 12px;
+        min-height: 115px;
+        position: relative;
+        a{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .questoes{
+            position: absolute;
+            bottom: 9px;
+        }
+        .badge-nucleo{
+            font-size: 21px;
+            padding: 0 5px;
+            font-weight: 600;
+            color: #ededed;
+            display: inline-block;
+            height: 32px;
+            margin-right: 5px;
+            top: -4px;
+            position: relative;
+            left: 10px;
+            float: right;
+            min-width: 29px;
+            text-align: center;
+        }
+    }
+}

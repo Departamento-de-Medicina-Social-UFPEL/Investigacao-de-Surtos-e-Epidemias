@@ -1,0 +1,72 @@
+<div class='row' style="padding: 3rem">
+	<div class="col-md-6">
+	  <h1>Enquetes</h1>
+	</div>
+</div>
+<div class='row'>
+	<div class="col-md-6">
+		<div class="list-group">
+			<div class="list-group-item">
+	          <div class="row-action-primary material-item">
+	             <i class="mdi mdi-clipboard-outline" style="background-color: var(--corpadraomenudestaque);"></i>
+	          </div>
+	          <div class="row-content">
+	            <div class="least-content material-item">
+	            	<% console.log(cadastro, 'cadastro');if(cadastro){%> <i class="mdi  mdi-checkbox-marked" ></i>
+	            	<%}else{%><i class="mdi mdi-checkbox-blank-outline" ></i>
+	            	<%}%>
+	           	</div>
+	            <h4 class="list-group-item-heading">Pós-cadastro</h4>
+
+	            <p class="list-group-item-text"><a href="#comp/enquetes/cadastro/<%- App.user.cpf %>" class="btn btn-raised btn-primary">Responder</a></p>
+	          </div>
+	        </div>
+
+	        <div class="list-group-separator"></div>
+	        <div class="list-group-item">
+	          <div class="row-action-primary material-item">
+	             <i class="mdi mdi-clipboard-outline" style="background-color: var(--corpadraomenudestaque);"></i>
+	          </div>
+	          <div class="row-content">
+	            <div class="least-content material-item">
+	            	<% if(conclusao){%> <i class="mdi  mdi-checkbox-marked" ></i>
+	            	<%}else{%><i class="mdi mdi-checkbox-blank-outline" ></i>
+	            	<%}%>
+	            </div>
+	            <h4 class="list-group-item-heading">Certificacão</h4>
+
+	            <p class="list-group-item-text">
+	            	<% if(elegivel){%>
+	            	<a href="#comp/enquetes/conclusao/<%- App.user.cpf %>" class="btn btn-raised btn-primary"  >Responder</a>
+	            	<%}else{%>
+	            	Obtenha seu certificado para desbloquear a enquete de conclusão
+	            	<%} %>
+	            </p>
+	          </div>
+	        </div>
+
+	        <div class="list-group-separator"></div>
+	        <div class="list-group-item">
+	          <div class="row-action-primary material-item">
+	             <i class="mdi mdi-clipboard-outline" style="background-color: var(--corpadraomenudestaque);"></i>
+	          </div>
+	          <div class="row-content">
+	            <div class="least-content material-item">
+	            	<% if(encerramento){%> <i class="mdi  mdi-checkbox-marked" ></i>
+	            	<%}else{%><i class="mdi mdi-checkbox-blank-outline" ></i>
+	            	<%}%>
+	           	</div>
+	            <h4 class="list-group-item-heading">Encerramento de oferta</h4>
+
+	            <p class="list-group-item-text">
+	            	<% if(elegivel){%>
+	            	<a href="#comp/enquetes/encerramento/<%- App.user.cpf %>" class="btn btn-raised btn-primary">Responder</a></p>
+	            	<%}else{%>
+	            	Aguarde o encerramento das ofertas para responder a enquete de encerramento
+	            	<%} %>
+	          </div>
+	        </div>
+	        <div class="list-group-separator"></div>
+        </div>
+	</div>
+</div>

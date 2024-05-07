@@ -1,0 +1,25 @@
+<div class="badgeContainer">
+    <a href="#comp/selecao-progresso" class="nucleoTexto"><i class="mdi mdi-chevron-left"></i> Voltar para o índice de Casos Interativos</a>
+    <a class="nucleoTexto gotoReturn" id='voltarUnidade' style='display:none'><i class="mdi mdi-chevron-left ico-unidade"></i> Voltar para <span id='unidade'></span></a>
+</div>
+<h1><%=titulo%></h1>
+<div class="container-static">
+    <h4><%=slides[0].conteudo.texto%></h4>
+</div>
+<small class="dataPubTop">Publicado em <%=dataLongaPub.data.getDate()%> de <%=dataLongaPub.mes%> de <%=dataLongaPub.data.getFullYear()%></small>
+<small class="autoresTop row">
+    <div class="col-md-4 listaPess">
+        <strong>Autore<%=typeof(autor) === 'object' ? 's' : ''%>:</strong> <%=typeof(autor) === 'object' ? autor.join(', ') : autor%>
+    </div>
+    <div class="col-md-3 listaPess">
+        <strong>Editores:</strong> Anaclaudia Fassa e Luiz Augusto Facchini
+    </div>
+    <div class="col-md-5 listaPess">
+    <%if(editores){ 
+        console.log(editores, 'editores')
+        if(editores.length > 0){%>
+        <strong>Editores Associados:</strong> <%=typeof(editores) === 'object' ? editores.join(', ') : editores %>
+        <%}
+    }%>
+    </div>
+</small>

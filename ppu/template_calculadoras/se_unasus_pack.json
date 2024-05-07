@@ -1,0 +1,24 @@
+﻿{
+    "Package": "CI0",
+    "Institution": {
+        "AroucaID": 46,
+        "Acronym": "UFPEL",
+        "Name": "Universidade Federal de Pelotas"
+    },
+    "Resource": {
+        "Name": "Calculadora de IMC",
+        "Language": "pt-BR",
+        "CreationDate": "2016-02-21",
+        "Review": 0,
+        "ReviewDate": "2018-03-14",
+        "CoverImage": "capa-0.png"
+    },
+    "SupportedDevices": [
+        "Tablet",
+        "SmartPhone",
+        "Desktop"
+    ],
+    "Video": {
+    },
+    "Dictionary": []
+}

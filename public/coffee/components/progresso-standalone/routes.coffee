@@ -1,0 +1,5 @@
+define [
+], ()->
+
+  "": "iniciaPagina"
+  "/badges": "badges"

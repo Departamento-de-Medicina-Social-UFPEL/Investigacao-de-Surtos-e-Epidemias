@@ -1,0 +1,93 @@
+
+.item.calculadoras.rcard .checkbox label.simples {
+  position: relative;
+  top: 0;
+  left: 60px;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.item.calculadoras.rcard .item {
+  min-height: 200px;
+}
+.item.calculadoras.rcard .radio {
+  margin: 10px 0px 13px;
+  padding: 0;
+}
+.item.calculadoras.rcard .slide-footer {
+  margin-top:20px;
+}
+.item.calculadoras.rcard input[type="radio"]:focus {
+  outline: none;
+}
+.item.calculadoras.rcard input[type="radio"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  margin-left: 0;
+  position: relative;
+  top: -6px;
+}
+.item.calculadoras.rcard .checkbox label.simples input[type="checkbox"] {
+  position: relative;
+  top: -3px;
+}
+
+.item.calculadoras.rcard .checkbox {
+  margin: 20px 0px 15px 20px;
+  padding: 0;
+}
+.item.calculadoras.rcard input[type="checkbox"]:focus {
+  outline: none;
+}
+.item.calculadoras.rcard input[type="checkbox"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.item.calculadoras.rcard label input[type='checkbox'][disabled] {
+  opacity: .4;
+}
+.item.calculadoras.rcard .checkbox label small {
+  white-space: pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.rcard .checkbox label small:before {
+  content: '\A';
+}
+.item.calculadoras.rcard .titulo-calc {
+  color: #333 ;
+}
+
+
+.item.calculadoras.rcard .titulo {
+  color: #333 ;
+}
+.item.calculadoras.rcard .descricao-resultado {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+/*novo*/
+.item.calculadoras.rcard .sub-titulo-calc{
+	background-color: var(--corpadrao)!important;
+	padding:4px 4px 4px 8px;
+}
+
+.item.calculadoras.rcard .sub-titulo-calc small{
+	color:white!important;
+}
+.item.calculadoras.rcard .resultado-titulo {
+	color:var(--corpadrao)!important;
+}
+.item.calculadoras.rcard .resultado {
+    background-color: var(--corpadrao)!important;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+.rcard.radio {
+    margin: 10px 10px 0px 0px !important;
+}

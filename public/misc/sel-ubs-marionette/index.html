@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testes seleção estado-municipio-ubs</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+  <style type="text/css">
+    body{
+      margin-top: 30px;
+    }
+    .ubsBox, .infoBox{
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="local-form-container"></div>
+  <script type="text/ejs" id="local-template">
+    <fieldset class='container'>
+      <legend>Em que município fica a sua UBS</legend>
+      <div class="row">
+        <div class="col-xs-3 ufBox"></div>
+        <div class="col-xs-9 muniBox"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 ubsBox"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 infoBox"></div>
+      </div>
+    </fieldset>
+  </script>
+  <script type="text/ejs" id="select-template">
+    <% items.forEach(function(it){ %>
+      <option value="<%= it.value %>"><%= it.text %></option>
+    <% }); %>
+  </script>
+  <script src="//dms.ufpel.edu.br/inscricoes/scripts/uf_municipios.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.4.2/backbone.marionette.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

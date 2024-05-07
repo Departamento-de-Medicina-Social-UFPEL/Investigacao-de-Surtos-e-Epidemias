@@ -1,0 +1,8 @@
+<h3><%=titulo%></h3>
+<br>
+<div class="row">
+<% for(var i in conteudo) { 
+    if(i !== 'delay'){%>
+    <div class="<%=i%> col-md-12"><%=conteudo[i]%></div>
+<% } }%>
+</div>

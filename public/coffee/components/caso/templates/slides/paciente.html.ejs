@@ -1,0 +1,29 @@
+<%
+    var capitalize = function(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+%>
+ <% if(sexo){ %>
+    <div class='row'>
+        <h3><%= titulo %></h3>
+
+      
+
+            <div class="pacienteInfoBlock col-md-1">
+                <i class="mdi mdi-gender-<%= sexo == "masculino" ? "male" : "female"%> <%=sexo%> iconeSexoPaciente"></i>
+                <%if(cor){%>
+                    <div class="text-left"><%=capitalize(cor).trim()%></div>
+                <%}%>
+            </div>
+
+            <div class="pacienteInfoBlock col-md-3">
+                <h1><%= iniciais.split('').join('.') + '.'%></h1>
+            </div>
+            <div class="pacienteInfoBlock col-md-8">
+                <div class="textoIdadePaciente"><%=strIdade()%></div>
+                <div class="textoIdadePaciente"><%if(ocupacao){%><%=capitalize(ocupacao)%><%}%></div>
+            </div>
+      
+        </div>
+
+<% } %>

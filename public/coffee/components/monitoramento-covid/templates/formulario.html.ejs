@@ -1,0 +1,298 @@
+<style type='text/css'>
+.form-control-wrapper {
+    float: right!important;
+}
+input{
+    max-width:80px!important;
+    text-align: center;
+    background-color: #eee!important;
+    border: 2px solid #eee!important;
+    border-radius: 4px!important;
+}
+.local-heading{
+    background-color: #CCE1EF!important;
+    font-weight: 600;
+}
+
+.local-heading-group{
+    background-color: #ebf6fc!important;
+    font-weight: 600;
+}
+.panel-heading h3{
+    color:#2C5A7A!important;
+    font-weight: 600;
+}
+.panel-heading {
+    color:#2C5A7A!important;
+    font-weight: 600;
+}
+li {
+  list-style-type: none;
+}
+.btn-navegar{
+    background-color:#2c5a7a!important;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px!important;
+}
+</style>
+      <div class='row ' style='margin:2rem'>
+            <div class='col-sm-12'>
+                <h3>Calculadora de Indicadores para Avaliação do Monitoramento dos Contatos de Casos de Covid-19</h3>
+            </div>
+        </div>
+<div class="row">
+    <div class="col-xs-12 " style='display: flex;  justify-content: space-between'>
+
+                <button class='btn btn-success btn-navegar' onClick="history.go(-1)">
+                    <i class='glyphicon glyphicon-arrow-left'> Voltar </i>
+                </button>
+        
+    </div>
+</div>
+<div class='panel panel-default'>
+    <div class='panel-heading '>
+        Novo Período de Referência
+    </div>
+    <div class='panel-body' >
+        <div class='form-group mensagens'></div>
+        
+        <div class="row">
+            <div class='col-xs-12'>
+                <div class="panel panel-default" style='    box-shadow: none!important;'>
+                    <div class="panel-heading local-heading">
+                        <h3>Local: <%= local %> </h3>
+                    </div>
+                    <div class='panel-body' >
+                        <div class="row">
+                            <% if(tipo !== 'diario'){%>
+                                <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-8 col-lg-offset-1 col-lg-5">
+                                    <label  for="inputPeriodoInicio">Período de Referência</label>
+                                    <div class="input-group" style='max-width: 200px; '>
+                                        <input type="text" class="form-control" id="inputPeriodoInicio" placeholder="Data de início">
+                                        <div class="input-group-addon"> a </div>
+                                        <input type="text" class="form-control" id="inputPeriodoFim" placeholder="Data de fim">
+                                    </div>
+                                </div>
+                            <%}else{%>
+                                <div class="form-group col-xs-offset-1 col-xs-10  col-sm-6 col-md-6 col-lg-5 ">
+                                    <label  for="inputPeriodoInicio">Dia de Referência</label>
+                                        <input type="text" class="form-control" id="inputPeriodoInicio" placeholder="Data">
+                                </div>
+                            <%}%>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-8 col-lg-offset-1 col-lg-5">
+                                <label for="inputNrRegistrados">Número de Casos Registrados</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrRegistrados" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-8  col-lg-5">
+                                <label for="inputNrMonitorados">Número de Contatos Monitorados</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrMonitorados" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-xs-12">
+            
+                <div class='panel panel-default'>
+                    <div class='panel-heading local-heading-group'>
+                        Entre Todos os Contatos
+                    </div>
+                    <div class='panel-body' >
+                        <div class=" col-xs-6">
+                            <h3><b>Situação do Monitoramento</b></h3>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrNaoIniciados">Não iniciado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrNaoIniciados" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrEmAndamento">Em andamento</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrEmAndamento" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrEncerrados">Encerrado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrEncerrados" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputIgnoradosSituacao">Ignorado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" readonly id="inputIgnoradosSituacao" placeholder="">
+                            </div>
+                        </div>
+                        <div class=" col-xs-6">
+                            <h3><b>Tipo de Relação com o Caso</b></h3>
+                        
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrDomiciliar">Domiciliar</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrDomiciliar" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrFamiliar">Familiar</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrFamiliar" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrEscolar">Escolar</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrEscolar" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrLaboral">Laboral</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrLaboral" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrEventoSocial">Evento social</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrEventoSocial" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrRelacaoOutros">Outro</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrRelacaoOutros" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrRelacaoIgnorados">Ignorado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" readonly id="inputNrRelacaoIgnorados" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="  col-xs-12 ">
+                <div class='panel panel-default'>
+                    <div class='panel-heading local-heading-group'>
+                        Entre Contatos Encerrados
+                    </div>
+                    <div class='panel-body' >
+
+                        <div class=" col-xs-12 ">
+                            <h3><b> Motivo de Encerramento</b></h3>
+                        </div>
+                        <div class=" col-xs-6 ">
+                        
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrPerdaSegmento">Perda de seguimento</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrPerdaSegmento" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNaoEncontradoLigacao">Não encontrado na ligação</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNaoEncontradoLigacao" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrRecusa">Recusa</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrRecusa" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrProblemasEquipe">Problemas com a equipe de monitoramento</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrProblemasEquipe" placeholder="">
+                            </div>
+                        </div>
+                        <div class=" col-xs-6 ">
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrDescartado">Contato descartado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrDescartado" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrSuspeita">Suspeita de covid-19</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrSuspeita" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrConfirmado">Confirmado para covid-19</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrConfirmado" placeholder="">
+                            </div> 
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMotivoIgnorados">Ignorado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" readonly id="inputNrMotivoIgnorados" placeholder="">
+                            </div> 
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <div class=" col-xs-12 ">
+                <div class='panel panel-default'>
+                    <div class='panel-heading local-heading-group'>
+                        Entre Contatos Descartados
+                    </div>
+                    <div class='panel-body' >
+                        <div class=" col-xs-6">
+                            <h3><b>Início do Monitoramento até o 2º dia</b></h3>
+                            
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMoniDoisPrimeiros">Monitoramento iniciado até o 2º dia</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrMoniDoisPrimeiros" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrNaoMoniDoisPrimeiros">Monitoramento não iniciado até o 2º dia</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrNaoMoniDoisPrimeiros" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMonitoradosIgnoradosSegundo">Ignorado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" readonly id="inputNrMonitoradosIgnoradosSegundo" placeholder="">
+                            </div>
+                             <h3><b>Monitoramento dos Contatos no 14º dia</b></h3>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMonitoradosDecimoQuato">Monitorado no 14º dia</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrMonitoradosDecimoQuato" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrNaoMonitoradosDecimoQuato">Não monitorado no 14º dia</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrNaoMonitoradosDecimoQuato" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMonitoradosIgnorados">Ignorado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" readonly id="inputNrMonitoradosIgnorados" placeholder="">
+                            </div>
+                        </div>
+                        <div class=" col-xs-6">
+                           <h3><b>Número de Comunicações com Cada Contato</b></h3>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMoniZeroOuTres">Contatado 3 vezes ou menos</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrMoniZeroOuTres" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMoniQuatroOuSeis">Contatado 4 a 6 vezes</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrMoniQuatroOuSeis" placeholder="">
+                            </div>
+                           
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMoniSeisOuMais">Contatado 7 vezes ou mais</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" id="inputNrMoniSeisOuMais" placeholder="">
+                            </div>
+                            <div class="form-group col-xs-offset-1 col-xs-10  col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+                                <label for="inputNrMonitoradosVezesIgnorados">Ignorado</label>
+                                <input type="number" step="1" pattern="\d+" class="form-control" readonly id="inputNrMonitoradosVezesIgnorados" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+ 
+
+    </div>
+   
+</div>
+  
+<div class="row">
+    <div class="col-xs-12 " style='display: flex;  justify-content: space-between'>
+
+                <button class='btn btn-success btn-navegar' onClick="history.go(-1)">
+                    <i class='glyphicon glyphicon-arrow-left'> Voltar </i>
+                </button>
+            <% if(!id){%>
+            <div>
+            <button class='btn btn-success btn-save'><i class='glyphicon glyphicon-save'> Inserir </i></button>
+            <button class='btn btn-danger btn-clear'><i class='glyphicon glyphicon-trash'> Limpar </i></button>
+            </div>
+            <% }else{%>
+            <button class='btn btn-success btn-save'><i class='glyphicon glyphicon-save'> Alterar </i></button>
+            <% }%>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 text-center mensagens" style=''>
+        
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<h3><%=titulo%></h3>
+<div class="row">
+    <div class="col-md-2 col-sm-2 text-center">
+    	<div class="fenotipo <%=fenotipo%>"></div>
+    </div>
+    <div class="col-md-5 col-sm-5">
+    	<% var longo = conteudo.reduce(function(m,c,i,l){
+    		return c.conteudo.length > l[m].conteudo.length ? i : m
+    	},0) %>
+    	<h4><%-conteudo[longo].titulo%></h4>
+    	<p><%=conteudo[longo].conteudo%></p>
+    </div>
+    <div class="col-md-5 col-sm-5">
+    <% for(var i in conteudo) { if( i != longo ) {%>
+    	<h4><%-conteudo[i].titulo%></h4>
+    	<p><%=conteudo[i].conteudo%></p>
+    <%} } %>
+    </div>
+</div>

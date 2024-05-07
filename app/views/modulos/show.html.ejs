@@ -1,0 +1,104 @@
+<% include ../functions.ejs %>
+
+<%
+    var appCache = false;
+    var rurl = rootUrl = '/casca';
+    var globalizeToClient = {
+            'modulo': modulo,
+            'lti': lti_tc,
+            'defaultStaticFileService': '/static'
+        };
+    var cssFiles = [
+            "/lib/bootstrap/dist/css/bootstrap.min.css",
+            "/lib/bootstrap-material-design/dist/css/material.css",
+            "/lib/bootstrap-material-design/dist/css/ripples.min.css",
+            "/lib/mdi/css/materialdesignicons.css",
+            "/lib/backbone-modal/backbone.modal.css",
+            "/lib/backbone-modal/backbone.modal.theme.css",
+            "/lib/jquery-ui/jquery-ui.css",
+            "/css/all.css"
+        ];
+    
+%>
+<!DOCTYPE html>
+<html<%
+    if(appCache){
+        %> manifest='./appCacheManifest/<%-moduloId%>?<%-Date.now()%>'<%
+    }
+%>>
+  <head>
+  <script src="/casca/lib/highcharts/highcharts.js"></script>
+  <script src="/casca/lib/highcharts/highcharts-more.js"></script>
+<script src="/casca/lib/highcharts/modules/exporting.js"></script>
+<script src="/casca/lib/highcharts/modules/export-data.js"></script>
+<script src="/casca/lib/highcharts/modules/accessibility.js"></script>
+    <title><%
+        if(lti_tc){
+            %><%-lti_tc.resource_link_title%><%
+        } else {
+            %><%-modulo.name%><%
+        }%></title>
+    <% include ./helpers/header.html.ejs %>
+
+    <%cssFiles.forEach(function(url) {
+        %><link href="<%-rurl + url %>" type="text/css" rel="stylesheet"><%
+    });
+
+    if(!modulo.corPadrao){modulo.corpadrao = '3f51b5';}
+    if(!modulo.corPadraoMenu){modulo.corpadraomenu = 'eaf9f8';}
+    if(!modulo.corPadraoMenuDestaque){modulo.corPadraoMenuDestaque = 'cbe8e5';}
+   
+    %>
+  </head>
+    <style type='text/css'>
+        :root{
+           --corpadrao:#<%- modulo.corPadrao %>;
+           --corpadraomenu:#<%- modulo.corPadraoMenu %>;
+           --corpadraomenudestaque:#<%- modulo.corPadraoMenuDestaque %>;
+        }
+        .navbar-inverse {
+            background-color: #<%- modulo.corPadrao %>!important;
+        }
+        .big-footer{ background-color:  #<%- modulo.corPadrao %> }
+        .mdi-home{ color: inherit!important; margin-bottom: 5px; }
+    </style>
+  <body style="overflow-x: hidden">
+
+    <div id="introLayer"></div>
+
+    <header>
+        <% include ./helpers/top-menu.html.ejs %>
+    </header>
+
+    <main id='mainStage' onclick="escondeMenus()"></main>
+
+    <script type="text/javascript">
+        <%- dumpGlobalsToWindow( globalizeToClient )%>
+    </script>
+
+    <footer id="coordenacao" class="col-md-12 text-center" style='margin-bottom: 110px; margin-top: 50px;'>
+        <strong>Coordenação:</strong> Anaclaudia Gastal Fassa e Luiz Augusto Facchini
+    </footer>
+    <footer class="footer navbar-fixed-bottom container-fluid big-footer" style="background-color: var(--corpadrao)">
+        <% include ./helpers/footer.html.ejs %>
+    </footer>
+
+
+    <%- dumpTemplates(templates) %>
+    <% rurl= '/casca' %>
+
+    <script type ="text/javascript"
+        src ="<%=rurl%>/lib/requirejs/require.js"
+        data-main ="<%=rurl%>/js/app/boot"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-35522388-1', 'auto'); ga('send', 'pageview');
+    </script>
+    <div class="modals-container"></div>
+  </body>
+
+</html>

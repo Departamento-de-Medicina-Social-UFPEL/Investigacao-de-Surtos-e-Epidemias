@@ -1,0 +1,39 @@
+<%
+    var it = obj;
+    var proIni = it.pro[0] ? (it.pro[1] ? "E M" :  "M") : it.pro[1] ? "E" : "O";
+    var proTag = proIni.replace('E', 'enf').replace('M', 'med').replace('O', 'odo');
+%>
+<div class="caso-lista-item">
+    
+    <h3><% if(it.pro[0] || it.pro[1] || it.pro[2]){%><span class="pro-tag <%=proTag%>"><%=proIni.trim()%></span><% }%> <%=it.titulo%></h3>
+    <div class="questoes">
+        <%
+        if(it.respostas){
+            var quests = _.filter(it.slides, function(sl){
+                return sl.tipo.match(/quest/im);
+            });
+
+            quests.forEach(function(que, idx){
+                var tipo = '',
+                    media = 0;
+                if(it.respostas.length > 0){
+                    respondeuEssa = it.respostas[idx]
+                    if(respondeuEssa){
+                        var media = respondeuEssa.escore
+                        tipo = 'errado';
+                        if (media >= 70) {
+                            tipo = 'correto';
+                        }
+                        else if (media >= 50) {
+                            tipo = 'meio';
+                        }
+                        tipo = "corrigido " + tipo;
+                    }
+                }
+                %><span class="badge quest lista <%-tipo%>" media="<%-media%>"><%=idx+1%></span><%
+            });
+        }
+        %>
+    </div>
+    <div id='msgBlock' class="questoes badge alert-danger" style="left: 150px;bottom: 30px;opacity:1; <% if(!bloqueado){ %>display:none<%}%>">Este caso mudou!</div>
+</div>

@@ -1,0 +1,177 @@
+<div class="container-fluid">
+	<div class='panel panel-default'>
+		<div class='panel-heading'>
+			<h3 class="titulo-calc">
+				<span class="nomeCalc">Risco Cardiovascular</span>
+				<small>Calculadora do Risco Cardiovascular</small>
+			</h3>
+		</div>
+		<div class='panel-body'>
+		    <div class="item item-1 active" data-indice='1'>
+		    	<div class="col-md-12 col-sm-12 col-xs-12">
+				    <div class='form-group'>
+                    	<label for='idadeId'>Idade</label>
+	                      <input type="text" id="idadeId" class='form-control input input-lg' style='width: 250px;'>
+	                </div>
+					<label>Sexo</label>
+				    <div class='form-group'>
+	                    <div class='radio'>
+	                        <label >
+	                            <input type="radio" name="optionRadios1" class="sexo" value="1"  checked >Masculino
+	                        </label>
+	                    </div>
+	                    <div class='radio'>
+	                        <label >
+	                            <input type="radio" name="optionRadios1" class="sexo" value="0">Feminino
+	                        </label>
+	                    </div>
+	                </div>
+					<label>Fumante</label>
+				    <div class='form-group'>
+	                    <div class='radio'>
+	                        <label >
+	                            <input type="radio" name="optionRadios2" class="fumante" value="1"  checked >Sim
+	                        </label>
+	                    </div>
+	                    <div class='radio'>
+	                        <label >
+	                            <input type="radio" name="optionRadios2" class="fumante" value="0">Não
+	                        </label>
+	                    </div>
+	                </div>
+				</div>
+				
+			</div>
+
+		    <div class="item item-2 " data-indice='2'>
+				<div class="col-md-12 col-sm-12 col-xs-12" style='margin-bottom:30px'>
+					<h4 class="sub-titulo-calc"><small>Critérios indicativos de alto risco cardiovascular e indicação de medidas de prevenção secundária </small></h4>
+					<ul class='list-group' style='margin-left: 30px;'>
+						<li>Doença aterosclerótica clínica: síndrome coronariana aguda, angina de peito, AVC ou ataque isquêmico transitório, doença
+						 arterial periférica, revascularização miocárdica prévia, endarterectomia prévia.</li>
+						<li>Dislipidemia grave (colesterol total > 320 mg/dL, colesterol LDL > 240 mg/dL ou relação colesterol total/HDL > 8 ou dislipidemia familiar*</li>
+						<li>Doença aneurismática de aorta</li>
+						<li>Insuficiência cardíaca congestiva (exceto com etiologia não coronariana estabelecida)</li>
+						<li>Insuficiência renal crônica (DCE < 60 mL/min)*</li>
+						<li>Diabéticos acima de 40 anos e/ou com nefropatia ou retinopatia*</li>
+					</ul>
+					<div>
+						*Recomendado pela diretriz de prevenção de doença cardiovascular da Organização Mundial da Saúde.<br>
+						DCE = Depuração de creatinina endógena.
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<span>Existe critério de alto risco cardiovascular?</span>
+				    <div class='radio first'>
+					    <label>
+						    <input type="radio" name="optionRadios3" id="1vez" value='1' checked> Sim 
+						</label>
+					</div>
+					<div class='radio'>
+					    <label>
+						    <input type="radio" name="optionRadios3" id="2vez" value='2'> Não
+					    </label>
+					</div>
+
+				</div>
+
+			</div>
+		    <div class="item item-3 " data-indice='3'>
+		    	<div class="col-md-12 col-sm-12 col-xs-12">
+		    		<div class="form-group">
+						<label for="pasId">Pressão arterial sistólica (mmHg)</label>
+						<div class="input-group">
+							<div class="form-control-wrapper">
+								<input type="text" id="pasId" class="form-control input empty">
+								<span class="material-input"></span>
+							</div>
+							<span class="input-group-addon">mmHg</span>
+						</div>
+					</div>
+					<label>Pressão arterial tratada?</label>
+				    <div class='radio first'>
+					    <label>
+						    <input type="radio" name="optionRadios4" id="1vez" value='1' checked> Sim 
+						</label>
+					</div>
+					<div class='radio'>
+					    <label>
+						    <input type="radio" name="optionRadios4" id="2vez" value='2'> Não
+					    </label>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="form-group">
+						<label for="hdlId">HDL (mg/dL)</label>
+						<div class="input-group">
+							<div class="form-control-wrapper">
+								<input type="text" id="hdlId" class="form-control input empty">
+								<span class="material-input"></span>
+							</div>
+							<span class="input-group-addon">mg/dL</span>
+						</div>
+					</div>
+				    <div class="form-group">
+						<label for="ctId">Colesterol total (mg/dL)</label>
+						<div class="input-group">
+							<div class="form-control-wrapper">
+								<input type="text" id="ctId" class="form-control input empty">
+								<span class="material-input"></span>
+							</div>
+							<span class="input-group-addon">mg/dL</span>
+						</div>
+					</div>
+				</div>			
+			</div>
+		    <div class='item item-4  ' data-indice='4'>
+		    	<div class="col-md-12 col-sm-12 col-xs-12">
+					<h2 class='resultado-titulo'>Resultado</h2>
+
+					<div class='descricao-resultado'>
+						<!-- <h3 >Manifestações Clínicas Classificadas como: </h3> -->
+						<p><h1 class='resultado'></h1></p>
+						<h3><b>Intervenções utilizadas em prevenção primária de eventos cardiovasculares<b></h3>
+						<ul class='list-group intervencoes'></li>
+					</div>
+
+				</div>
+				
+		    </div>
+
+		    <div class="col-md-12 col-sm-12 col-xs-12">
+		    	<ul class="pagination">
+				  <li id='prev' >
+				  		<a class='sensivel'><span class='glyphicon glyphicon-chevron-left prev'></span></a>
+				  </li>
+				  <li id='inicio'>
+				  		<a class='sensivel'><span class='glyphicon glyphicon-home inicio'></span></a>
+				  </li>
+				  <li id='next'>
+				  		<a class='sensivel'><span class='glyphicon glyphicon-chevron-right next'></span></a>
+				  	</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div class='container calc-footer'>
+		<div class='col-md-12 col-sm-12 col-xs-12'>
+			<!-- <h4 >Versão impressa</h4>
+			<dl>
+			    <dt><a href="/static/bib/apoio/paciente_ad1.pdf" target="_blank">Especificação da calculadora de complexidade do pacente em AD1.</a>
+			    </dt>
+			    <dd>
+			      <small>58.3 kB</small>
+			    </dd>
+			</dl> -->
+			<h4>Referências:</h4>
+			<dl>
+			    <dt>
+				Duncan BB, Schmidt MI, Giugliani ER. Medicina Ambulatorial: condutas clínicas em atenção primária. Porto Alegre: Artes Médicas, 4ª edição, 2013.
+				</dt>
+				<dd><p>Disponível em: <a href="" target="_blank">Sem arquivo</a> Acesso em sem ano <br><small>2000.0 kB</small></p>
+				</dd>
+			</dl>
+		</div> 
+	</div> 
+</div>

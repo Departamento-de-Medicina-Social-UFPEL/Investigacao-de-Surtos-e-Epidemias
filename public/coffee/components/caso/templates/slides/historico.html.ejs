@@ -1,0 +1,29 @@
+<h3><%=titulo%></h3>
+<div class="row">
+<%
+
+var blockMap = {
+	"historiaSocial": "História social",
+	"antecFamiliares": "Antecedentes familiares",
+	"antecPessoais": "Antecedentes pessoais",
+	"medicacoesEmUso": "Medicações em uso"
+}
+
+var blocks = [];
+
+for (var key in conteudo){
+	val = conteudo[key];
+	if(val.length>0) blocks.push({"nome": key,"cont": val});
+}
+
+blocks.sort(function(a, b){
+	return a.cont.length >= b.cont.length ? -1 : 1;
+});
+
+_.each(blocks, function(val){
+	%><div class="col-md-6">
+	    <h4><%=blockMap[val.nome]%></h4>
+	    <p><%=val.cont%></p>
+	</div><%
+}); %>
+</div>

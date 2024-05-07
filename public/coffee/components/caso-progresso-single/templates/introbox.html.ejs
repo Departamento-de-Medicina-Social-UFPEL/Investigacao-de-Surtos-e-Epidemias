@@ -1,0 +1,16 @@
+<h1 class='display-2'><%=titulo%></h1>
+<div class="container-static">
+    <h4><%=slides[0].conteudo.texto%></h4>
+</div>
+<small class="dataPubTop">Publicado em <%=dataLongaPub.data.getDate()%> de <%=dataLongaPub.mes%> de <%=dataLongaPub.data.getFullYear()%></small>
+<small class="autoresTop row">
+    <div class="col-md-4 listaPess">
+        <strong>Autores</strong> <%=(typeof(autor) === 'string') ? autor : autor.join(', ')%>
+    </div>
+    <div class="col-md-3 listaPess">
+        <strong>Editores</strong> Anaclaudia Fassa e Luiz Augusto Facchini
+    </div>
+    <div class="col-md-5 listaPess">
+        <strong>Editores Associados</strong> <%= editores.join(', ') %>
+    </div>
+</small>

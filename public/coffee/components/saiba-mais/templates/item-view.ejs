@@ -1,0 +1,67 @@
+
+<div class="container-fluid  main-slide well">
+    <div>
+        <%=pergunta%>
+    </div>
+    <h2 class='titulo'>Saiba Mais</h2>
+    <div class=" ">
+        <%=conteudo.resposta.texto%>
+    </div>
+</div>
+
+    <% if(bibliografia){
+    
+        var mesesAbr = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun','jul','ago','set','out','nov','dez'];
+        var it = {resources: obj}
+        var numCols = 2;
+        var alphaSort = function(a,b){
+          var aa = a.autor.toLowerCase(),
+              ab = b.autor.toLowerCase();
+          return aa > ab ? 1 : aa < ab ? -1 : 0
+        };
+        bibliografia = bibliografia.sort(alphaSort);
+    %>
+    
+    <div class="bibliografia well">
+        <b>Referência</b>
+        <ol class='list-group'>
+            <% bibliografia.forEach(function(bib){
+                %>
+                <li class="adaptItem" data-id="<%-bib._id%>">
+            <%-bib.autor.slice(-1) === '.' ? bib.autor.slice(0, -1)+"." : bib.autor%>
+            <strong style="font-weight: 400!important; color: #333!important;">
+            <%if(bib.url){%>
+                <a target='_blank' style="font-weight: 400!important; color: #333!important;" href='<%-window.defaultStaticFileService%>/bib/<%=bib.url%>'>
+                <%-bib.titulo.slice(-1) === '.' ? bib.titulo.slice(0, -1) : bib.titulo%>
+                </a>
+            </strong>.<%
+            }else {%>
+                <%=bib.titulo.slice(-1) === '.' ? bib.titulo.slice(0, -1)+"." : bib.titulo%></strong>
+                <%}%>
+            <%=bib.etc?bib.etc:''%><%
+                if(bib.ano!='' && !bib.soEtc){
+                %><%=bib.ano%>.<%
+                }
+            %>
+            <%if(bib.urlOri && bib.urlOri !=''){%>
+                <small style="font-weight: 200; font-style: oblique;">
+                <span style="word-break: break-all;"><a target='_blank' href='<%-bib.urlOri%>'><%-bib.urlOri%></a></span>&gt;. 
+                <%if(bib.acessoEm){
+               
+                %>
+                Acesso em: <%-bib.acessoEm%>. 
+                <%}%>
+                </small>
+            <%}%>
+            <br/>
+            <%if(bib.url && bib.filesize != ''){%>
+                <small>
+                <i class="mdi mdi-cloud-download" style="color: #ababab"></i> <a target='_blank' href='<%-window.defaultStaticFileService%>/bib/<%=bib.url%>'>Cópia espelho (<%=bib.filesize%>)</a></small>
+            <%}%>
+            </li>
+                <%
+            }) %>
+        </ol>
+    </div>
+    <%} %>  
+ 

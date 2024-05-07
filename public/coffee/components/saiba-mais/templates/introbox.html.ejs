@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+    <div class="badgeContainer">
+        <a class="nucleoTexto gotoReturn" id='voltarUnidade' style='display:none'><i class="mdi mdi-chevron-left ico-unidade"></i> Voltar para a Seleção</span></a>
+    </div>
+    <h2><%=titulo%></h2>
+    <small class="dataPubTop">Publicado em <%=dataLongaPub.data.getDate()%> de <%=dataLongaPub.mes%> de <%=dataLongaPub.data.getFullYear()%></small>
+    <div class="listaPess">
+        <strong>Autore<%=typeof(autor) === 'object' ? 's' : ''%>:</strong> <%=typeof(autor) === 'object' ? autor.join(', ') : autor%>
+    </div>
+    <div class="listaPess">
+        <strong>Editores:</strong> Anaclaudia Gastal Fassa e Luiz Augusto Facchini
+    </div>
+     <%if(editores){ 
+        console.log(editores, 'editores')
+        if(editores.length > 0){%>
+        <strong>Editores Associados:</strong> <%=typeof(editores) === 'object' ? editores.join(', ') : editores %>
+        <%}
+    }%>
+
+</div>

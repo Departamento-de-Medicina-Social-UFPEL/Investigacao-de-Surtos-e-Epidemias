@@ -1,0 +1,5 @@
+define [
+], ()->
+
+  "": "iniciaPagina"
+  "/:ambiente": "carregaAmbiente"

@@ -1,0 +1,985 @@
+{
+  "__v": NumberInt(0),
+  "ano": "2002",
+  "autor": "ANDRADE, Gabriela R. B.; VAITSMEN, Geni.",
+  "createdAt": ISODate("2014-05-19T20:48:24.550Z"),
+  "filesize": "81.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Apoio social e redes: conectando solidariedade e saúde",
+  "updatedAt": ISODate("2014-05-20T08:42:47.870Z"),
+  "url": "andrade_gabriela_apoio_social.pdf",
+  "etc": "<b>Ciência & Saúde Coletiva<\/b>, Rio de Janeiro, v. 7, n. 4, p. 925 – 934,"
+}
+
+{
+  "__v": NumberLong(0),
+  "ano": "2011",
+  "autor": "ASSIS, Gisela Maria; FARO, Ana Cristina M.",
+  "createdAt": ISODate("2014-05-19T20:48:24.0Z"),
+  "filesize": "84.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Autocateterismo vesical intermitente na lesão medular",
+  "updatedAt": ISODate("2014-05-20T08:42:47.137Z"),
+  "url": "assis_gisela_autocateterismo.pdf",
+  "etc": "<b>Rev. Esc. Enferm. USP<\/b>, São Paulo, v. 45, n. 1, p. 289-93,"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2007",
+  "autor": "BONARDI, Gislaine; SOUZA, Valdemarina Bidone A.; MORAES, João Feliz D.",
+  "createdAt": ISODate("2014-05-19T20:48:24.553Z"),
+  "filesize": "135.4 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Incapacidade funcional e idosos: um desafio para os profissionais de saúde",
+  "updatedAt": ISODate("2014-05-20T08:42:47.88Z"),
+  "etc": "<b>Scientia Medica<\/b>, Porto Alegre, v. 17, n. 3, p. 138-144,",
+  "url": "bonardigislaine_incapacidade.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria da Atenção à Saúde. Departamento de Atenção Básica.",
+  "createdAt": ISODate("2014-05-19T20:48:24.554Z"),
+  "filesize": "5.8 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Acolhimento à Demanda Espontânea: queixas mais comuns na Atenção Básica",
+  "updatedAt": ISODate("2014-05-20T08:42:47.88Z"),
+  "etc":"Brasília, DF: Ministério da Saúde, 2013. p. 57. (Cadernos de Atenção Básica, n. 28, Volume II)",
+  "noAno": true,
+  "url": "brasil_acolhimento.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2009",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica",
+  "createdAt": ISODate("2014-05-19T20:48:24.554Z"),
+  "filesize": "564.8 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Alimentação saudável para a pessoa idosa: um manual para profissionais de saúde",
+  "updatedAt": ISODate("2014-05-20T08:42:47.89Z"),
+  "url": "brasil_alimentacao_saudavel.pdf",
+  "etc": "Brasília, DF: Ministério da Saúde, 2009. 38p. (Série A. Normas e Manuais Técnicos).",
+  "noAno": true
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "",
+  "autor": "BRASIL. Ministério da Saúde. Departamento de Gestão e Incorporação de Tecnologias em Saúde da Secretaria de Ciência, Tecnologia e Insumos Estratégicos. Comissão Nacional de Incorporação de Tecnologias no SUS (CONITEC) - Relatório n° 30",
+  "createdAt": ISODate("2014-05-19T20:48:24.554Z"),
+  "filesize": "347.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Budesonida, Beclometasona, Fenoterol, Salbutamol, Formoterol e Salmeterol para o tratamento da doença pulmonar obstrutiva crônica (DPOC)",
+  "updatedAt": ISODate("2014-05-20T08:42:47.89Z"),
+  "url": "brasil_budesonida.pdf",
+  "etc":"Brasília, DF: CONITEC, [200-?].",
+  "noAno": true
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2009",
+  "autor": "BRASIL. Ministério da Saúde. Instituto Nacional de Traumatologia e Ortopedia",
+  "createdAt": ISODate("2014-05-19T20:48:24.560Z"),
+  "filesize": "155.5 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Dicas em saúde - Queda de idosos",
+  "etc":"<b>Biblioteca Virtual em Saúde<\/b>",
+  "updatedAt": ISODate("2014-05-20T08:42:47.106Z"),
+  "url": "brasil_queda_de_idosos.pdf"
+}
+
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2011",
+  "autor": "BRASIL",
+  "createdAt": ISODate("2014-05-19T20:48:24.555Z"),
+  "filesize": "117.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Consulta pública nº 6 de 20 de setembro de 2011",
+  "updatedAt": ISODate("2014-05-20T08:42:47.91Z"),
+  "etc":"O Ministro de Estado da Saúde torna pública, nos termos do artigo 34, inciso II, e art. 59 do Decreto n. 4.176 de 28 de março de 2002, minuta de portaria que institui a Linha de Cuidado do Infarto Agudo do Miocárdio (IAM) no âmbito do Sistema Único de Saúde (SUS), bem como o Protocolo Clínico sobre Síndrome Coronariana Aguda. <b>Diário Oficial [da] República Federativa do Brasil<\/b>, Poder Executivo, Brasília, DF, 21 set. 2011. Seção 1, p. 89.",
+  "url": "brasil_consulta_publica_n6.pdf",
+  "noAno": true
+}
+
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000037" },
+  "__v": 0,
+  "ano": "2011",
+  "autor": "BRASIL. Ministério da Saúde. Ministério do Estado de Minas e Energia",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "16.9 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Portaria interministerial nº 630, de 8 de novembro de 2011",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"<b>Diário Oficial [da] República Federativa do Brasil<\/b>, Poder Executivo, Brasília, DF, 09 nov.",
+  "url": "portaria_interministerial_630.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2011",
+  "autor": "BRASIL. Ministério da Saúde",
+  "createdAt": ISODate("2014-05-19T20:48:24.558Z"),
+  "filesize": "217.5 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Portaria nº 2.527, de 27 de outubro de 2011. Redefine a Atenção Domiciliar no âmbito do Sistema Único de Saúde (SUS)",
+  "updatedAt": ISODate("2014-05-20T08:42:47.96Z"),
+  "etc":"<b>Diário Oficial [da] República Federativa do Brasil<\/b>, Poder Executivo, Brasília, DF, 27 out.",
+  "url": "brasil_portaria_2527.pdf"
+}
+
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2012",
+  "autor": "BRASIL. Ministério da Saúde",
+  "createdAt": ISODate("2014-05-19T20:48:24.558Z"),
+  "filesize": "112.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Portaria nº 664, de 12 de abril de 2012. Aprova o Protocolo Clínico e Diretrizes Terapêuticas - Trombólise no Acidente Vascular Cerebral Isquêmico Agudo",
+  "updatedAt": ISODate("2014-05-20T08:42:47.105Z"),
+  "url": "brasil_portaria_664.pdf",
+  "etc":"<b>Diário Oficial [da] República Federativa do Brasil<\/b>, Poder Executivo, Brasília, DF, 12 abr."
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "BRASIL. Ministério da Saúde",
+  "createdAt": ISODate("2014-05-19T20:48:24.558Z"),
+  "filesize": "109.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Portaria nº 609, de 6 de junho de 2013. Aprova o protocolo clínico e diretrizes terapêuticas da Osteoporose",
+  "updatedAt": ISODate("2014-05-20T08:42:47.96Z"),
+  "url": "brasil_portaria_609.pdf",
+  "etc":"<b>Diário Oficial [da] República Federativa do Brasil<\/b>, Poder Executivo, Brasília, DF, 6 jun."
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Ações Programáticas Estratégicas",
+  "createdAt": ISODate("2014-05-19T20:48:24.555Z"),
+  "filesize": "8.3 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Diretrizes de atenção à pessoa com lesão medula",
+  "updatedAt": ISODate("2014-05-20T08:42:47.92Z"),
+  "url": "brasil_diretrizes.pdf",
+  "etc": "Brasília, DF: Ministério da Saúde,"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2012",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica.",
+  "createdAt": ISODate("2014-05-19T20:48:24.554Z"),
+  "filesize": "1.2 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Caderno de atenção domiciliar",
+  "updatedAt": ISODate("2014-05-20T08:42:47.89Z"),
+  "url": "brasil_caderno_de_atencao1.pdf",
+  "etc": "Brasília, DF: Ministério da Saúde, 2012. 102 p. (Melhor em casa: a segurança do hospital no conforto do seu lar, v. 1).",
+  "noAno": true
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica.",
+  "createdAt": ISODate("2014-05-19T20:48:24.555Z"),
+  "filesize": "1.9 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Caderno de atenção domiciliar",
+  "updatedAt": ISODate("2014-05-20T08:42:47.90Z"),
+  "url": "brasil_caderno_de_atencao2.pdf",
+  "etc":"Brasília, DF: Ministério da Saúde, 2013. 205 p. (Melhor em casa: a segurança do hospital no conforto do seu lar, v. 2).",
+  "noAno": true
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2006",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica",
+  "createdAt": ISODate("2014-05-19T20:48:24.555Z"),
+  "filesize": "706.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Diabetes mellitus",
+  "updatedAt": ISODate("2014-05-20T08:42:47.91Z"),
+  "url": "brasil_diabetes.pdf",
+  "etc":"Brasília, DF: Ministério da Saúde, 2006. (Cadernos de Atenção Básica - n.º 16. Série A. Normas e Manuais Técnicos).",
+  "noAno": true
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2007",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica.",
+  "createdAt": ISODate("2014-05-19T20:48:24.556Z"),
+  "filesize": "2.3 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Envelhecimento e saúde da pessoa idosa",
+  "updatedAt": ISODate("2014-05-20T08:42:47.92Z"),
+  "noAno": true,
+  "etc":"Brasília, DF: Ministério da Saúde, 2007. (Série A. Normas e Manuais Técnicos. Cadernos de Atenção Básica, n. 19).",
+  "url": "brasil_envelhecimento_e_saude.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2006",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica",
+  "createdAt": ISODate("2014-05-19T20:48:24.560Z"),
+  "filesize": "434.2 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Prevenção clínica de doença cardiovascular, cerebrovascular e renal crônica",
+  "updatedAt": ISODate("2014-05-20T08:42:47.105Z"),
+  "url": "brasil_prevencao_clinica_de_doenca_cardio.pdf",
+    "noAno": true,
+  "etc":"Brasília, DF: Ministério da Saúde, 2006. (Cadernos de Atenção Básica – nº 14. Série A. Normas e Manuais Técnicos)."
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2006",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica",
+  "createdAt": ISODate("2014-05-19T20:48:24.561Z"),
+  "filesize": "1.7 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Saúde bucal",
+  "updatedAt": ISODate("2014-05-20T08:42:47.107Z"),
+  "etc":"Brasília, DF: Ministério da Saúde, 2006. (Cadernos de Atenção Básica – nº 17).",
+  "noAno": true,
+  "url": "brasil_saude_bucal.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Especializada",
+  "createdAt": ISODate("2014-05-19T20:48:24.557Z"),
+  "filesize": "3.2 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Manual de rotinas para atenção ao AVC",
+  "updatedAt": ISODate("2014-05-20T08:42:47.95Z"),
+  "etc":"Brasília, DF: Ministério da Saúde,",
+  "url": "brasil_manual_de_rotinas.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2008",
+  "autor": "BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Secretaria de Gestão do Trabalho e da Educação na Saúde",
+  "createdAt": ISODate("2014-05-19T20:48:24.556Z"),
+  "filesize": "2.4 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Guia Prático do Cuidador",
+  "updatedAt": ISODate("2014-05-20T08:42:47.92Z"),
+  "url": "brasil_guia_pratico.pdf",
+  "etc":"Brasília, DF: Ministério da Saúde, 2008. (Série A. Normas e Manuais Técnicos).",
+    "noAno": true
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2011",
+  "autor": "BRASIL. Ministério da Saúde. Sociedade Brasileira de Nefrologia",
+  "createdAt": ISODate("2014-05-19T20:48:24.557Z"),
+  "filesize": "100.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Dicas em saúde - Insuficiência renal crônica",
+  "updatedAt": ISODate("2014-05-20T08:42:47.93Z"),
+  "url": "brasil_insuficienciarenal.pdf",
+  "etc":"<b>Biblioteca Virtual em Saúde<\/b>."
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2004",
+  "autor": "BRUNI, Denise S. et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.561Z"),
+  "filesize": "234.4 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Aspectos fisiopatológicos e assistenciais de enfermagem na reabilitação da pessoa com lesão medular",
+  "updatedAt": ISODate("2014-05-20T08:42:47.72Z"),
+  "etc":"<b>Revista da Escola de Enfermagem da USP<\/b>, São Paulo, v. 38, n.1, p. 71-79,",
+  "url": "bruni_aspectos_fisiopatologicos.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2009",
+  "autor": "CAETANO, Aletha Silva et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.562Z"),
+  "filesize": "229.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Influência da atividade física na qualidade de vida e auto-imagem de mulheres incontinentes",
+  "updatedAt": ISODate("2014-05-20T08:42:47.110Z"),
+  "etc":"<b>Rev. Bras. Med. Esporte<\/b>, São Paulo, v. 15, n. 2, p. 93-97,",
+  "url": "caetano_influencia.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2000",
+  "autor": "CAMPOS, Maria Teresa F. S.; MONTEIRO, Josefina B. R.; ORNELAS, Ana Paula R. C.",
+  "createdAt": ISODate("2014-05-19T20:48:24.563Z"),
+  "filesize": "130.9 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Fatores que afetam o consumo alimentar e a nutrição do idoso",
+  "updatedAt": ISODate("2014-05-20T08:42:47.111Z"),
+  "etc":"<b>Rev. Nutr.<\/b>, Campinas, v. 13, n. 3, p. 157-165,",
+  "url": "campos_fatores_que_afetam.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "CHAIMOWICZ, Flávio",
+  "createdAt": ISODate("2014-05-19T20:48:24.563Z"),
+  "filesize": "5.0 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Saúde do idoso. 2 ed",
+  "updatedAt": ISODate("2014-05-20T08:42:47.79Z"),
+  "etc":"Belo Horizonte: NESCON UFMG, 2013. 167 p.",
+"noAno": true,
+  "url": "chaimowicz_saude_do_idoso.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "",
+  "autor": "COMISSÃO NACIONAL DE INCORPORAÇÃO DE TECNOLOGIAS NO SUS",
+  "createdAt": ISODate("2014-05-19T20:48:24.557Z"),
+  "filesize": "323.8 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Linha de Cuidados em Acidente Vascular Cerebral (AVC) na Rede de Atenção às Urgências e Emergências",
+  "updatedAt": ISODate("2014-05-20T08:42:47.94Z"),
+  "etc":"Brasília, DF: CONITEC, [201-?]. 37 p.",
+  "noAno": true,
+  "url": "brasil_linhadecuidado.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2009",
+  "autor": " CORRÊA, Ricardo de Amorim et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.563Z"),
+  "filesize": "491.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Diretrizes brasileiras para pneumonia adquirida na comunidade em adultos imunocompetentes - 2009",
+  "updatedAt": ISODate("2014-05-20T08:42:47.112Z"),
+  "etc":"<b>J. Bras. Pneumol.<\/b>, Brasília, DF, v. 35, n. 6, p. 574-601,",
+  "url": "correa_diretrizes_brasileiras.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2011",
+  "autor": "DEL DUCA, Giovâni Firpo; THUMÉ, Elaine; HALLAL, Pedro Curi",
+  "createdAt": ISODate("2014-05-19T20:48:24.564Z"),
+  "filesize": "171.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Prevalência e fatores associados ao cuidado domiciliar a idosos",
+  "updatedAt": ISODate("2014-05-20T08:42:47.113Z"),
+  "etc":"<b>Rev. Saúde Pública<\/b>, São Paulo, v. 45, n. 1, p. 113-120,",
+  "url": "duca_prevalencia_e_fatores.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2005",
+  "autor": "DIOGO, Maria José D’Elboux; CEOLIM, Maria Filomena; CINTRA, Fernanda Aparecida",
+  "createdAt": ISODate("2014-05-19T20:48:24.564Z"),
+  "filesize": "547.8 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Orientações para idosas que cuidam de idosos no domicílio: relato de experiência",
+  "updatedAt": ISODate("2014-05-20T08:42:47.113Z"),
+  "etc":"<b>Rev. Esc. Enferm. USP<\/b>, São Paulo, v. 39, n. 1, p. 97-102,",
+  "url": "diogo_orientacoes_para_idosas.pdf"
+}
+
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900003A" },
+  "__v": 0,
+  "ano": "2009",
+  "autor": "DUARTE, Yeda aparecida de Oliveira",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "2.4 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Manual dos formadores de cuidadores de pessoas idosas",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"São Paulo: Secretaria Estadual de Assistência e Desenvolvimento Social: Fundação Padre Anchieta, 2009. 135 p.",
+"noAno": true,
+  "url": "sao_paulo_manual_de_cuidadores_de_pessoas_idosas.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2011",
+  "autor": "FERREIRA, Adriano Menis et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.564Z"),
+  "filesize": "263.2 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Colchões do tipo caixa de ovo: um reservatório de Staphylococcus aureus resistente à meticilina?",
+  "updatedAt": ISODate("2014-05-20T08:42:47.114Z"),
+  "etc":"<b>Rev. Esc. Enferm. USP<\/b>, São Paulo, v. 45, n. 1, p. 161-166,",
+  "url": "ferreira_colchao_do_tipo.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2001",
+  "autor": "FRIED, LINDA P. et al",
+  "filesize": "190.9 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Frailty in Older Adults: Evidence for a Phenotype",
+  "updatedAt": ISODate("2014-05-20T08:42:47.80Z"),
+  "etc":"<b>Journal of Gerontology: Medical Sciences<\/b>, [S. l.], v. 56A, n. 3, p. M146–M156,",
+  "url": "fried_frailty.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2006",
+  "autor": "FURTADO, Angelina M.; LIMA, Francisca E. T",
+  "createdAt": ISODate("2014-05-19T20:48:24.565Z"),
+  "filesize": "35.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Autocuidado dos pacientes portadores de insuficiência renal crônica com a fístula artério-venosa",
+  "updatedAt": ISODate("2014-05-20T08:42:47.117Z"),
+  "etc":"<b>Rev. Gaúcha Enferm<\/b>, Porto Alegre, v. 27, n. 4, p. 532-538, dez.",
+  "url": "furtado_autocuidado.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "GLOBAL INITIATIVE FOR CHRONIC OBSTRUCTIVE LUNG DISEASE",
+  "createdAt": ISODate("2014-05-19T20:48:24.565Z"),
+  "filesize": "960.5 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Global strategy for the diagnosis, management, and prevention of chronic obstructive pulmonary disease (updated 2013).",
+  "updatedAt": ISODate("2014-05-20T08:42:47.118Z"),
+  "url": "gold_global_strategy.pdf",
+  "etc":"[EUA]: GOLD,"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2011",
+  "autor": "GONÇALVES, Luiz Felipe Fernandes et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.565Z"),
+  "filesize": "58.4 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Higienização de Próteses Totais e Parciais Removíveis",
+  "updatedAt": ISODate("2014-05-20T08:42:47.119Z"),
+  "etc":"<b>Rev. Bras Ciênc. Saúde<\/b>, João Pessoa, v. 15, n. 1, p. 87-94,",
+  "url": "goncalves_higienizacao_de_proteses.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2008",
+  "autor": "GORZONI, Milton L.; FABBRI, Renato M. A.; PIRES, Sueli L.",
+  "createdAt": ISODate("2014-05-19T20:48:24.566Z"),
+  "filesize": "76.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Critérios de Beers-Fick e medicamentos genéricos no Brasil",
+  "etc":"<b>Rev. Assoc. Med. Bras.<\/b>, São Paulo, v. 54, n. 4, p. 353-356,",
+  "updatedAt": ISODate("2014-05-20T08:42:47.120Z"),
+  "url": "gorzoni_criterios_de_beers-fick.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2010",
+  "autor": "GORZONI, Milton Luiz et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.565Z"),
+  "filesize": "149.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Febre em idosos",
+  "updatedAt": ISODate("2014-05-20T08:42:47.120Z"),
+  "etc":"<b>Arq. Med. Hosp. Fac. Cienc. Med. Santa Casa São Paulo<\/b>. São Paulo, v. 55, n. 1, p. 27-29,",
+  "url": "gorzoni_febre.pdf"
+}
+
+
+{
+  "__v": NumberInt(0),
+  "ano": "2013",
+  "autor": "HOLZ, Adriana Winter et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.566Z"),
+  "filesize": "469.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Prevalência de déficit cognitivo e fatores associados entre idosos de Bagé, Rio Grande do Sul, Brasil",
+  "updatedAt": ISODate("2014-05-20T08:42:47.121Z"),
+  "etc":"<b>Rev. Bras. Epidemiol.<\/b>, São Paulo, v. 16, n. 4, p. 880-888,",
+  "url": "holtz_prevalencia_de_deficit.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000029" },
+  "__v": 0,
+  "ano": "",
+  "autor": "INSTITUTO NACIONAL DE TRAUMATOLOGIA E ORTOPEDIA",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "1.0 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Cartilha de orientações ao paciente",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "inot_cartilha_de_orientacoes.pdf",
+  "etc": "Rio de Janeiro: INTO, [200-?]."
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2006",
+  "autor": "LIMA, Ione Costa at al.",
+  "createdAt": ISODate("2014-05-19T20:48:24.561Z"),
+  "filesize": "626.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Caderno de enfermagem em ortopedia. Curativos: orientações básicas",
+  "updatedAt": ISODate("2014-05-20T08:42:47.109Z"),
+  "etc":"Rio de Janeiro: Instituto Nacional de Traumatologia e Ortopedia, 2006. 32 p.",
+    "noAno": true,
+  "url": "caderno_de_enfermagem_maio_2006.pdf"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2009",
+  "autor": "LIM, W. S. et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.561Z"),
+  "filesize": "822.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Guidelines for the management of community acquired pneumonia in adults: update 2009",
+  "updatedAt": ISODate("2014-05-20T08:42:47.108Z"),
+  "url": "british_guidelines.pdf",
+  "etc":"<b>Thorax<\/b>, [S. l.], v. 64, Supl. III, p. iii1–iii55."
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900002A" },
+  "__v": 0,
+  "ano": "2002",
+  "autor": "MAGALHÃES, Ana Maria; CHIOCHETTA, Fabiana Veiga",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "37.7 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Diagnósticos de enfermagem para pacientes portadores de bexiga neurogênica",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "magalhaes_diagnosticos_de_enfermagem.pdf",
+  "etc":"<b>Rev. Gaúcha Enferm.<\/b>, Porto Alegre, v. 23, n. 1, p. 6-18,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900002B" },
+  "__v": 0,
+  "ano": "1998",
+  "autor": "MARCHINI, Júlio Sérgio; FERRIOLLI, Eduardo; MORIGUTI, Julio Cesar",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "119.5 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Suporte nutricional no paciente idoso: definição, diagnóstico, avaliação e intervenção",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "marchini_suporte_nutricional.pdf",
+  "etc":"<b>Medicina<\/b>, Ribeirão Preto, v. 31, p. 54-61,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900002C" },
+  "__v": 0,
+  "ano": "2006",
+  "autor": "MONTEIRO, Carla Roberta; FARO, Ana Cristina Mancussi",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "88.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "O cuidador do idoso e sua compreensão sobre a prevenção e o tratamento cirúrgico das fraturas de fêmur",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "monteiro_carla_o_cuidador_do_idoso.pdf",
+  "etc":"<b>Estud. Interdiscip. Envelhec.<\/b>, Porto Alegre, v. 10, p. 105-121,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900002D" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "MORAES, Edgar Nunes de; MARINO, Marília Campos de Abreu; SANTOS, Rodrigo Ribeiro",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "573.4 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Principais síndromes geriátricas",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "moraes_edgar_principais_sindromes.pdf",
+    "noAno": true,
+  "etc":"<b>Rev. Med. Minas Gerais<\/b>, Belo Horizonte, v. 20, n. 1, p. 54-66,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900002E" },
+  "__v": 0,
+  "ano": "2005",
+  "autor": "MOREIRA, Rafael S. et al",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "87.7 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "A saúde bucal do idoso brasileiro: revisão sistemática sobre o quadro epidemiológico e acesso aos serviços de saúde bucal",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "moreira_rafael_a_saude_bucal.pdf",
+  "etc":"<b>Cad. Saúde Pública<\/b>, Rio de Janeiro, v. 21, n. 6, p. 1665-1675, nov./dez."
+}
+
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900002F" },
+  "__v": 0,
+  "ano": "2007",
+  "autor": "NATIONAL KIDNEY FOUNDATION",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "243.4 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Nutrição e insuficiência renal crônica",
+  "updatedAt": { "$date": 1400575367000.000000 },
+"noAno": true,
+  "url": "national_kidney_foundation.pdf",
+  "etc":"New York, NY: National Kidney Foundation, 2007. 19 p."
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000032" },
+  "__v": 0,
+  "ano": "2011",
+  "autor": "NATIONAL INSTITUTE FOR HEALTH AND CLINICAL EXCELLENCE",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "98.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Anaemia management in people with chronic kidney disease: quick reference guide",
+  "etc":"London, UK: NHS, Feb. 2011. 11p. This updates and replaces NICE clinical guideline 39.",
+  "updatedAt": { "$date": 1400575367000.000000 },
+"noAno": true,
+  "url": "nihce_anaemia.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000033" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "NATIONAL INSTITUTE FOR HEALTH AND CLINICAL EXCELLENCE",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "87.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Delirium: diagnosis, prevention and management",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "nihce_delirium.pdf",
+  "etc":"Londres: NIHCE,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000034" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "NATIONAL INSTITUTE FOR HEALTH AND CLINICAL EXCELLENCE",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "215.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Lipid modification: Cardiovascular risk assessment and the modification of blood lipidsfor the primary and secondary prevention of cardiovascular disease",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "nihce_lipid.pdf",
+  "etc":"Londres: NICE,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000030" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "NATIONAL STROKE FOUNDATION",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "1.9 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Clinical guidelines for stroke management 2010",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "national_stroke_foundation.pdf",
+  "etc":"Melbourne: National Stroke Foundation,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000031" },
+  "__v": 0,
+  "ano": "2011",
+  "autor": "NERBASS, Fabiana Baggio et al",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "512.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Fatores relacionados ao ganho de peso interdialítico em pacientes em hemodiálise",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "nerbass_fabiana_fatores_relacionados.pdf",
+  "etc":"<b>J. Bras. Nefrol.<\/b>, São Paulo, v. 33, n. 3, p. 300-305,"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000035" },
+  "__v": 0,
+  "ano": "2005",
+  "autor": "NÓBREGA, Otávio T.; KARNIKOWSKI, Margô",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "236.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "A terapia medicamentosa no idoso: cuidados na medicação",
+  "etc":"<b>Ciência & Saúde Coletiva<\/b>, Rio de Janeiro, v. 10, n. 2, p. 309-313, abr./jun.,",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "nobrega_otavio_a_terapia_medicamentosa.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000036" },
+  "__v": 0,
+  "ano": "1999",
+  "autor": "ORENSTEIN, Robert; WONG, Edward S",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "347.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Urinary tract infections in adults",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "orenstein_urinary_tract.pdf",
+  "etc":"<b>Am Fam Physician<\/b>, [S. l.], v. 59, n. 5, p. 1225-1234"
+}
+
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900003B" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "ORGANIZAÇÃO MUNDIAL DA SAÚDE. Secretaria de Estado da Saúde de São Paulo",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "479.9 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Relatório global da OMS sobre prevenção de quedas na velhice",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"São Paulo: Secretaria de Estado da Saúde, 2010. 62 p. ",
+"noAno": true,
+  "url": "sao_paulo_relatorio_global.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000038" },
+  "__v": 0,
+  "ano": "2013",
+  "autor": "RIBEIRÃO PRETO. Prefeitura Municipal. Secretaria Municipal da Saúde.",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "687.6 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Manual de assistência às pessoas com feridas",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"Ribeirão Preto: Secretaria Municipal de Saúde, 2013. 79 p.",
+"noAno": true,
+  "url": "ribeirao_preto_manual_de_assistencia.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000039" },
+  "__v": 0,
+  "ano": "2007",
+  "autor": "RIBEIRO-ALVES, Maria Almerinda; GORDAN, Pedro A",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "58.8 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Diagnóstico de anemia em pacientes portadores de doença renal crônica",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"<b>J. Bras. Nefrol.<\/b>, São Paulo, v. 29, n. 4, Supl. 4, p. 4-6,",
+  "url": "ribeiro-alves_maria_diagnostico_de_anemia.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900003C" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "SENA, Edite Lago da Silva et al.",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "335.2 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Tecnologia cuidativa de ajuda mútua grupal para pessoas com parkinson e suas famílias",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "sena_edite_tecnologia_cuidativa.pdf",
+  "etc":"<b>Texto Contexto Enferm.<\/b>, Florianópolis, v.  19, n. 1, p. 93-103"
+}
+
+{
+  "__v": NumberInt(0),
+  "ano": "2009",
+  "autor": "SILVA, Adriana A. et al",
+  "createdAt": ISODate("2014-05-19T20:48:24.562Z"),
+  "filesize": "304.4 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Caderno de enfermagem em ortopedia. Gerenciamento do cuidado: centros de atenção especializada",
+  "updatedAt": ISODate("2014-05-20T08:42:47.110Z"),
+  "etc":"Rio de Janeiro: INTO, v. 2, 2009. 36 p.",
+"noAno": true,
+  "url": "caderno_de_enfermagem_maio_2009.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900003D" },
+  "__v": 0,
+  "ano": "2004",
+  "autor": "SOCIEDADE BRASILEIRA DE CARDIOLOGIA",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "739.7 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "III DIRETRIZ SOBRE TRATAMENTO DO INFARTO AGUDO DO MIOCÁRDIO",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"<b>Arquivos Brasileiros de Cardiologia<\/b>, Rio de Janeiro, v. 83, Supl. IV,",
+  "url": "sociedade_brasileira_de_cardiologia.pdf"
+}
+
+
+"sociedade_brasileira_de_cardiologia.pdf"
+III DIRETRIZ SOBRE TRATAMENTO DO INFARTO AGUDO DO MIOCÁRDIO
+
+2004
+739.7 kB
+
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900003E" },
+  "__v": 0,
+  "ano": "2011",
+  "autor": "SOCIEDADE BRASILEIRA DE GERIATRIA E GERONTOLOGIA. ACADEMIA BRASILEIRA DE NEUROLOGIA. SOCIEDADE BRASILEIRA DE MEDICINA DE FAMÍLIA E COMUNIDADE",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "415.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Doença de Alzheimer: prevenção e tratamento",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "url": "sociedade_brasileira_de_geriatria_e_gerontologia.pdf",
+"noAno": true,
+  "etc":"[S.l]: AMB, 2011. (Projeto Diretrizes)."
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B4900003F" },
+  "__v": 0,
+  "ano": "2004",
+  "autor": "SOCIEDADE BRASILEIRA DE PNEUMOLOGIA E TISIOLOGIA",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "1.1 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "II Consenso Brasileiro sobre Doença Pulmonar Obstrutiva Crônica - DPOC",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"<b>Jornal Brasileiro de Pneumologia<\/b>, Brasília, DF, v. 30, n. 5, p. 01-42",
+  "url": "sociedade_brasileira_de_pneumologia_e_tisiologia.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000040" },
+  "__v": 0,
+  "ano": "2008",
+  "autor": "SOCIEDADE BRASILEIRA DE UROLOGIA",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "352.0 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Bexiga Urinária: cateterismo Intermitente",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"São Paulo: AMB/CFM, 2008. (Projeto Diretrizes)",
+"noAno": true,
+  "url": "sbu_bexiga_urinaria.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000041" },
+  "__v": 0,
+  "ano": "2004",
+  "autor": "SOCIEDADE BRASILEIRA DE UROLOGIA",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "59.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Infecção do trato urinário no idoso",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"São Paulo: Associação Médica Brasileira",
+  "url": "sbu_infeccao_do_trato.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000042" },
+  "__v": 0,
+  "ano": "2009",
+  "autor": "SOUSA, Valéria M. C.; GUARIENTO, Maria Elena",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "89.1 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Avaliação do idoso desnutrido",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"<b>Rev. Soc. Bras. Clin. Med.<\/b>, São Paulo, v. 7, p. 46-49,",
+  "url": "sousa_valeria_avaliacao_do_idoso.pdf"
+}
+
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000043" },
+  "__v": 0,
+  "ano": "2010",
+  "autor": "TRZEPACZ, Paula et al",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "474.7 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Practice guideline for the treatment of patients with delirium",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"American Psychiatric Association,",
+  "url": "trzepacz_paula_practice.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000044" },
+  "__v": 0,
+  "ano": "2005",
+  "autor": "WACKER, Priscilla; NUNES, Paula V.; FORLENZA, Orestes V.",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "205.3 kB",
+  "modulo": "AD-Idosos",
+  "titulo": "Delirium: uma perspectiva histórica",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"<b>Rev. Psiq. Clín.<\/b>, São Paulo, v. 32, n. 3, p. 97-103,",
+  "url": "wacker_priscilla_delirium_uma_perspectiva.pdf"
+}
+
+{
+  "_id": { "$oid" : "537A6E18F4D4E33B49000045" },
+  "__v": 0,
+  "ano": "2005",
+  "autor": "WORLD HEALTH ORGANIZATION",
+  "createdAt": { "$date": 1400532504000.000000 },
+  "filesize": "1.9 MB",
+  "modulo": "AD-Idosos",
+  "titulo": "Envelhecimento ativo: uma política de saúde",
+  "updatedAt": { "$date": 1400575367000.000000 },
+  "etc":"Brasília, DF: Organização Pan-Americana da Saúde,",
+  "url": "who_envelhecimento_ativo.pdf"
+}
+
+
+

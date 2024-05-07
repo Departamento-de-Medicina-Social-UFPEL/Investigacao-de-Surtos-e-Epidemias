@@ -1,0 +1,17 @@
+<%
+    // console.log('i run ok');
+    dumpGlobalsToWindow = function(vars) {
+        var list = '\n';
+        for ( var varName in vars )
+            list += 'window.' + varName + ' = ' + JSON.stringify(vars[varName]) + ';\n';
+        return list + '\n'
+    };
+    dumpTemplates = function(templates) {
+        var list = '\n';
+        for ( var template in templates ) {
+            html = templates[template]
+            list += '\n<script type="text/ejs" id="' + template + '">\n' + html + '\n</script>\n';
+        }
+        return list + '\n'
+    };
+%>

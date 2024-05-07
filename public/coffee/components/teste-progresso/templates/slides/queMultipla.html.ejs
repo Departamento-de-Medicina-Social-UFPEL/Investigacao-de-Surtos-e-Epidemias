@@ -1,0 +1,75 @@
+<h4><%-titulo%> <!-- <div class='badge esc-multipla'>Escolha múltipla</div> --></h4>
+<h3><%=pergunta%></h3>
+<div class="opcoes clearfix"><%
+    if(conteudo.opcoes<=6){
+
+        %><div class="col-md-12 "><%
+            for(var i in conteudo.opcoes) {
+            %>
+            <label for="resposta" class='checkbox unchecked opcao'><input type="checkbox" data-originalidx="<%=conteudo.opcoes[i].originalIdx%>" name="resposta"/><%=conteudo.opcoes[i].texto%></label>
+            <% }
+        %></div><%
+
+    } else {
+
+        var ops = conteudo.opcoes,
+            till = (Math.ceil(ops.length/2)),
+            firsters = ops.slice(0, till);
+
+        %><div class="col-md-6 ">
+            <% firsters.forEach(function(op,key) { %>
+            <div class="checkbox">
+                <label class='opcao'>
+                    <input type="checkbox" data-originalidx="<%=op.originalIdx%>"
+                    name="resposta"/>
+                    <%=op.texto%>
+                </label>
+            </div>
+            <% }); %>
+        </div>
+        <div class="col-md-6 ">
+            <%
+            var lasters = ops.slice(till, ops.length);
+            lasters.forEach(function(op,key) { %>
+            <div class="checkbox">
+                <label class='opcao'>
+                    <input type="checkbox" data-originalidx="<%=op.originalIdx%>"
+                    name="resposta"/>
+                    <%=op.texto%>
+                </label>
+            </div>
+            <% }); %>
+        </div>
+    <%}%>
+    <div class="col-md-12 text-center">
+        <button class="btn btn-lg btn-info responder">Responder</button>
+    </div>
+</div>
+<div class="correcao alert hide">
+    <div class="container-fluid">
+        <i class="mdi iconeCorrige"></i> <h2 class="porcentagem"><span class='valor'></span> <span class="barra">/</span> <span class="cento">100</span> <small>acerto</small></h2>
+    </div>
+</div>
+<div class="resposta well lead hide">
+
+    <%
+        var texto = conteudo.resposta.texto;
+        var matches = texto.match(/(caso|tenta)\/(.*?)'/gim);
+        var refUrl = '';
+
+        if(matches!=null){
+            matches = matches[0].match(/[0-9abcdef]{24}/img);
+            refUrl = App['selecao-testes-progresso'].refRouteFactory(matches[0]);
+        }
+        strLink = texto.slice(0, texto.indexOf("<")).trim();
+        if(!strLink){
+            strLink = texto.slice(0, texto.indexOf("<a href") - 1).trim()+"</p>";
+            if(!texto.slice(0, texto.indexOf(":<")).trim())
+                strLink = texto.slice(0, texto.indexOf(": <")).trim()+"</p>";
+
+        }
+    %>
+    <a href="<%=refUrl%>"><%= strLink %></a>
+
+</div>
+

@@ -1,0 +1,204 @@
+<div class="container">
+    <style type="text/css">
+            .item.calculadoras.fager {
+
+                .radio label{
+                    position: relative;
+                    top: -3px;
+                }
+
+                .radio label.simples{
+                    position: relative;
+                    top: 0;
+                    left: 60px;
+                    margin-top: 12px;
+                    display: inline-block;
+                    margin-bottom: 30px;
+                }
+
+                .radio label.simples  input[type="radio"]{
+                    position: relative;
+                    top: -3px;
+                }
+
+                @media (min-width: 768px){
+                  .escoreBox{
+                    width: auto;
+                    margin-left: -80px;
+                  }
+                }
+
+
+                /*.radio.idade{
+                    position: relative;
+                    margin-left: 59px;
+                }*/
+
+                .radio {
+                  margin: 10px 0px -7px;
+                  padding: 0;
+                }
+                input[type="radio"]:focus {
+                  outline: none;
+                }
+
+                input[type="radio"]{
+                  /* float: none; */
+                  /* vertical-align: -8px; */
+                  margin-right: 10px;
+                  position: relative;
+                  top: 4px;
+                }
+                /*
+                label>input[type='radio'][disabled] {
+                    opacity: .4;
+                }
+                */
+                label input[type='radio'][disabled] {
+                    opacity: .4;
+                }
+
+                .radio label small {
+                  white-space:pre;
+                  position: relative;
+                  top: -4px;
+                }
+                .item.calculadoras.fager .radio label small:before {
+                  content: '\A';
+                }
+
+                .item.calculadoras.fager .titulo-calc{
+                  color: #333 ;
+                }
+
+                .item.calculadoras.fager .escoreBox{
+                  text-align: center;
+                  margin-bottom: -40px;
+                  margin-left: 0px;
+                }
+
+                .item.calculadoras.fager .condutaBox h4{
+                  display: inline-block;
+                }
+
+                .fager-tag{
+                  float: left;
+                  font-size: 30px;
+                  /* vertical-align: -4px; */
+                  /* display: inline-block; */
+                  margin-right: 38px;
+                  position: relative;
+                  top: -4px;
+                }
+
+                .fager-tag.idade{
+                  float: left;
+                  font-size: 18px;
+                  /* vertical-align: -4px; */
+                  /* display: inline-block; */
+                  margin-right: 38px;
+                  position: relative;
+                  top: 5px;
+                }
+
+                .item.calculadoras.fager .panel-body{
+                  /*padding: 0;*/
+                }
+
+                .item.calculadoras.fager .panel{
+                  background: none;
+                  border: none;
+                  box-shadow: none;
+                }
+
+                .item.calculadoras.fager .titulo{
+                  color: #333 ;
+                }
+
+
+
+            }
+
+
+    </style>
+
+
+
+
+    <div class='panel panel-default'>
+        <div class='panel-heading'>
+            <h3 class="titulo-calc">
+                <span class="nomeCalc">Questionário de Tolerância de Fagerström</span>                
+            </h3>
+        </div>
+        <div class='panel-body'>
+              <div class="col-md-7 col-sm-8 col-xs-12">
+
+                <h5>1. Quantos cigarros você fuma por dia?</h5></p>
+                <div class="radio">          
+                        <label><input type="radio" name="Q1" id="Q10" value="0">menos de 11</label><BR>
+                        <label><input type="radio" name="Q1" id="Q11" value="1">de 11 a 20</label><BR>
+                        <label><input type="radio" name="Q1" id="Q12" value="2">de 21 a 30</label><BR>
+                        <label><input type="radio" name="Q1" id="Q13" value="3">mais de 30</label><BR><BR>
+                 </div>
+
+
+            <h5>2. Quanto tempo depois de acordar você fuma o primeiro cigarro?</h5></p>
+                <div class="radio">          
+                        <label><input type="radio" name="Q2" id="Q20" value="0">+ de 60 min</label><BR>
+                        <label><input type="radio" name="Q2" id="Q21" value="1">entre 31 e 60 min</label><BR>
+                        <label><input type="radio" name="Q2" id="Q22" value="2">entre 06 e 30 min</label><BR>
+                        <label><input type="radio" name="Q2" id="Q23" value="3">menos de 6 min</label><BR><BR>
+                 </div>
+
+            <h5>3. Você tem dificuldade de ficar sem fumar em locais proibidos?</h5></p>
+                <div class="radio">          
+                        <label><input type="radio" name="Q3" id="Q30" value="0">Não</label><BR>
+                        <label><input type="radio" name="Q3" id="Q31" value="1">Sim</label><BR><BR>
+                 </div>
+
+            <h5>4. O primeiro cigarro da manhã é o que traz mais satisfação?</h5></p>
+                <div class="radio">          
+                        <label><input type="radio" name="Q4" id="Q40" value="0">Não</label><BR>
+                        <label><input type="radio" name="Q4" id="Q41" value="1">Sim</label><BR><BR>
+                 </div>
+
+            <h5>5. Você fuma mais nas primeiras horas da manhã do que no resto do dia?</h5></p>
+                <div class="radio">          
+                        <label><input type="radio" name="Q5" id="Q50" value="0">Não</label><BR>
+                        <label><input type="radio" name="Q5" id="Q51" value="1">Sim</label><BR><BR>
+                 </div>
+
+            <h5>6. Você fuma mesmo quando acamado por doença?</h5></p>
+                <div class="radio">          
+                        <label><input type="radio" name="Q6" id="Q60" value="0">Não</label><BR>
+                        <label><input type="radio" name="Q6" id="Q61" value="1">Sim</label><BR>
+                 </div>           
+            
+            </div>
+          
+          <div class="col-md-5 col-sm-4 col-xs-12 " style="">
+            <div class="escoreBox">
+              <h3>Escore</h3>
+              <input class="grafResult" value="0">
+            </div>
+            <div class="condutaBox">
+              <h3 class="descricao"></h3>
+              <h4><span class="mortalidade"></span></h4>
+              <small></small>
+              <p class="conduta"></p>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+<div class='container calc-footer'>
+    <div class="col-md-12">
+        <h4>Referências:</h4>
+        <dl>
+            <dt>Brasil. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica. Doenças respiratórias crônicas / Ministério da Saúde, Secretaria de Atenção à Saúde, Departamento de Atenção Básica. – Brasília : Ministério da Saúde, 2010.</dt>           
+        </dl>
+
+    </div>
+</div>

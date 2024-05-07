@@ -1,0 +1,39 @@
+<style type='text/css'>
+    .material-item i{
+    color: #1a877b!important;
+  }
+  .calc-itemView{
+    margin-top: 20px;
+  }
+  .calc-itemView span.nome {
+    display: block;
+    font-size: 23px;
+}
+.calc-itemView a {
+    color: #428bca;
+    text-decoration: none;
+}
+</style>
+    <h2 style='margin-top: 35px; margin-bottom: 20px;' >Calculadoras</h2>
+    <%
+        var capitaliseFirstLetter = function(string){
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        };
+        b = _.sortBy(resource, function(it){  return - it.length });
+    %>
+
+<ul class="lista-calcs list-group">
+    <%
+    b.forEach(function(c){
+    %>
+    <div class="calc-itemView col-sm-4">
+        <span class="nome">
+            <a href="<%= c.url %>"> <%= c.short %> </a>
+        </span>
+        <small class="descricao">
+            <%= capitaliseFirstLetter(c.title) %>
+        </small>
+    </div>
+    <%})%>
+</ul>
+

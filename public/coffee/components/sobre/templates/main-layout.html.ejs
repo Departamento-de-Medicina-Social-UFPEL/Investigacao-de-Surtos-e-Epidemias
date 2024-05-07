@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Sobre os Componentes</h1>
+        </div>
+        <div class="col-md-12">
+            <div class="">Uma breve apresentação da estrutura, funcionamento e convenções dos componentes de módulos de apoio e autoaprendizagem.</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="sobre-main-container" class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Módulo, modulo</h2>
+                    <ul>
+                        <li>Objeto na coleção mongodb:modulos.modulos</li>
+                        <li>Model e Controller no locomotive</li>
+                        <li>http://<%- window.location.host %>/modulos/:id</li>
+                        <li>Exemplo:<br><pre><code>$ mongo
+MongoDB shell version: 2.4.11
+> use modulos
+switched to db modulos
+> db.modulos.findOne()
+{
+    "_id" : ObjectId("5474eb2f70bf95195804f780"),
+    "name" : "Módulo de Análise Situacional",
+    "components" : [
+        {
+            "folder" : "sobre",
+            "short" : "Sobre",
+            "title" : "Sobre o módulo",
+            "categories" : [
+                "documento"
+            ]
+        },
+        {
+            "folder" : "caderno",
+            "short" : "Caderno",
+            "title" : "Caderno de Ações Programáticas",
+            "categories" : [
+                "ferramenta"
+            ]
+        },
+        {
+            "folder" : "ubs",
+            "short" : "UBS",
+            "title" : "Unidade Básica de Saúde",
+            "categories" : [
+                "ferramenta"
+            ]
+        }
+    ]
+}</code>
+                            </pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Componentes</h2>
+                    <ul>
+                        <li>Descritos em modulos.components</li>
+                        <li>Indicam uma pasta em public/js/components</li>
+                        <li>Tags de categoria</li>
+                        <li>Exemplo: <br><pre><code>{
+    "folder": "ubs"
+    "short": "UBS"
+    "title": "Unidade Básica de Saúde"
+    "categories": [ "ferramenta" ]
+}</code>
+                            </pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Conveções</h3>
+                    <ul>
+                        <li>Estrutura básica de arquivos<br> <pre>js/components/{folder}/
+    controller.js
+    main.js
+    routes.js</pre></li>
+                        <li>A pasta do componente pode, opcionalmente, conter o seguintes pastas: <br><pre>
+    collections/
+    models/
+    templates/
+    views/</pre></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Templates</h3>
+                    <div>
+                        <p>Se o componente possui views, terá arquivos .html.ejs que ficam em <br>
+                        <code>js/components/{folder}/templates</code></p>
+                        <p>Todos os arquivos .html.ejs em {folder}/templates e sub-pastas serão incluídos automaticamente no html inicial.<br>
+                            <br>
+                            Cada template assume a forma de uma tag script no html do App. <br>
+                            Cada tag script tem id com o prefixo {folder}-nomeDoArquivo <br>
+                            <code>js/components/ubs/templates/modal.html.ejs</code><br>
+                            <code>&#x3C;script id=&#x22;ubs-modal&#x22; type=&#x22;text/ejs&#x22;&#x3E;&#x3C;/script&#x3E;</code><br>
+                            Sub-pastas na pasta {folder} viram prefixo após o prefixo {folder}, ex: <br>
+                            .../components/ubs/templates/nova/layout.html.ejs <br>
+                            <code>&#x3C;script id=&#x22;ubs-nova-layout&#x22; type=&#x22;text/ejs&#x22;&#x3E;&#x3C;/script&#x3E;</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

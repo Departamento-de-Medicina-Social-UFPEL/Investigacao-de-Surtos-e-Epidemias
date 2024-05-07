@@ -1,0 +1,61 @@
+<h4>
+    <%-titulo%>
+    <!-- <span class='badge esc-simples'>Escolha simples</span> -->
+</h4>
+<h3>
+    <%=pergunta%>
+</h3>
+<div class="opcoes clearfix">
+
+    <div class="col-md-12">
+
+<%
+var bust = Math.random().toString(36).substring(7);
+for(var i in conteudo.opcoes) { %>
+    <div class="radio radio-multi">
+        <label class='opcao'>
+            <input type="radio" data-originalidx="<%=conteudo.opcoes[i].originalIdx%>" name="<%=bust%>"/>
+            <%=conteudo.opcoes[i].texto%>
+        </label>
+    </div>
+<% } %>
+    </div>
+
+</div>
+<div class="text-center">
+    <button class="btn btn-lg btn-info responder">Responder</button>
+</div>
+
+<div class="correcao alert alert-success hide">
+    <div class="container-fluid">
+        <i class="mdi iconeCorrige"></i> <h2 class="acerto"></h2>
+    </div>
+</div>
+
+<div class="resposta well lead hide">
+    <%
+        var texto = conteudo.resposta.texto;
+        var matches = texto.match(/(caso|tenta)\/(.*?)'/gim);
+        var refUrl = '';
+        if(matches!=null){
+            matches = matches[0].match(/[0-9abcdef]{24}/img);
+            refUrl = App['selecao-testes-progresso'].refRouteFactory(matches[0]);
+        }
+        strLink = texto.slice(0, texto.indexOf("<")).trim();
+        if(!strLink){
+            strLink = texto.slice(0, texto.indexOf("<a href") - 1).trim()+"</p>";
+            if(!texto.slice(0, texto.indexOf(":<")).trim())
+                strLink = texto.slice(0, texto.indexOf(": <")).trim()+"</p>";
+
+        }
+        if(refUrl){
+            %>
+            <a href="<%=refUrl%>"><%= strLink %></a>
+            <%
+        }else{
+            %>
+            <%= strLink %>
+            <%
+        }
+    %>
+</div>

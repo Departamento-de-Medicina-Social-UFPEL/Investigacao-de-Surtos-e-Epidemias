@@ -1,0 +1,16 @@
+<h2>Escolha o estado</h2>
+<div class="col-md-12" style="margin-top: 30px;">
+    <div class="row">
+<%
+    var ufs = [
+        "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA",
+        "MT", "MS", "MG", "PR", "PB", "PA", "PE", "PI", "RJ", "RN",
+        "RS", "RO", "RR", "SC", "SE", "SP", "TO"
+    ];
+    var classes =  "btn btn-lg btn-success btn-flat text-center col-xs-3 col-md-2"
+    ufs.forEach(function(uf){ %>
+        <a class="<%-classes%>" style="margin:8px 0" href="#comp/ubs/nova/<%-uf%>"><%-uf%></a><%
+    });
+%>
+    </div>
+</div>

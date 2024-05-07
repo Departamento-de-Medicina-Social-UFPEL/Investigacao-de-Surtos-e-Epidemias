@@ -1,0 +1,36 @@
+<h4>Referências</h4>
+<ol class="referencia">
+<%
+    for(var i in conteudo) {
+    %><li><%=conteudo[i].linkTitulo%><%
+        if (conteudo[i].urlExterno != '') {
+            %> <em><a href="<%=conteudo[i].urlExterno%>#" target="_blank"> <%
+        } %>
+    <%
+    url = conteudo[i].urlExterno;
+    if(url.length > 75) url = url.slice(0,72) + '...';
+    if(url.length != '') url = '&lt;' + url + '&gt;';
+    %><%=url%><%
+    if (conteudo[i].urlExterno != '') {
+        %> </a>.</em> <%
+    }
+
+
+var local = conteudo[i].urlLocal != '' ? conteudo[i].urlLocal : null;
+var externo = conteudo[i].urlExterno != '' ? conteudo[i].urlExterno : null;
+if(!local && externo){
+    var a = document.createElement('a');
+    a.href = conteudo[i].urlExterno.replace(/[^a-z0-9]$/img, '');
+    local = a.pathname.split('/').slice(-1)[0]; }
+if(local){ %>
+    <a href="<%-window.defaultStaticFileService%>/bib/<%-local%>" target="_blank"><i class="mdi mdi-file-pdf"></i> Cópia local</a> 
+    <% }
+
+
+    if (conteudo[i].acessoEm) {
+        %> Acesso em <%=conteudo[i].acessoEm%>.<%
+    }
+    %></li>
+<% } %>
+</ol>
+

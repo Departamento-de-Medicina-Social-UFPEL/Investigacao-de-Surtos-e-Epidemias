@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testes seleção estado-municipio-ubs com require</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+  <style type="text/css">
+    body{
+      margin-top: 30px;
+    }
+    .ubs, .info{
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="local-form-container"></div>
+  <script type="text/ejs" id="local-template">
+    <fieldset class='container'>
+      <legend>Em que município fica a sua UBS</legend>
+      <div class="row">
+        <div class="col-xs-3 uf"></div>
+        <div class="col-xs-9 muni"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 ubs"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 info"></div>
+      </div>
+    </fieldset>
+  </script>
+  <script type="text/ejs" id="select-template">
+      <% items.forEach(function(it){ %>
+          <option value="<%= it.value %>"><%= it.text %></option>
+      <%});%>
+  </script>
+  <script type="text/ejs" id="infoUbs-template">
+    <div class="container-fluid">
+      <div class="h1  col-md-2 pull-right">
+        <div class="label label-info text-center"><%=esfera%></div>
+      </div>
+      <div class="col-md-10">
+        <h3><%=nome%></h3>
+        <p class="lead"><%=tipo%></p>
+        <p><%=bairro || ''%> - <%=municipio || ''%> - <%=uf || ''%></p>
+        <p><%=logradouro || ''%>, <%=numero || ''%>. CEP <%=cep.slice(0,-3) + '-' + cep.slice(-3) || ''%></p>
+      </div>
+    </div>
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js" data-main="index.js"></script>
+</body>
+</html>

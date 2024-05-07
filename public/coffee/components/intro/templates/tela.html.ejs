@@ -1,0 +1,22 @@
+<div class="col-md-12">
+	<div class="janela">
+		<div class="intro-primeira">
+			<div class="ufpel prim-logo logo">
+				<img src="<%=defaultStaticFileService%>/img/<%- modulo.intro_img_1 ? modulo.intro_img_1 : 'marcas/dms.svg' %>" alt="<%- modulo.intro_img_1_alt ? modulo.intro_img_1_alt : 'Logo da Departamento de Medicina Social da UFPEL' %>">
+			</div>
+		</div>
+		<div class="intro-segunda">
+			<div class="logo">
+				<img src="<%=defaultStaticFileService%>/img/<%- modulo.intro_img_2 ? modulo.intro_img_2 : 'marcas/unasus.svg' %>" alt="<%- modulo.intro_img_2_alt ? modulo.intro_img_2_alt : 'Logo da UNA-SUS' %>" <% if(modulo.fl_layout_alternativo) { %> style="width: 60%" <% } %>>
+			</div>
+		</div>
+		<% if(modulo.intro_img_3) { %>
+			<div class="intro-terceira">
+				<div class="logo">
+					<img src="<%=defaultStaticFileService%>/img/<%- modulo.intro_img_3 %>" alt="<%- modulo.intro_img_3_alt %>" <% if(modulo.fl_layout_alternativo) { %> style="width: 70%" <% } %>>
+				</div>
+			</div>
+		<% } %>
+	</div>
+</div>
+

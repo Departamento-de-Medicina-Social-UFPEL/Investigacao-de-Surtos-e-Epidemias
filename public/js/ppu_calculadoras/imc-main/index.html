@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de IMC</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Módulo de Análise Situacional do Curso Online de Especialização em Saúde da Família da Universidade Aberta do Sistema Único de Saúde UNA-SUS desenvolvido pela Universidade Federal de Pelotas UFPEL">
+        <meta name="keywords" content="medicina, enfermagem, odontologia, saúde, saúde comunitária, saúde da família, análise situacional, ead, educação a distância, ufpel, unasus">
+        <meta name="author" content="Adrian Neuhaus, Vanderson Silva">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=5" name="viewport">
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Calculadora de IMC" />
+        <meta property="og:url" content="https://dms.ufpel.edu.br/casca/modulos/imc-calc#comp/imc-main" />
+        <meta property="og:title" content="Módulo de Autoaprendizagem de Atenção Primária à Saúde" />
+        <meta property="fb:app_id" content="undefined" />
+        <meta property="og:image" content="https://dms.ufpel.edu.brimg/img_face_imc-calc_1024px.png" />
+        <style>
+
+            .gm-style-cc > div > a{
+                display: none!important;
+            }
+        </style>
+
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="css/material/material.css" type="text/css" rel="stylesheet">
+        <link href="css/material/ripples.min.css" type="text/css" rel="stylesheet">
+        <link href="css/material/materialdesignicons.min.css" type="text/css" rel="stylesheet">
+        <link href="css/all.css" type="text/css" rel="stylesheet"> 
+        <script src='js/jquery.min.js'></script>
+        <!-- <script src='js/jquery.min.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+        <script src='js/backbone-min.js'></script>
+        <script src='js/backbone.marionette.min.js'></script> -->
+        <script type="text/javascript" src="js/require.js" data-main="js/index.js"></script>
+        <script src='se_unasus_pack.js'></script>
+    </head>
+    <style type='text/css'>
+        :root{
+           --corpadrao:#;
+           --corpadraomenu:#eaf9f8;
+           --corpadraomenudestaque:#cbe8e5;
+        }
+        .navbar-inverse {
+            background-color: #!important;
+        }
+        .big-footer{ background-color:  # }
+        .mdi-home{ color: inherit!important; margin-bottom: 5px; }
+    </style>
+  <body>
+
+    <div id="introLayer"></div>
+
+    <header>
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-header">
+                <button type="button"  class="navbar-toggle" style="float: left;" data-toggle="collapse" data-target=".navbar-inverse-collapse-top">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Calculadora de IMC</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-inverse-collapse navbar-inverse-collapse-top    ">
+                <ul class="nav navbar-nav main-menu">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="ufpel logo" style="">
+                        <img src="img/marcas/dms_branco.svg" alt="Logo da Departamento de Medicina Social da UFPEL" style="
+                            padding-right: 0px; max-width: 200px; padding-top: 5px; margin-left: 15px;
+                        ">
+                    </li>
+                    <li class="unasus logo" style="padding-right: 0px; max-width: 150px; padding-top: 13px; margin-left: 15px;">
+                        <img src="img/marcas/unasus_branco.svg" alt="Logo da Universidade Aberta do Sistema Único de Saúde">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main">
+       
+        
+    </main>
+
+    
+    <script type="text/ejs" id="imc-main-view">
+      <div class="container">
+          <style type="text/css">
+              .item.calculadoras.imc .calc-footer{
+                  padding-bottom: 1px;
+              }
+          </style>
+          <div class='panel panel-default'>
+              <div class='panel-heading'>
+                  <h3 class="titulo-calc">
+                      <span class="nomeCalc">IMC</span>
+                      <small>Calculo do Índice de Massa Corporal</small>
+                  </h3>
+              </div>
+              <div class='panel-body'>
+                  <div class="col-sm-6">
+                      <span class="h4">Informações do paciente</span>
+                      <div class='form-group'>
+                          <label for='pesoId'>Peso</label>
+                          <div class="input-group">
+                            <input type="text" id="pesoId" class='form-control input input-lg' >
+                            <span class="input-group-addon">Kg</span>
+                          </div>
+                      </div>
+                      <div class='form-group'>
+                          <label for='alturaId'>Altura</label>
+                          <div class="input-group">
+                            <input type="text" id="alturaId" class='form-control input input-lg'>
+                            <span class="input-group-addon">m</span>
+                          </div>
+                      </div>
+                      <div class='form-group'>
+                          <div class='radio'>
+                              <label class="h4">
+                                  <input type="radio" name="optionRadios1" class="ehIdoso" value="1"  checked >Idoso: idade > 65 anos
+                              </label>
+                          </div>
+                          <div class='radio'>
+                              <label class="h4">
+                                  <input type="radio" name="optionRadios1" class="ehIdoso" value="0">Adulto: idade <= 65 anos
+                              </label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <button class="btn btn-lg btn-info">Calcular</button>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 condutaBox">
+                      <span class='h4'>Resultado</span><br>
+                      <span class="faixa"></span> <span class="altuRes"></span><br/>
+                      <h3>IMC =
+                          <span class='resultado'></span>
+                      </h3>
+                      <div class='infomacao'>
+                          <h4 class='classificacao'></h4>
+                          <span class='descricao'></span>
+                          <div class='intervaloIdeal'>
+                              Peso ideal <span class='idealMenor'></span> - <span class='idealMaior'></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class='container calc-footer'>
+          <div class="col-md-12">
+              <dl>
+                  <dt>
+                      <a href="/static/bib/apoio/imc.pdf" target="_blank"><span class='h4' ><i class="mdi mdi-file-pdf"></i> </span>
+                      Especificação da calculadora do IMC</a>
+                  </dt>
+                  <dd>
+                    <small>40.3 kB</small>
+                  </dd>
+              </dl>
+              <h4>Referências:</h4>
+              <dl>
+                  <dt>WORLD HEALTH ORGANIZATION. Obesity: preventing and managing the global epidemic. Report of a World Health Organization Consultation. Geneva: World Health Organization, 2000. 253 p. (WHO Obesity Technical Report Series, n. 894).</dt>
+                  <dd><p>Disponível em: <a href="http://www.who.int/nutrition/publications/obesity/WHO_TRS_894/en/" target="_blank">http://www.who.int/nutrition/publications/obesity/WHO_TRS_894/en/</a> Acesso em 2014</p></dd>
+              </dl>
+              <dl>
+                  <dt>LIPSCHITZ, D.A. Screening for Nutritional Status in the Elderly. Primary Care, [S. l.], v. 21, n. 1, p. 55-67, mar.1994. (Indexed for MEDLINE)</dt>
+                  <dd><p>Disponível em: <a href="http://www.ncbi.nlm.nih.gov/pubmed/8197257" target="_blank">http://www.ncbi.nlm.nih.gov/pubmed/8197257</a> Acesso em 2014</p></dd>
+              </dl>
+          </div>
+      </div>
+      </script>
+  </body>
+    
+</html>

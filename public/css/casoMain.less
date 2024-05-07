@@ -1,0 +1,671 @@
+.caso-main{
+
+    padding: 0px 30px 180px 30px;
+    overflow-y: scroll;
+
+    .resposta p{
+        font-size: 18px;
+    }
+
+    #estadoResposta{
+        padding: 20px;
+        background-color: #ECF0F1;
+        margin: 20px 0;
+        .mensagem{
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .row {
+            .btn-info{
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .checkbox input[type="checkbox"]{
+        margin-right: 10px;
+        vertical-align: -9px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        float: left;
+    }
+
+    .badge.esc-multipla{
+        background: #3498db;
+        /*color: hsl(204, 70%, 15%);*/
+        float: right;
+    }
+
+    .badge.esc-simples{
+        background: #53d76a;
+        /*color: hsl(130, 62%, 15%);*/
+        float: right;
+    }
+
+    .caso-rodape{
+        color: #f7f7f7;
+        .titulo{
+            font-size: 30px;
+            margin-top: 22px;
+        }
+        .badge-box .badge-nucleo-pq{
+            font-size: 13px;
+            /* float: left; */
+            color: #f7f7f7;
+            line-height: 25px;
+        }
+        .navbar-collapse.collapse{
+            height: 75px!important;
+        }
+
+        .nav.navbar-nav.navbar-right{
+            margin-right: 0;
+        }
+        .navbar-header{
+            h4.tit-questoes{
+                font-size: 17px;
+                  display: inline-block;
+                  vertical-align: 24px;
+                  position: relative;
+                  top: -5px;
+                  left: 2px;
+            }
+        }
+        li.navbar-brand {
+            height: 20px;
+            line-height: 5px;
+        }
+        .box-nucleo-quests-left{
+          display: inline-block;
+          float: none;
+          vertical-align: -19px;
+          margin-left: -71px;
+            li.score{
+                margin-right: -100%;
+                margin-left: 20px;
+                font-size: 25px;
+                margin-top: 36px;
+                border-radius: 6px;
+                .tit-conceito{
+                    font-size: 10px;
+                    margin-top: -3px;
+                }
+                .conceito{
+                    margin-top: -7px;
+                }
+            }
+
+            li.quest{
+                cursor: pointer;
+                &.badge{
+                    background: #f1f1f1;
+                    font-size: 20px;
+                    color: #222;
+                    padding: 10px 14px;
+                    border-radius: 0px;
+                    border: none;
+                    background-color: #e9e9e9;
+                    box-shadow: 0 1px #888;
+                    opacity: .8;
+                    font-weight: normal;
+                    border-left: 1px solid #cfcfcf;
+                }
+                &.badge:first-child {
+                    border-top-left-radius: 11px;
+                    border-bottom-left-radius: 11px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-left: none;
+                }
+                &.badge:last-child {
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 11px;
+                    border-bottom-right-radius: 11px;
+                }
+                &.badge.corrigido{
+                    border: none;
+                    background: darken(#3498db, 20%);
+                    color: #f1f1f1;
+                    font-weight: 400;
+                    opacity: 1;
+                }
+                &.badge.corrigido:hover{
+                    border: none;
+                    background: darken(#3498db, 20%);
+                    color: #f1f1f1;
+                    font-weight: 400;
+                    opacity: 0.3;
+                }
+                &.badge.corrigido.errado{
+                    box-shadow: 0 1px darken(#ff3b30, 20%);
+                    background-color: #ff3b30;
+                }
+                &.badge.corrigido.correto{
+                    box-shadow: 0 1px darken(#4cd964, 20%);
+                    background-color: #4cd964;
+                }
+                &.badge.corrigido.meio{
+                    box-shadow: 0 1px darken(#ffcc00, 20%);
+                    background-color: #ffcc00;
+                }
+            }
+        }
+        .badge-nucleo-pq{
+            font-size: 30px;
+            padding: 22px 17px;
+            font-weight: bold;
+            color: #ededed;
+            display: inline-block;
+            height: 76px;
+            margin-top: -1px;
+        }
+        background-color: #f5821f;
+
+    }
+    ol.referencia{
+        li{
+            margin-top: 10px;
+        }
+    }
+    .checkbox input[type="checkbox"]:checked{
+        box-shadow: inset 0px 0px 0px 20px #3498DB;
+    }
+
+    .container .jumbotron{
+        /*padding-top: 10px;*/
+        border-radius: 0;
+    }
+    .slide .form-group{
+        margin-bottom: 0;
+    }
+    form, .form{
+        margin: 0;
+        padding: 0;
+    }
+    .well{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .option-space{
+        margin: 14px;
+    }
+    .slide{
+        padding: 20px 30px 20px;
+        margin-top: 20px;
+        background: #f7f7f7;
+        .alert>.container-fluid{
+            padding-right: 0;
+            padding-left: 6px;
+        }
+    }
+    .fenotipo {
+        background:url(/img/fenoSprite.png) no-repeat;
+        width:130px;
+        height:420px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .slide h3{
+        color: #34495E;
+        padding: 0px;
+        font-size: 25px;
+        line-height: 1.4;
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .slide h4{
+        color: #2980B9;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+
+    .resposta h2{
+        padding: 25px 0 10px 0px;
+
+        font-size: 36px;
+    }
+    .resposta i.glyphicons{
+        font-size: 60px;
+        opacity: .4;
+    }
+
+    .slide.slide-questaoSimples, .slide.slide-questaoMulti{
+        padding: 10px 30px 30px 30px;
+        background: blanchedalmond;
+        margin-top: 20px;
+        .checkbox{
+            margin-bottom: 1.8em;
+        }
+        .radio{
+            margin-bottom: 1.8em;
+        }
+    }
+
+    .slide .questao h4{
+        color: #34495E;
+        font-weight: 300;
+    }
+
+    .slide .questao h3{
+        color: #2C3E50;
+        font-weight: bold;
+    }
+
+    .iconeCorrige{
+        &:before{
+            font-size: 43px;
+        }
+        opacity: .4;
+        vertical-align: middle;
+    }
+
+    .slide p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    h2.acerto{
+        display: inline-block;
+        margin:0;
+        margin-left: 20px;
+        vertical-align: middle;
+    }
+
+    h2.porcentagem{
+        display: inline-block;
+        margin:0;
+        margin-left: 20px;
+        vertical-align: middle;
+        span{
+            vertical-align: middle;
+            font-size: 38px;
+            color: white;
+        }
+        small{
+            vertical-align: middle;
+            color: #f1f1f1;
+        }
+    }
+
+
+    .slide .questao h4 .badge{
+        vertical-align: 4px;
+        margin-left: 20px;
+        font-size: 22px;
+        font-weight: 300;
+        text-shadow: none;
+        background-color: #95A5A6;
+    }
+
+    section.slide{
+        /*box-shadow: 0 1px 12px -4px #2C3E50;
+        background-color: #fff;*/
+    }
+
+    .introbox-container {
+
+        position: relative;
+        background-color: #ECF0F1;
+        margin: 0;
+        @media (min-width: 768px) {
+            padding: 40px;
+        }
+        @media (max-width: 768px) {
+            padding: 20px;
+        }
+
+
+        .listaPess {
+            margin-top: 10px;
+            strong{
+                margin-right: 10px;
+                color: #34495E;
+            }
+
+            li{
+                margin: 0 5px;
+            }
+
+        }
+        h1{
+            margin-bottom: 10px;
+            margin-top: 17px;
+            font-size: 39px;
+            .badge-nucleo:last-child{
+                margin-left: 10px;
+            }
+        }
+
+        .dataPubTop{
+            vertical-align: 7px;
+            color:#34495E;
+        }
+
+        .badgeContainer{
+            text-align: left;
+        }
+
+        .badge-nucleo{
+            font-size: 20px;
+            padding: 10px 16px;
+            line-height: 26px;
+            font-weight: bold;
+            color: #ededed;
+            display: inline-block;
+            vertical-align: 5px;
+            float: right;
+
+        }
+    }
+
+    .slide .opcoes{
+        margin-top: 15px;
+    }
+
+    .navbar-header .nav-brand {
+        color:#ECF0F1;
+    }
+    .navbar-header .badge-nucleo{
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: -1px;
+    }
+
+    .navbar-header .badge-nucleo.affix-top{
+        opacity: 0;
+    }
+
+    .navbar-header .badge-nucleo.affix{
+        opacity: 1;
+    }
+
+
+    .titApp.affix{
+        opacity: 0;
+    }
+
+    .titApp.affix-top{
+        opacity: 1;
+        margin-left: 0;
+        color:#ECF0F1;
+    }
+
+    .titApp.affix-top:hover{
+        color:#BDC3C7;
+    }
+
+    .titCaso{
+        position: absolute;
+        left: 90px;
+        color:#ECF0F1;
+    }
+
+    .titCaso.affix{
+        opacity: 1;
+        color:#ECF0F1;
+    }
+
+    .titCaso.affix-top{
+        opacity: 0;
+        color:#ECF0F1;
+    }
+
+    section:not([style*="display: none"]):last-child{
+        box-shadow: none;
+    }
+    .medicina{
+        background-color: #27AE60;
+    }
+    .enfermagem{
+        background-color: #3498DB;
+    }
+    .odontologia{
+        background-color: #C0392B;
+    }
+    .fenoBebe {
+        background-position:-370px 0;
+        // background-position-x:-370px;
+        // background-position-y:0;
+    }
+
+    .fenoCrianca {
+        background-position:-114px 0;
+        // background-position-x:-114px;
+        // background-position-y:0;
+        height:320px;
+    }
+
+    .fenoMulher {
+        background-position:0;
+        // background-position-x:3px;
+        // background-position-y:0;
+    }
+
+    .container.caso main section{
+        margin-top: 20px
+    }
+
+    label.radio.opcao{
+        line-height: 32px;
+        font-size: 18px;
+        padding-bottom: 9px;
+        font-weight: normal;
+    }
+
+
+    label.radio.opcao .icons{
+        line-height: 43px;
+        vertical-align: 2px;
+
+    }
+
+
+    .radio, .checkbox{
+        label.opcao{
+            font-size: 1.5rem;
+            line-height: 2.7rem;
+        }
+    }
+
+    label.radio.opcao input{
+        margin-right: 20px;
+
+    }
+
+    .alert{
+        border-radius: 0;
+        margin-top: 15px;
+    }
+
+    .navbar.navbar-fixed-top{
+        height: 73px;
+        border-radius: 0;
+    }
+    a:focus{
+        color: #fff;
+    }
+    .resposta.well{
+        border-radius: 4px;
+        background: #f7f7f7;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .resposta{
+        padding: 20px;
+        background: #f1f1f1;
+    }
+
+    label.checkbox{
+        line-height: 34px;
+        font-size: 18px;
+        padding-bottom: 9px;
+        font-weight: normal;
+    }
+
+    label.checkbox .icons{
+        line-height: 43px;
+        vertical-align: 2px;
+    }
+
+    .paciente{
+        text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    }
+
+    .paciente h1{
+        margin: 0;
+    }
+
+    .nucleoTexto {
+        font-size: 16px;
+        color: #34495E;
+    }
+
+    .pacienteQueixa{
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .pacienteInfo{
+        // margin-bottom: 30px;
+    }
+    .iconeSexoPaciente{
+        &:before{
+            font-size: 52px;
+        }
+        margin-top: 40px;
+    }
+    .pacienteInfoBlock{
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 25px;
+        h1{
+          font-size: 60px;
+        }
+    }
+    .textoIdadePaciente{
+        font-size: 25px;
+    }
+
+    .iconeSexoPaciente.masculino:before{
+        color: #3498DB;
+
+    }
+
+    .iconeSexoPaciente.feminino:before{
+        color: #E74C3C;
+
+    }
+
+    .autoresTop{
+        margin-top: 30px;
+        display: block;
+        font-size: 13px;
+    }
+
+
+
+    .fadded-off{
+        opacity: 0;
+    }
+
+    .modal-open, .modal-open .navbar-fixed-top {
+        margin-right: 0 !important;
+    }
+
+
+
+    .slide-saibaMais{
+        background: #f1f1f1;
+        // padding: 20px;
+    }
+
+    .btn.responder{
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 20px;
+    }
+
+    section.slide.daVez {
+        // border: 3px solid #d6d6d6;
+    }
+
+    section.slide h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding: 0;
+        margin-left: 0px;
+    }
+
+    .inImgSexoIdadeBox{
+        height: 27px;
+        margin-top: 48px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    .inImgSexoIdadeBox.m{
+        background: -webkit-linear-gradient(top, rgba(155, 185, 232, 0) 0%,rgba(158, 221, 250, 0.4) 100%);
+        background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(158, 221, 250, 0.4) 100%);
+    }
+    .inImgSexoIdadeBox.f{
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%,rgba(250, 158, 206, 0.4) 100%);
+        background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(250, 158, 206, 0.4) 100%);
+    }
+    .paciente .dadosPaciente{
+        margin-left:15px;
+    }
+
+    .pacienteImagem {
+        background:url(/img/paciente.png);
+        border:2px solid #737373;
+        border-radius:4px;
+        font-family:'Source Sans Pro',sans-serif;
+        font-size:15px;
+        color:#222;
+        font-weight:600;
+        display:block;
+        height:108px;
+        width:140px;
+        margin-left: 15px;
+        .iniciais {
+            font-size:28px;
+            margin: 0px 3px 0 5px;
+        }
+        .idade {
+            font-size: 22px;
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+            margin-top: -45px;
+        }
+        .sexo {
+            font-size: 22px;
+            margin-left: 6px;
+            display: inline-block;
+            margin-top: -8px;
+        }
+    }
+    .slide-bibliografia {
+        em {
+            word-break: break-all;
+        }
+    }
+    .paciente {
+        font-family:'Source Sans Pro',sans-serif;
+        font-size:15px;
+        color:#222;
+        font-weight:600;
+        display:block;
+        width:181px;
+        vertical-align:top;
+        padding:15px 10px 10px;
+    }
+
+}

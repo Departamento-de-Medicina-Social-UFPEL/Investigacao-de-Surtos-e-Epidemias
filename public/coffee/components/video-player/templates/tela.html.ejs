@@ -1,0 +1,38 @@
+<div class="bbm-modal__topbar" style="margin-bottom:10px;">
+	<div class="bbm-modal__title">
+        <a href="#" class="btn btn-small bbm-button  close-modal" style="margin-top: -5px;  background-color: var(--corpadrao);color:white">Fechar</a>
+    </div>
+    </div>
+<div class="bbm-modal__section row" style="text-align: center">
+    	<video allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    		id="intro_video" controls="true" preload="none" width="<%= window.innerWidth * 0.8 %>px"  style="max-height:550px;"
+    		poster="<%-defaultStaticFileService%>/img/<%-poster%>">
+    		<%
+            sources = sources.sort(function(a,b){
+                var f = function(x){return parseInt(x.resolution.match(/\d/img).join(''),10)};
+                return f(a) > f(b) ? 1 : (f(a) < f(b) ? -1 : 0);
+            });
+            for (idx in sources){
+                var source = sources[idx];
+                %>
+                <source
+                    src="<%-defaultStaticFileService%>/videos/<%-source.filename%>_<%-source.resolution%>.<%-source.extension%>"
+                    type="<%-source.mime%>"
+                    media="<%-source.mediaQuery%>">
+            <% } %>
+    	</video>
+</div>
+<div class="bbm-modal__topbar" style="margin-bottom:10px;">
+	<div class="bbm-modal__title"><% if(title){%><%- title %><%}else{ %>Vídeo de Apresentação<%}%>
+        
+    </div>
+        <% if(fileapoio){%>
+    <h4><small>
+        <i class="mdi mdi-cloud-download" style='color: #1a877b!important;'></i> 
+        <a href="https://<%- window.location.host %>/static/bib/apoio/<%- fileapoio %>" target='_blank' >
+            Material de apoio
+        </a>
+    </small></h4>
+    <%}%>
+</div>
+

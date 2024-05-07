@@ -1,0 +1,15 @@
+
+<div class="bbm-modal__topbar" style="margin-bottom:0px;">
+  <div class="bbm-modal__title" >
+    <h3><%= titulo %></h3>
+  </div>
+</div>
+<div class="bbm-modal__section" style="margin-bottom:0px;">
+  <div class='row alert alert-danger' style="margin-bottom:0px;padding:30px;">
+    <%= msg %>
+  </div>
+</div>
+<div class="bbm-modal__bottombar" style="margin-top:0px;padding:10px;">
+	<% if(link){ %> <a href="<%= link.url %>" target='_blank' class='btn btn-primary'><%= link.descricao %></a><%}%>
+  <a href="#" class="btn btn-primary close-modal" >Fechar</a>
+</div>

@@ -1,0 +1,58 @@
+          <%
+            var art = _.contains(['cozinha', 'sala'], folder) ? 'a':'o',
+                nomeLow = name.toLowerCase();
+            %>
+    <div class=' col-md-12 ambiente'>
+        <div class="lista-outras-quesdas col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-sm-8  col-sm-offset-2 col-lg-8 col-lg-offset-2 " style='margin-bottom: 10px;'>
+            <a class="col-md-2" href="#comp/quedas-main/banheiro" <% if(name == 'Banheiro'){%> style="font-weight:900" <%}%> > Banheiro</a>
+            <a class="col-md-2" href="#comp/quedas-main/corredor" <% if(name == 'Corredor'){%> style="font-weight:900" <%}%> > Corredor</a>
+            <a class="col-md-2" href="#comp/quedas-main/cozinha" <% if(name == 'Cozinha'){%> style="font-weight:900" <%}%> > Cozinha</a>
+            <a class="col-md-2" href="#comp/quedas-main/patio" <% if(name == 'Pátio'){%> style="font-weight:900" <%}%> > Pátio</a>
+            <a class="col-md-2" href="#comp/quedas-main/quarto" <% if(name == 'Quarto'){%> style="font-weight:900" <%}%> > Quarto</a>
+            <a class="col-md-2" href="#comp/quedas-main/sala" <% if(name == 'Sala'){%> style="font-weight:900" <%}%> > Sala</a>
+        </div>
+
+        <div class="descQueda col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-sm-8  col-sm-offset-2 col-lg-8 col-lg-offset-2 "><%=descricao%></div>
+        <div class="contador clearfix col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-sm-8  col-sm-offset-2 col-lg-8 col-lg-offset-2">
+            <div class="text-center">
+                <span class="feitos"></span>
+                <span class="barrinha">/</span>
+                <span class="total"></span>
+            </div>
+            <!--<div class="col-xs-11">
+                <span>Clique nos objetos da cena abaixo e descubra os erros e acertos nesta ilustração.</span>
+            </div>-->
+        </div>
+        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-sm-8  col-sm-offset-2 col-lg-8 col-lg-offset-2  image-pile">
+  
+            <img class="fundo" src="<%=defaultStaticFileService%>/img/<%-folder%>/<%-folder%>_fundo.png"/>
+            <div class="full-msg">
+                <p>Explore <%=art%> <%=nomeLow%> e encontre orientações sobre os aspectos mais importantes para evitar acidentes neste ambiente.</p>
+                <p class="text-center"><button class="btn btn-primary btn-lg btn-goto-content">Explorar  <%=art%> <%=nomeLow%></button></p>
+            </div>
+            <div class="concluiu-msg" style="display:none">
+                <p>Parabéns, você encontrou todas as orientações d<%=art%> <%=nomeLow%>.<br/>Visite os outros ambientes em Conteúdos na barra superior.</p>
+                <p class="text-center"><button class="btn btn-primary btn-lg btn-close-concluido">Fechar</button></p>
+            </div>
+            <div class="slices">
+                <%=svg%>
+            </div>
+            <% if( folder == 'corredor' ){
+                %><div class="sombra"></div><%
+            }
+            %>
+
+        </div>
+        <% for (var ori in resources) {
+            var o = resources[ori];
+            %>
+            <div class="tooltip_template <%=o.nome%> hide">
+                <h4><%=o.titulo%></h4>
+                <p><%=o.orientacao%></p>
+            </div>
+            <%
+        } %>
+                <div class='col-md-12 text-center footer-desisto'>
+    <button class='btn btn-default btn-desisto' style='color:white;background-color:var(--corpadrao)!important'>Ver todas as orientações d<%-(art + ' ' + folder)%></button>
+</div>
+    </div>

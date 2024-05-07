@@ -1,0 +1,26 @@
+<%
+    var proIni = profissional !== 'Interdisciplinar'?(obj.pro[0] ? (obj.pro[1] ? "E M" :  "M") : obj.pro[1] ? "E" : "O"):"";
+
+    console.log(obj.pro)
+    var proTag = proIni.replace('E', 'enf').replace('M', 'med').replace('O', 'odo').replace('I','inter');
+    var proLong = proIni.replace('E', 'Enfermagem').replace('M', 'Medicina').replace('O', 'Odontologia');
+    if(proLong.split(' ').length > 1){
+        proLong = proLong.split(' ').join(' e ');
+    }
+%>
+<h1><span class="pro-tag <%=proTag%>"><%=proIni.trim()%></span> <%=titulo%> <% if(profissional !== 'Interdisciplinar'){%> de <%=proLong%> <%}%></span> </h1><!-- 
+<div class="container-static">
+    <h4><%=slides[0].conteudo.texto%></h4>
+</div> -->
+<!-- <small class="dataPubTop">Publicado em <%=dataLongaPub.data.getDate()%> de <%=dataLongaPub.mes%> de <%=dataLongaPub.data.getFullYear()%></small> -->
+<small class="autoresTop">
+<!--     <div class="container-static listaPess">
+        <strong>Autores</strong> <%=autor.join(', ')%>
+    </div>
+    <div class="container-static listaPess">
+        <strong>Editores Associados</strong> <%= editores.join(', ') %>
+    </div> -->
+    <div class="container-static listaPess">
+        <strong>Editores</strong> Anaclaudia Fassa e Luiz Augusto Facchini
+    </div>
+</small>

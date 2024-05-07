@@ -1,0 +1,34 @@
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        <div class='row'>
+        <div class='col-md-12'>
+            <a href='#comp/monitoramento-covid/local/<%= id %>'><h2><%= local %> (<%= municipio %>/<%= uf %>)</h2></a>
+            <label>Ano de referência: </label><span><%= ano %></span>
+            <label>Periodo de referência: </label><span><%= dt_inicio %> à <%= dt_fim %></span>
+        </div>
+        </div>
+    </div>
+    <div class='panel-body'>
+        <div class='row'>
+            <div CLASS='col-md-6  text-center'>
+                <h2>Número de casos</span>
+                <h2 ><%= nr_total_casos %></span>
+            </div>
+              <div class='col-md-6  text-center'>
+                <h2>Número de contatos</span>
+                <h2><%= nr_total_contatos %></span>
+            </div>
+        </div>
+        <div class='row list-graficos'>
+            <figure class="highcharts-figure">
+                <div id='area'></div>
+                <p class="highcharts-description">
+        Chart showing stacked percentage columns, where each column totals 100%,
+        and each element value is visualized by giving it a size relative to the
+        other elements.
+    </p>
+</figure>
+        </div>
+    </div>
+</div>
+

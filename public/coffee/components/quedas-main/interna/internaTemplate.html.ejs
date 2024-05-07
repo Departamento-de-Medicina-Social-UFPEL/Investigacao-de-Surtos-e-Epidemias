@@ -1,0 +1,47 @@
+<div class='container lista-outras-quesdas'>
+    <%
+        var esteQueda = function(queda){
+                return queda.get('name') === name;
+            },
+            poeLink = function(queda) {
+                %><a class='col-md-1' href="#queda/<%=queda.get('folder')%>"><%=queda.get('name')%></a><%
+            };
+        // _.findWhere(window.modulo.components, {folder:'quedas-main'})..reject(esteQueda).forEach(poeLink);
+    %>
+</div>
+<h3><%=name%></h3>
+<div class="descQueda"><%=descricao%></div>
+<div class="contador clearfix">
+    <div class="text-center">
+        <span class="feitos"></span>
+        <span class="barrinha">/</span>
+        <span class="total"></span>
+    </div>
+    <!--<div class="col-xs-11">
+        <span>Clique nos objetos da cena abaixo e descubra os erros e acertos nesta ilustração.</span>
+    </div>-->
+</div>
+<div class="col-md-12 col-sm-12 image-pile">
+    <img class="fundo" src="img/<%-folder%>/<%-folder%>_fundo.png"/>
+    <div class="slices">
+        <%=svg%>
+    </div>
+    <% if( folder == 'corredor' ){
+        %><div class="sombra"></div><%
+    }%>
+</div>
+<%
+    var art = _.contains(['cozinha', 'sala'], folder) ? 'a':'o';
+%>
+<% for (var ori in resources) {
+    var o = resources[ori];
+    %>
+    <div class="tooltip_template <%=o.nome%> hide">
+        <h4><%=o.titulo%></h4>
+        <p><%=o.orientacao%></p>
+    </div>
+    <%
+} %>
+<div class='col-md-12 text-center footer-desisto'>
+    <button class='btn btn-default btn-desisto'>Ver todas as orientações d<%-(art + ' ' + folder)%></button>
+</div>

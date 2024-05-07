@@ -1,0 +1,18 @@
+{
+  "name": "lz-string-bower",
+  "main": "lz-string.js",
+  "version": "1.3.3",
+  "homepage": "https://github.com/nicolas-van/lz-string",
+  "description": "LZ-based compression algorithm",
+  "authors": [
+    "Pieroxy"
+  ],
+  "license": "WTFPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

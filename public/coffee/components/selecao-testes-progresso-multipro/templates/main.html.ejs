@@ -1,0 +1,287 @@
+<style>
+    .selecao-teste-multipro{
+        padding-top: 20px;
+    }
+     .teste-block-inicial{
+        margin: 0.5em 0;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 40px;
+    }
+     .teste-dica-inicial{
+        font-size: 1.3em;
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 20px;
+        color: #777;
+        /*margin-top: 20px;*/
+    }
+    .teste-final .teste-img-inicial-box span{
+        height: 100px;
+        width: 100px;
+        background-color: hsla(0, 0%, 0%, .5);
+        margin-left: -71px;
+        top: -28px;
+        position: relative;
+        border-radius: 3px;
+        left: -32px;
+        margin-right: -30px;
+    }
+    .teste-final .teste-img-inicial-box span:before{
+        font-size: 5em;
+        position: absolute;
+        top: 44px;
+        left: 7px;
+        color: white;
+    }
+    .teste{
+        cursor: pointer;
+    }
+    .ul-outroNuc{
+        font-size: 1.83rem;
+        line-height: : 1.89rem;
+    }
+    .outro-teste{
+        /*text-decoration: underline;*/
+    }
+    .selecao-teste-multipro .progress label{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        font-weight: normal;
+        padding: 1px 3px;
+        mix-blend-mode: hard-light;
+        text-align: right;
+    }
+    .selecao-teste-multipro .progress{
+        height: 20px;
+        background: white;
+        line-height: 1.4;
+        position: relative;
+    }
+    .selecao-teste-multipro .progress-bar{
+        /*height: 30px;*/
+        font-size: 1rem;
+        background: #16b0dc!important;
+    }
+    .selecao-teste-multipro .progress-marker label {
+        /*margin-right: -3px;*/
+        font-weight: 100;
+        padding-right: 3px;
+    }
+    .listaCasos.list-group {
+        font-size: 1.7rem;
+    }
+    .imgTesteLogo{
+        width: 50px!important;
+        margin-right: 15px;
+    }
+    .imagem-teste{
+        width: 100px;
+    }
+    .teste-inicial .imagem-teste{
+        margin-top: 30px;
+
+    }
+    .box-teste{
+        padding: 10px;
+    }
+    .info{
+        margin-bottom: 30px;
+    }
+
+    .btn-acesso-teste:hover{
+        /*background-color: #1a877b!important;*/
+       <% if(window.modulo.style){ 
+        var sty = window.modulo.style;
+        if(sty['navbar-inverse']){
+            var cores = sty['navbar-inverse'];
+            var fundo = cores[0];
+        %>
+        <%= fundo %>;
+        <%
+            var cor = fundo.split(':')[1];
+        %>
+        border-color: <%= cor %>;
+        <%
+            }
+        }
+        %>
+        color: white!important;
+    }
+    .btn-acesso-teste{
+       <% if(window.modulo.style){ 
+        var sty = window.modulo.style;
+        if(sty['navbar-inverse']){
+            var cores = sty['navbar-inverse'];
+            var fundo = cores[0];
+            var cor = fundo.split(':')[1];
+        %>
+        border-color: <%= cor %>;
+        color: <%= cor %>;
+        <%
+            }
+        }
+        %>
+        /*border-color: #0f9d58!important;*/
+        border: 1px solid;
+        position: relative;
+        top: -30px;
+        /*left: 100px;*/
+        background-color: white!important;
+    }
+    .box-teste-descricao{
+        background-color: #e0e0e0;
+        padding: 15px;
+        text-align: center;
+    }
+    .box-btn-descricao{
+        text-align: center;
+    }
+    .btn-acesso-teste i{
+        <% if(window.modulo.style){ 
+        var sty = window.modulo.style;
+        if(sty['navbar-inverse']){
+            var cores = sty['navbar-inverse'];
+            var fundo = cores[0];
+            var cor = fundo.split(':')[1];
+        %>
+        color: <%= cor %>;
+        <%
+            }
+        }
+        %>
+        /*color: #0f9d58!important;*/
+        vertical-align: top!important;
+    }
+    .btn-acesso-teste:hover i{
+        color: white!important;
+    }
+    .btn-acesso-teste span{
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+</style>
+
+        <%
+        var testes = obj.items;
+        var nucleo = App.user.profissional;
+        var pros = {
+            '1': 'Enfermagem',
+            '2': 'Medicina',
+            '0': 'Outro'
+        };
+        var preTesteOutroNucleo = [];
+        var doNucleo = testes.reduce(function(m, t){
+            if(nucleo=='0'){
+                if(!t.posTeste)
+                {
+                    preTesteOutroNucleo.push(t);
+                }
+                return m;
+            }
+            ehNuc = t.profissional.toLowerCase() == pros[nucleo].toLowerCase();
+            if(!ehNuc){
+                if(!t.posTeste){
+                    preTesteOutroNucleo.push(t);
+                }
+            } else {
+                m.push(t);
+            }
+            return m;
+        },[]);
+        console.log(doNucleo, preTesteOutroNucleo)
+        var posDoNucleo = doNucleo.filter(function(t){ 
+            return t.posTeste
+        });
+        %>
+<div class="col-md-12">
+    <div class="info">
+        <h2><%-App.selecaoTestes.titulo%><br>
+        <small>Para um teste contabilizar nos critérios de certificação, você deve obter 70% ou mais de acerto.</small>
+        </h2>
+    </div>
+</div>
+<div class="">
+    <div class="caixa-casos">
+        <h2></h2>
+        <div class="listaCasos list-group">
+          <% doNucleo.forEach(function(it){ 
+                pref = it.titulo === "Teste Inicial" ? "pre" : "pos";
+                it.lockTesteFinal = App.masterFinalLock();
+          %>
+                
+            <div class=" teste teste-block-inicial teste-<%-pref=='pos'?'final gotoFinal':'inicial gotoInicial'%>" data-id='<%-it._id%>'>
+                <div class='teste-inicial-box'>
+                    <img class="imagem-teste" src="<%-defaultStaticFileService%>/img/<%-pref%>Teste.svg" alt="<%=it.titulo%>">
+                    <% if (pref == 'pre'){%>
+                        <div class="teste-dica-inicial text-left">Descubra o quanto você sabe sobre <br><%= modulo.name %></div>
+                    <%} else {%>
+                        <span class="teste-img-inicial-box"><%
+                            if(it.lockTesteFinal){%>
+                            <span class="mdi mdi-lock-outline"></span><%
+                            }%>
+                        </span>
+                        <div class="teste-dica-inicial text-left"><%
+                            if(it.lockTesteFinal){
+                                %>Teste Final Bloqueado<%
+                            } else {
+                                %><span class="h3">Faça o Teste Final</span><%
+                            }%>
+                        </div>
+                    <%}%>
+                </div>
+            </div>
+            <div class="text-left teste" data-id='<%-it._id%>'>
+                <% if(it.respostas){
+
+                    var quests = _.filter(it.slides, function(sl){ return sl.tipo.match(/quest/im); }),
+                        coi = it.respostas.length;
+                    if(coi > 0){
+                        %><%-it.respostas.length%> / <%-quests.length%> Questões respondidas<%
+                        %><div class="progress" style="height:26px; width: 100%">
+                            <div class="progress-bar" style="width: <%-(it.respostas.length/quests.length).toFixed(2)*100%>%; height: 25px"></div>
+                            <label for=""><%-(it.respostas.length/quests.length*100).toFixed(2)%>%</label>
+                        </div>
+                        <%
+
+                        var ehFinal = pref == 'pos',
+                            Teste = ehFinal ? 'Pos' : 'Pre',
+                            FouI = ehFinal ? 'Final' : 'Inicial',
+                            propName = 'percAcerto' + Teste +'Teste',
+                            acertosTeste = App.progresso.geral[propName].toFixed(2);
+                            console.log(Teste, propName, acertosTeste);
+                        %>
+                        Média de Acerto no Teste <%-FouI%>: <%-acertosTeste%>%<%
+                        %><div class="progress" style="height:26px; width: 100%">
+                            <div class="progress-bar" style="width: <%-acertosTeste%>%; height: 25px"></div>
+                            <label for=""><%-acertosTeste%>%</label>
+                        </div><%
+                    }
+                } else {%>
+
+                <%}});%>
+            </div>
+            <div class="col-md-12 outros-testes text-left">
+                <h3>Outros testes deste Módulo</h3>
+                <div class="row ul-outroNuc" style="list-style: none; padding: 0">
+                <%preTesteOutroNucleo.forEach(function(d){%>
+                    <div class='col-md-<% if(preTesteOutroNucleo.length > 1){%>6<%}else{%>12<%}%> teste outro-teste' data-id="<%-d._id%>">
+                        <div class='box-teste'>
+                            <div class='row box-teste-descricao'>
+                                <img class="imagem-teste imgTesteLogo" src="<%-defaultStaticFileService%>/img/preTeste.svg" alt="Teste Inicial de <%-d.profissional%>">
+                                <span>Teste Inicial de <%-d.profissional[0]+d.profissional.substring(1, d.profissional.length).toLowerCase()%></span>
+                            </div>
+                            <div class='row box-btn-descricao'>
+                                <button class='btn btn-sm btn-acesso-teste'>
+                                    <i class="mdi mdi-play-circle-outline" ></i><span>INICIAR TESTE</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <%})%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

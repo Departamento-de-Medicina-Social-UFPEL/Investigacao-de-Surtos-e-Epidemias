@@ -1,0 +1,92 @@
+
+.item.calculadoras.diag-sindromico-dor-pelvica .checkbox label.simples {
+  position: relative;
+  top: 0;
+  left: 60px;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .item {
+  min-height: 200px;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .radio {
+  margin: 10px 0px 13px;
+  padding: 0;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .slide-footer {
+  margin-top:20px;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica input[type="radio"]:focus {
+  outline: none;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica input[type="radio"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  margin-left: 0;
+  position: relative;
+  top: -6px;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .checkbox label.simples input[type="checkbox"] {
+  position: relative;
+  top: -3px;
+}
+
+.item.calculadoras.diag-sindromico-dor-pelvica .checkbox {
+  margin: 20px 0px 15px 20px;
+  padding: 0;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica input[type="checkbox"]:focus {
+  outline: none;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica input[type="checkbox"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica label input[type='checkbox'][disabled] {
+  opacity: .4;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .checkbox label small {
+  white-space: pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .checkbox label small:before {
+  content: '\A';
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .titulo-calc {
+  color: #333 ;
+}
+
+.item.calculadoras.diag-sindromico-dor-pelvica .titulo {
+  color: #333 ;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .descricao-resultado {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+/*novo*/
+.item.calculadoras.diag-sindromico-dor-pelvica .sub-titulo-calc{
+	background-color: var(--corpadrao)!important;
+	padding:4px 4px 4px 8px;
+}
+
+.item.calculadoras.diag-sindromico-dor-pelvica .sub-titulo-calc small{
+	color:white!important;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .resultado-titulo {
+	color:var(--corpadrao)!important;
+}
+.item.calculadoras.diag-sindromico-dor-pelvica .resultado {
+    background-color: var(--corpadrao)!important;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+.diag-sindromico-dor-pelvica.radio {
+    margin: 10px 10px 0px 0px !important;
+}

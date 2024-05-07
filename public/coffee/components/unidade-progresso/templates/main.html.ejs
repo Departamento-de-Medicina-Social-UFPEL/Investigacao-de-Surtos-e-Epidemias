@@ -1,0 +1,455 @@
+<style type='text/css'>
+	.info{
+		text-align: center;
+	}
+	.info h1{
+		color: #<%= corFonte %>;
+	}
+  .unidade-title {
+  	margin-left: 12px;
+    background-color: #<%= corElementos %>!important;
+    padding: 10px;
+    padding-left: 15px;
+    color: white;
+    font-family: sans-serif;
+  }
+	.video-lista-item {
+    padding: 10px;
+    background: #f3f3f3;
+    margin-top: 12px;
+  }
+  .video-lista-item i{
+    color: #<%= corElementos %>!important;
+  }
+  .listaVideos{
+    margin-right: -15px;
+  }
+  .listaCasos{
+  	margin-left: -15px;
+    margin-right: -25px;
+  }
+ .teste-bloqueado {
+    background-color: #666666;
+    color: white;
+    font-size: 16px;
+}
+ .teste-block {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 12px;
+        min-height: 116px;
+}
+.teste-block span.mdi.mdi-lock-outline:before {
+    font-size: 3em;
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    color: white;
+}
+.introducao{
+    color: <%= corFonte %>!important;
+    padding-bottom: 40px;
+    background-color: #<%= corIntro %>!important;
+    margin-top: -20px;
+    padding-top: 20px;
+
+}
+.introducao h1{
+		color: <%= corFonte %>!important;
+	}
+.video-poster-inicial {
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 300px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: solid 2px;
+}
+.video-poster-inicial .play {
+    position: absolute;
+    top: calc(50%);
+    left: calc(50% - 30px);
+}
+.video-poster-inicial .play:before {
+    font-size: 4em;
+    color: hsla(0, 100%, 100%, 0.8);
+}
+.dica-assista-video-inicial {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.8em;
+    width: 100%;
+    left: 0;
+    text-shadow: 1px 1px 4px black;
+}
+.unidade-main .teste-img-inicial{
+  zoom: 0.8;
+}
+.unidade-main .teste-dica-inicial{
+  padding: 13px;
+}
+</style>
+<div class="row introducao">
+    <div class="col-md-12 info">
+    <h2><%- short %></h2>
+    <h1><%- title %></h1>
+    </div>
+    <% if(img_video_apresentacao) {%>
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+        <div class="no-pad text-center video-poster-inicial gotoVideo" style="background-image: url('<%-defaultStaticFileService%>/img/<%- img_video_apresentacao %>')">
+        </div>
+        <h2 style='text-align: center;'>Assista ao vídeo de apresentação</h3>
+      </div>
+    <%}%>
+</div>
+<div class='container'>
+  <div class="row" style="font-family: sans-serif;">
+    <div class="col-md-12">
+    <div id="alert-certificar" class="alert alert-info alert-dismissible fade in" role="alert" style="margin-bottom: 0px;margin-top:10px;margin-left: 12px;">
+        <strong>Dica!</strong> Para acompanhar seu progresso, use o menu <b>Meu progresso</b>!
+    </div>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <% 
+    if(testes){
+      if(testes.length > 0){
+    %>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class='unidade-title'>Teste Inicial</h3>
+            <div class='list-group'>
+            <% 
+              g = App.progresso.geral;
+              if(testes.length > 0){
+                testes = testes.sort(function(a,b){
+                  if(a.get('titulo').indexOf('nicial') > -1 && b.get('titulo').indexOf('nicial') == -1){
+                    return -1;
+                  }else{
+                    return 1;
+                  } 
+                });
+              }
+              t = testes[0];
+              unidade = t.get('unidade');
+              conteudo = "Unidade "+t.get('unidade');
+              if(window.modulo.fl_por_unidade){
+                percAcertoPreTeste =   g.unidade[unidade]['percAcertoPreTeste'].toFixed(1)
+                lock =   App['masterFinalLockUnidade'](unidade)
+                percAcertoPosTeste = g.unidade[unidade].percAcertoPosTeste.toFixed(1)
+              }else{
+                conteudo = t.get('profissional').toLowerCase()
+                conteudo = conteudo.substring(0,1).toUpperCase()+conteudo.substring(1, conteudo.length)
+
+                percAcertoPreTeste = g['percAcertoPreTeste'+conteudo].toFixed(1)
+                lock = App["masterFinalLock"+conteudo]()
+                percAcertoPosTeste = g['percAcertoPosTeste'+conteudo].toFixed(1)
+              }
+              %>
+              <div class="col-xs-12">
+                <div class=" teste-inicial video-lista-item ">
+                  <div class="row"  style='min-height: 15rem;'>
+                    <div class='col-xs-7 col-xs-offset-3  col-sm-offset-0 col-sm-4 col-md-3 col-lg-3' style="text-align: center;">
+                      <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/preTeste.svg" alt="">
+                    </div>
+                    <div class='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
+                      <div class="teste-dica-inicial text-left">Descubra o quanto você sabe sobre  
+                      <% if(window.modulo.fl_por_unidade){%> 
+                        <%- title %>
+                      <%}else{%>
+                        <%- modulo.name %>
+                      <%}%>
+                      </div>
+                      <div style='padding-top: 10px;' class="row teste-block teste-liberado">
+                        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              
+                          <p class="text-left">Média de acerto: <%= percAcertoPreTeste %>%</p>
+                          <div class="progress">
+                          <div class="progress-bar <%- conteudo %>" role="progressbar" aria-valuenow="<%= percAcertoPreTeste %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= percAcertoPreTeste %>%;">
+                          <%= percAcertoPreTeste %>%
+                          </div>
+                          </div>
+
+                        </div>
+                        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          <button data-unidade='<%= unidade %>' class='btn btn-primary gotoInicialUnidade'>Acessar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%
+      }
+    }
+  %>
+  <% if(sources.length > 0){%>
+    <div class="row" style="font-family: sans-serif;">
+        <div class="col-md-12">
+            <h3 class="unidade-title">Vídeo</h3>
+            <div class="listaVideos list-group">
+              <%
+              if(!sources){
+                  sources = []
+              }
+              sources.forEach(function(s) {
+                var viu = false;
+                %>
+                <div class="col-md-12">
+                  <div class='video-lista-item'>
+                    <a href="#comp/video-player/<%- s.poster %>"><h4><i class="mdi mdi-file-video" ></i>  <%- s.title %> <small>
+                    <%
+                    if(_.findWhere(App.user.especifico, {modulo:window.modulo._id, name:s.poster})){
+                    %><i class="mdi mdi-check" style="color: green;margin-left: 10px;"></i><%
+                    }
+                    %>
+                    </small></h4></a>
+                  </div>
+                </div><%
+              })
+              %>
+            </div>
+        </div>
+    </div>
+  <%}%>
+  <% if(nr_casos){%>
+  <div class="row">
+      <div class="col-md-12">
+          <h3 class='unidade-title'><% if(categories.indexOf('saibamais') > -1){ %>Você Sabia Que...<%}else{%>Casos Interativos<%}%></h3>
+          <div class="listaCasos list-group" ></div>
+      </div>
+  </div>
+  <%}%>
+    <% if(nr_atividades){%>
+  <div class="row">
+      <div class="col-md-12">
+          <h3 class='unidade-title'>Atividade</h3>
+          <div class="list-group" >
+            <%
+                atividades.forEach(function(s) {
+              %>
+                <div class="col-md-12">
+                  <div class='video-lista-item'>
+                    <p style='font-size: 1.8rem;    text-align: justify;'><%= s.descricao %></p>
+                    <h4>
+                        <i class="<%= s.icone %>" > </i>
+                        <a href="<%- s.url %>"> <%- s.title %></a>
+                    </h4>
+                  </div>
+                </div>
+              <%
+                })
+              %>
+          </div>
+      </div>
+  </div>
+  <%}%>
+  
+    <%
+    componente = _.findWhere(window.modulo.components, {folder: 'calculadoras'})
+    if(componente && unidade){
+      sources = componente.resource;
+    %>
+      <div class="row" style="font-family: sans-serif;">
+        <div class="col-md-12">
+            <h3 class="unidade-title">Calculadora</h3>
+            <div class="listaVideos list-group">
+              <%
+                sources.forEach(function(s) {
+              %>
+                <div class="col-md-12">
+                  <div class='video-lista-item'>
+                     <h4><i class="mdi mdi-calculator" > </i>
+                     <a href="<%- s.url %>">
+                       <%- s.title %> </a></h4>
+                  </div>
+                </div>
+              <%
+                })
+              %>
+            </div>
+        </div>
+      </div>
+    <% 
+      } 
+    %>
+      <% 
+    componente = _.findWhere(window.modulo.components, {folder: 'materiais'});
+    materiais = []
+    if(componente && unidade){
+      resource = componente.resource
+    }
+    if(resource.length > 0){
+      resource = resource.filter(function(m){
+        return m.unidade <= unidade
+      });
+      var capitaliseFirstLetter = function(string){
+          return string.charAt(0).toUpperCase() + string.slice(1);
+      };
+      var a = _.groupBy(resource, 'tipo');
+      
+      var b = [];
+      var k = [];
+      for(var i in a){
+          k.push(i);
+      }
+      k = _.sortBy(k)
+      k.forEach(function(i){
+        b.push(a[i])
+      })
+      b = _.sortBy(b, function(it){  return it.nome });
+      a = {};
+      for(var k in b){
+          a[b[k][0].tipo] = b[k];
+      }
+      var zero = "class='active'";
+      %>
+      <div class="row">
+          <div class="col-md-12">
+            <h3 class='unidade-title'>Materiais de Apoio</h3>
+            <%
+              for(var i in a){
+                  var ca = a[i];
+                  ca = _.sortBy(ca, 'nome');
+                  %>
+                  <div class="col-md-6">
+                    <h3><%=capitaliseFirstLetter(i == 'apoio' ? 'Impressos' : i)%></h3>
+                    <%
+                    for(var m in ca){
+                      var o = ca[m];
+                      if(o.tipo != 'video'){
+                        if(o.url){
+                        
+                          %>
+                                  <p class="material-item">
+                                      <i class="mdi mdi-file-document"></i>
+                                      <a href="<%-defaultStaticFileService%>/bib/apoio/<%=o.url%>" target='_blank' class='apoio-link'><%=o.nome%></a>
+                                      <br><small>&nbsp;<%-o.filesize.replace('.',',')%></small>
+                                  </p>
+                          <%
+                              }else{
+                            %>
+                                  <p class="material-item">
+                                      <i class="mdi mdi-file-document"></i>
+                                      <a href="<%=o.urlOri%>" target='_blank' class='apoio-link'><%=o.nome%></a>
+                                      <br><small>&nbsp;<%-o.filesize.replace('.',',')%></small>
+                                  </p>
+                      <%
+                              }
+                      
+                      }else{
+                          %>
+                          <p class="material-item">
+                          <i class="mdi mdi-file-video"></i>
+                          <a href="<%=o.url%>" class='apoio-link'><%=o.nome%></a>
+                          <br><small>&nbsp;<%- o.filesize %></small>
+                          </p>
+                          <%
+                      }
+                    }
+                  %>
+                  </div> 
+            <%} %>
+          </div>
+      </div>
+    <%} %>
+    <% 
+    if(testes){
+      if(testes.length > 0){
+        %>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class='unidade-title'>Teste Final</h3>
+            <div class='list-group'>
+              <% 
+              g = App.progresso.geral;
+              if(testes.length > 0){
+                testes = testes.sort(function(a,b){
+                  if(a.get('titulo').indexOf('nicial') > -1 && b.get('titulo').indexOf('nicial') == -1){
+                    return -1;
+                  }else{
+                    return 1;
+                  } 
+                });
+              }
+              t = testes[1];
+              unidade = t.get('unidade');
+              conteudo = "Unidade "+t.get('unidade');
+              if(window.modulo.fl_por_unidade){
+                percAcertoPreTeste =   g.unidade[unidade]['percAcertoPreTeste'].toFixed(1)
+                lock =  App['masterFinalLockUnidade'](unidade)
+                percAcertoPosTeste = g.unidade[unidade].percAcertoPosTeste.toFixed(1)
+              }else{
+                conteudo = t.get('profissional').toLowerCase()
+                conteudo = conteudo.substring(0,1).toUpperCase()+conteudo.substring(1, conteudo.length)
+                console.log(conteudo, 'conteudo')
+                percAcertoPreTeste = g['percAcertoPreTeste'+conteudo].toFixed(1)
+                lock = App["masterFinalLock"+conteudo]()
+                percAcertoPosTeste = g['percAcertoPosTeste'+conteudo].toFixed(1)
+              }
+              %>
+              <div class="col-xs-12">
+                <div class="teste-inicial video-lista-item ">
+                  <div class="row" style='min-height: 15rem;'>
+                    <div class='col-xs-7 col-xs-offset-3  col-sm-offset-0 col-sm-4 col-md-3 col-lg-3' style="text-align: center;margin-top: 10px;">
+                      <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/posTeste.svg" alt="">
+                    </div>
+                    <div class='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
+                        <div class="teste-dica-inicial text-left">Descubra o quanto você sabe sobre  
+                        <% if(window.modulo.fl_por_unidade){%> 
+                        <%- title %>
+                        <%}else{%>
+                        <%- modulo.name %>
+                        <%}%>
+                        </div>
+                        <div style='padding-top: 10px;margin-bottom: 22px;' class="row teste-block <% if(lock){%> teste-bloqueado<%}else{%> teste-liberado<%}%>">
+                          <% if(lock){%>
+                            <div class=" col-xs-12 col-sm-2 col-md-2 col-lg-2">  
+                              <span class="mdi mdi-lock-outline" <%
+                                  if(navigator.userAgent.toLowerCase().includes('firefox')){
+                                    %>style="top: -38px; left: 35px;"<%
+                                  }
+                                  %>
+                                ></span>
+                            </div>
+                            <div class=" col-xs-12 col-sm-10 col-md-10 col-lg-10" style="padding-top: 10px;">
+                              <b>Teste Final de <%= conteudo %> Bloqueado</b>
+                               <% if(categories.indexOf('saibamais') > -1){%>
+                              <p  style="padding-top: 20px;">Para desbloquear você precisa concluir o você sabia que...</p>
+                              <%}else{%>
+                              <p>Para desbloquear você precisa concluir 70% dos casos interativos com 70% de acerto.</p>
+                              <%}%>
+                            </div>
+                          <%}else{%>
+                            <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                              <p class="text-left">Média de acerto: <%= percAcertoPosTeste %>%</p>
+                              <div class="progress">
+                              <div class="progress-bar <%- conteudo %>" role="progressbar" aria-valuenow="<%= percAcertoPosTeste %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= percAcertoPosTeste %>%;">
+                              <%= percAcertoPosTeste %>%
+                              </div>
+                              </div>
+                            
+                            </div>
+                            <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                              <button data-unidade='<%= unidade  %>' class='btn btn-primary gotoFinalUnidade'>Acessar</button>
+                            </div>
+                          <%}%>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%
+      }
+    }
+  %>
+</div>

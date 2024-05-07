@@ -1,0 +1,80 @@
+.item.calculadoras.complexidadePacienteAd .checkbox label {
+  /* position: relative; */
+  /* top: 0; */
+}
+.item.calculadoras.complexidadePacienteAd .checkbox label.simples {
+  position: relative;
+  top: 0;
+  left: 60px;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.item.calculadoras.complexidadePacienteAd .item {
+  min-height: 300px;
+}
+.item.calculadoras.complexidadePacienteAd .radio {
+  margin: 10px 0px 13px;
+  padding: 0;
+}
+.item.calculadoras.complexidadePacienteAd input[type="radio"]:focus {
+  outline: none;
+}
+.item.calculadoras.complexidadePacienteAd input[type="radio"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  margin-left: 0;
+  position: relative;
+  top: -6px;
+}
+.item.calculadoras.complexidadePacienteAd .checkbox label.simples input[type="checkbox"] {
+  position: relative;
+  top: -3px;
+}
+.item.calculadoras.complexidadePacienteAd .radio.first {
+  margin-top: 30px;
+}
+.item.calculadoras.complexidadePacienteAd .checkbox {
+  margin: 20px 0px 15px 20px;
+  padding: 0;
+}
+.item.calculadoras.complexidadePacienteAd input[type="checkbox"]:focus {
+  outline: none;
+}
+.item.calculadoras.complexidadePacienteAd input[type="checkbox"] {
+  /* float: none; */
+  /* vertical-align: -8px; */
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.item.calculadoras.complexidadePacienteAd label input[type='checkbox'][disabled] {
+  opacity: .4;
+}
+.item.calculadoras.complexidadePacienteAd .checkbox label small {
+  white-space: pre;
+  position: relative;
+  top: -4px;
+}
+.item.calculadoras.complexidadePacienteAd .checkbox label small:before {
+  content: '\A';
+}
+.item.calculadoras.complexidadePacienteAd .titulo-calc {
+  color: #333 ;
+}
+.item.calculadoras.complexidadePacienteAd .panel-body {
+  /*padding: 0;*/
+}
+.item.calculadoras.complexidadePacienteAd .panel {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.item.calculadoras.complexidadePacienteAd .titulo {
+  color: #333 ;
+}
+.item.calculadoras.complexidadePacienteAd .descricao-resultado {
+  margin-top: 25px;
+  margin-left: 25px;
+}

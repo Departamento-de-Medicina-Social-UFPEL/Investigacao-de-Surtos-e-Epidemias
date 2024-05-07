@@ -1,0 +1,140 @@
+    <div class='row'>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Testes</h1>
+        </div>
+    </div>
+    <div class="row testes">
+		<% 
+		var ofertas = window.modulo.ofertasAbertas.filter(function(o){
+			return o.tipo != 'integrador'
+		})
+		ofertas.forEach(function(o){ 
+			var conteudo = o.conteudo.slice(0,1).toUpperCase()+o.conteudo.slice(1);
+			if(o.tipo == 'unidade'){ 
+				conteudo ='Unidade'
+			}
+			
+		%>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		    <div class="panel panel-default">
+			    <div class="panel-heading">
+					<% if(o.tipo == 'unidade'){%>
+						<h3><%- o.nome %></h3>
+					<%}else{%>
+					    <b class='titulo'>Conteúdo de <%= conteudo %></b>
+					<%}%>
+				</div>
+				<div class="panel-body">
+					<div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+			            <div class=" teste-inicial ">
+			              <div class="row"  style='min-height: 15rem;'>
+			                <div class='col-xs-7 col-xs-offset-3  col-sm-offset-0 col-sm-4 col-md-3 col-lg-3'>
+			                    <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/preTeste.svg" alt="">
+			                </div>
+			                <div class='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
+			                    <div class='titulo' style="color: #f05b26;">Teste Inicial</div>
+			                    <div class="teste-dica-inicial text-left">Descubra o quanto você sabe 
+			                        <br>sobre  <%- modulo.name %>
+			                    </div>
+			                </div>
+			              </div>
+			                <div style='padding-top: 10px;' class="row teste-block teste-liberado">
+			                    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								  <% 
+								  g = App.progresso.geral;
+								  if(o.tipo == 'unidade'){ 
+									percAcertoPreTeste =   g.unidade[o.unidade]['percAcertoPreTeste'].toFixed(1)
+								  }else{
+									percAcertoPreTeste =   g['percAcertoPreTeste'+conteudo].toFixed(1)
+								  } 
+								  %>
+
+								  <p class="text-left">Média de acerto: <%= percAcertoPreTeste %>%</p>
+								  <div class="progress">
+								    <div class="progress-bar <%- conteudo %>" role="progressbar" aria-valuenow="<%= percAcertoPreTeste %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= percAcertoPreTeste %>%;">
+								    <%= percAcertoPreTeste %>%
+								    </div>
+								  </div>
+
+			                    </div>
+			                    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			                        <button data-unidade='<%= o.unidade %>' class='btn btn-primary gotoInicial<%= conteudo %>'>Acessar</button>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+
+			        <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+			            <div class="teste-inicial ">
+			                <div class="row" style='min-height: 15rem;'>
+			                    <div class='col-xs-7 col-xs-offset-3  col-sm-offset-0 col-sm-4 col-md-3 col-lg-3'>
+			                        <img class="teste-img-inicial" src="<%-defaultStaticFileService%>/img/posTeste.svg" alt="">
+			                    </div>
+			                    <div class='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
+			                        <div class='titulo' style="color: #2b8fb2;">Teste Final</div>
+			                        <div class="teste-dica-inicial text-left">Descubra o quanto você sabe 
+				                        <br>sobre  <%- modulo.name %>
+				                    </div>
+			                    </div>
+			                </div>
+								<% 
+								if(o.tipo == 'unidade'){ 
+									lock =   App['masterFinalLockUnidade'](o.unidade)
+								  }else{
+									lock =  App['masterFinalLock'+conteudo]()
+								  } 
+								 %>
+			                    <div style='padding-top: 10px;' class="row teste-block <% if(lock){%> teste-bloqueado<%}else{%> teste-liberado<%}%>">
+			                        <% if(lock){%>
+			                        <div class=" col-xs-12 col-sm-2 col-md-2 col-lg-2">  
+			                           <span class="mdi mdi-lock-outline" <%
+			                                    if(navigator.userAgent.toLowerCase().includes('firefox')){
+			                                        %>style="top: -38px; left: 35px;"<%
+			                                    }
+			                                    %>
+			                                ></span>
+			                        </div>
+			                        <div class=" col-xs-12 col-sm-10 col-md-10 col-lg-10">
+										<% if(modulo.fl_layout_alternativo) { %>
+											<b>Teste final bloqueado</b>
+											<p>Para desbloquear você precisa concluir 70% dos casos interativos com 70% de acerto.</p>
+										<% } else { %>
+											<b>Teste Final de <%= conteudo %> Bloqueado</b>
+											<p>Para desbloquear você precisa concluir 70% dos casos clínicos de <%= conteudo %> com 70% de acerto.</p>
+										<% } %>
+			                        </div>
+			                        <%}else{%>
+			                        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									  <% 
+									  g = App.progresso.geral;
+									  if(o.tipo == 'unidade'){ 
+
+									  percAcertoPosTeste = g.unidade[o.unidade].percAcertoPosTeste.toFixed(1) 
+									  }else{
+
+									  percAcertoPosTeste = g['percAcertoPosTeste'+conteudo].toFixed(1) 
+									  }
+									  %>
+
+									  <p class="text-left">Média de acerto: <%= percAcertoPosTeste %>%</p>
+									  <div class="progress">
+									    <div class="progress-bar <%- conteudo %>" role="progressbar" aria-valuenow="<%= percAcertoPosTeste %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= percAcertoPosTeste %>%;">
+									    <%= percAcertoPosTeste %>%
+									    </div>
+									  </div>
+									
+				                    </div>
+			                        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+			                            <button data-unidade='<%= o.unidade  %>' class='btn btn-primary gotoFinal<%= conteudo %>'>Acessar</button>
+			                        </div>
+			                        <%}%>
+			                    </div>
+
+			            </div>
+			        </div>
+				</div>
+				
+			</div>
+		</div>
+        <%})%>
+    </div>

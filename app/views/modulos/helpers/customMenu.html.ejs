@@ -1,0 +1,191 @@
+
+<div class="main-menu">
+  <ul class="nav navbar-nav navbar-left">
+    <li>
+      <div class='menu-lateral'>
+        <ul class="lista-conteudos drawer-menu drawer-left " data-animating="false" style="display:none" >
+          <li class='historyBarItem' style=' margin-left: 35px;padding-top: 25px;'><span id='user-name' style='color: var(--corpadrao);'></span></li>
+          <div class="panel-group progresso-conteudo" id="accordionMenu" role="tablist" aria-multiselectable="true" style='margin-bottom:0'>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingCadastro" style="">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordionMenu" href="#collapseCadastro" aria-expanded="true" aria-controls="collapseCadastro">
+                    <u>Cadastro</u>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseCadastro" class="panel-collapse collapse in user-menu" role="tabpanel" aria-labelledby="headingCadastro">
+             
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingMenu" style="">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordionMenu" href="#collapseMenu" aria-expanded="true" aria-controls="collapseMenu">
+                    <u>Menu</u>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseMenu" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingMenu">
+                  <%
+                      modulo.customMenu.forEach(function(mnuItm) {
+                  %>
+                      <li class='historyBarItem'>
+                          
+                          <a href="<%-mnuItm.path%>" class="main-menu-link " onclick="escondeMenus()">
+                          <% if(mnuItm.name.trim() == 'Inicial'){%>
+                              <i class="mdi mdi-home"></i>
+                          <%}else{%>
+                              <i class="espaco-menu"></i>
+                          <%}%>
+                          <span class='text-ico' ><%-mnuItm.name%></span></a>
+                      </li>
+                  <% }); %>
+              </div>
+            </div>
+          <li class='user-menu'>
+          </li>
+        </ul>
+        
+      </div>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="">
+      <!-- AQUI VÃO OS LOGOS -->
+      <div class="logos ">
+        <img class="logo-uf hidden-xs" src="/static/img/marcas/dms_branco.svg">
+        <img class="logo-un hidden-xs" src="/static/img/marcas/unasus_branco.svg">
+      </div>
+      <a class="user-menu-toggle hide">
+        <span class="user-nome hide">Visitante</span> <i class="ion-ios7-contact-outline"></i>
+        <div class="box-dial">
+          <div style="display: inline; width: 46px; height: 46px;"><canvas width="46" height="46"></canvas><input type="text" value="40" class="dial-completed" readonly="readonly" style="display: none; width: 0px; visibility: hidden;"></div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="userBar">
+    <div class="userBar-wrap drawer-menu drawer-right out" >
+        <div class='user-menu-progresso'>
+          <div class="user-info-block dados-pessoais">
+          </div>
+        </div>
+    </div>
+</div>
+<script type="text/ejs" id="user-drop-menu-template">
+    <div class="dados-pessoais">
+      <div class="menu-top-right open">
+          
+            <ul class="menu" style="list-style: none; padding-left: 0px;">
+            </ul>
+          <% if(modulo.url_facebook){ %>
+          <ul class="share-item">
+            <iframe src="<%= modulo.url_facebook %>" width="97" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+          </ul>
+          <%}%>
+        </div>
+    </div>  
+</script>
+<script type="text/ejs" id="user-progresso-menu-template">
+  <div class="user-progresso-block progresso">
+        <span class="titulo-block-progresso" onclick='ativaMenuUser()'
+        ><i class="glyphicon glyphicon-dashboard"></i><span> Meu Progresso</span></span>
+        <div class="extra-right"></div>
+        <div class="content container-progresso">
+          <div class="panel-group progresso-conteudo" id="accordionProgressos" role="tablist" aria-multiselectable="true" style='margin-bottom:0'>
+          </div>
+
+            <div class='progresso-sincroniza' style='padding-right: 1rem;padding-left: 1rem;'>
+              <button class='btn btn-success' style='padding-left: 1rem;'><i class="mdi mdi-autorenew"></i> Sincronizar progresso</button>
+              <div class="progress" style='display:none'>
+                <div id='progressbar-sinc' class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                  <span class="sr-only">40% Complete (success)</span>
+                </div>
+              </div>
+              <div class='text-sinc-progresso'></div>
+            </div>
+             <div class="progressoZero">
+                 <span>Você ainda não possui progressos!</span>
+                 <span>Que tal fazer um <a href="#comp/selecao-progresso">caso clínico</a>?</span>
+             </div>
+              
+        </div>
+  </div>
+</script>
+<script type="text/ejs" id="item-menu-drop-template">
+    <a class='main-menu-link' href="<@-link@>" onclick="escondeMenus()"><i class="espaco-menu"></i> <@-texto@></a>
+</script>
+<script type="text/ejs" id="modal-elegivel-conteudo-item">
+  <div class="bbm-modal__topbar">
+    <div class="bbm-modal__title">Parabéns</div>
+  </div>
+  <div class="bbm-modal__section row text-center">
+    <p id='modal-elegivel-content'>Você concluiu os requisitos para certificar em uma unidade/conteúdo!<br> 
+      Acesse o menu <a href="#comp/progresso" id='link-meu-progresso'>Meu progresso</a> e gere seu certificado agora!
+       Ou continue respondendo e aumente sua média!
+    </p>
+  </div>
+  <div class="bbm-modal__bottombar">
+      <a href="#" class="bbm-button close-modal">ok</a>
+  </div>
+</script>
+<script type="text/ejs" id="item-conteudo-drop-template">
+  <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading<@= nucleo @>" style='background-color:#<@ if(corIntro){@><@= corIntro @>!important<@}else{@>#007bff<@}@>'>
+      <h4 class="panel-title">
+        <@= sigla @>
+        <a role="button" style='color:<@ if(corFonte){@><@= corFonte @>!important<@}else{@>#007bff<@}@>' data-toggle="collapse" data-parent="#accordion" href="#collapse<@= nucleo @>" aria-expanded="true" aria-controls="collapse<@= nucleo @>">
+          <u><@= titulo @></u>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse<@= nucleo @>" class="panel-collapse collapse <@ if(unidade == 1){@> in<@}@>" role="tabpanel" aria-labelledby="heading<@= nucleo @>">
+      <div class="panel-body" style='padding:10px'>
+
+        <div class="progresso-item progresso-<@= nucleo.toLowerCase() @>" >
+          
+          <b class='h4-progresso'>Teste Inicial </b>
+          <p class="text-left">Média de acerto: <@= percAcertoPreTeste @>%</p>
+          <div class="progress">
+            <div class="progress-bar <@- nucleo @>" role="progressbar" aria-valuenow="<@= percAcertoPreTeste @>" aria-valuemin="0" aria-valuemax="100" style="width: <@= percAcertoPreTeste @>%;">
+            <@= percAcertoPreTeste @>%
+            </div>
+          </div>  
+        </div>
+        <div class="progresso-item">          
+          <b class='h4-progresso'><@ if(categories.indexOf('saibamais') > -1 ){ @> Saiba Mais <@}else{@> Casos Clinicos <@} @> </b>
+          <p class="text-left progress-help" style=''>Concluídos <@ if(!categories.indexOf('saibamais') > -1 ){ @> com 70% de acerto ou + <@} @>: <@= percCasos @>%</p>
+
+          <label class="progresso-mark-lateral"></label>
+          <div class="progress">
+            <div class="progress-bar <@- nucleo @>" role="progressbar" aria-valuenow="<@= percCasos @>" aria-valuemin="0" aria-valuemax="100" style="width: <@= percCasos @>%;">
+            <@= percCasos @>%
+            </div>
+          </div>
+          <label class="progresso-mark-lateral-help" style="font-weight:100;color: #8c8c8c;">
+            <@ if(!categories.indexOf('saibamais') > -1 ){ @>Ultrapasse 70%<@}else{@> Conclua 100%<@} @> e libere o Teste Final
+          </label>
+        </div>
+        <div class="progresso-item">
+          
+          <b class='h4-progresso'><span class="mdi mdi-lock<@= lockTesteFinal?'':'-open' @>-outline" style="color: var(--corpadrao);"></span>Teste final</b>
+          <p class="text-left progress-help">Média de acerto: <@= percAcertoPosTeste @>%</p>
+          <label class="progresso-mark-lateral"></label>
+          <div class="progress">
+            <div class="progress-bar <@- nucleo @>" role="progressbar" aria-valuenow="<@= percAcertoPosTeste @>" aria-valuemin="0" aria-valuemax="100" style="width: <@= percAcertoPosTeste @>%;">
+            <@= percAcertoPosTeste @>%
+            </div>
+          </div>
+          <label class="progresso-mark-lateral-help" style="font-weight:100;color: #8c8c8c;">
+            Ultrapasse 70% de acerto.
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>

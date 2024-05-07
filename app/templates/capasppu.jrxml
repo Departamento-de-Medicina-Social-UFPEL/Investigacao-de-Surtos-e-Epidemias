@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="capasppu" language="groovy" pageWidth="1280" pageHeight="720" orientation="Landscape" columnWidth="1280" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1a11c87f-a10f-4a7e-a731-7e00cdce60a1">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<parameter name="nucleo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="720" splitType="Stretch">
+			<staticText>
+				<reportElement x="146" y="286" width="1015" height="303" forecolor="#FFFFFF" uuid="cb18b4d9-82be-4106-8418-829aa6869576"/>
+				<textElement>
+					<font fontName="Myriad Pro" size="72" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Criança com exatema e febre. Será dengue?]]></text>
+			</staticText>
+			<image isUsingCache="false">
+				<reportElement x="0" y="0" width="1280" height="720" uuid="ad42d4a1-00a0-43ee-b275-ec88e76028e5"/>
+				<imageExpression><![CDATA["CapaPPU_maior.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="134" y="260" width="782" height="76" forecolor="#FFFFFF" uuid="b661785d-3777-40fc-a7fc-1dfcc2a55680"/>
+				<textElement>
+					<font fontName="Myriad Pro" size="44" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Caso Clínico Interativo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="320" width="1015" height="289" forecolor="#FFFFFF" uuid="5a1ee902-f0ae-4f46-9eb9-42acad69d14f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Myriad Pro" size="66" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titulo}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement x="84" y="155" width="174" height="62" forecolor="#378A33" backcolor="#378A33" uuid="b2b70c3a-ca88-45f4-9346-44b216b1ea99">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '4')]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="101" y="164" width="160" height="44" forecolor="#FFFFFF" uuid="7e126603-63f1-45a4-9a82-309800c6164d">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '4')]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Myriad Pro" size="36" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Medicina]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="84" y="81" width="236" height="62" forecolor="#0091D6" backcolor="#0091D6" uuid="fbce6a72-48f9-48b2-a123-4b602fee6313">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '4')]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="98" y="88" width="212" height="44" forecolor="#FFFFFF" uuid="3c90b718-a271-41d0-a62f-360ad933c03a">
+					<property name="enftext" value="new Boolean($F{nucleo} == 4)"/>
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '4')]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Myriad Pro" size="36" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Enfermagem]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="98" y="112" width="174" height="62" forecolor="#378A33" backcolor="#378A33" uuid="0c469a76-8fde-4595-9328-af6e7ca8f2d2">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '1')]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="115" y="121" width="160" height="44" forecolor="#FFFFFF" uuid="f2393bab-9945-4d8a-8aad-7ff91808a6b6">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '1')]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Myriad Pro" size="36" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Medicina]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="98" y="112" width="236" height="62" forecolor="#0091D6" backcolor="#0091D6" uuid="065a33f1-6ca9-489d-9928-eee00ecd0c26">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '2')]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="112" y="119" width="212" height="44" forecolor="#FFFFFF" uuid="889b3b78-7235-4863-a3d6-7f020e5ca9cc">
+					<property name="enftext" value="new Boolean($F{nucleo} == 2)"/>
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '2')]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Myriad Pro" size="36" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Enfermagem]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="98" y="113" width="226" height="62" forecolor="#DB160F" backcolor="#DB160F" uuid="eb38726c-b961-4636-88ca-b37bcb922809">
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '3')]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="112" y="121" width="198" height="44" forecolor="#FFFFFF" uuid="f6ff8f55-3f38-4a88-905d-1201804480b8">
+					<property name="enftext" value="new Boolean($F{nucleo} == 3)"/>
+					<printWhenExpression><![CDATA[new Boolean($P{nucleo} == '3')]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Myriad Pro" size="36" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Odontologia]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

@@ -1,0 +1,118 @@
+
+	<div class='panel panel-default'>
+		<div class='panel-heading'>
+			<% if(tipo == 'unidade'){%>
+				<h3><%- nome %></h3>
+			<%}else if(tipo == 'integrador'){%>
+				<h3>Módulo integral</h3>
+			<%}else{%>
+				<h3>Conteúdo de <%- nucleo %></h3>
+			<%}%>
+			<div id='fl-inscrito' class="checkbox">
+				<label class='check-inscrito'>
+					<input class='conteudos' type="checkbox" disabled="disabled" value="<%- id_arouca %>" >
+					 Você <b class="link-inscricao">não </b>está inscrito.
+					 <a class='link-inscricao' href="#comp/cadastro"><b>Inscreva-se aqui </b></a>
+				</label>
+			</div>
+		</div>
+		<div class='panel-body'>
+			<% if(!window.modulo.fl_por_unidade){%>
+			<div class="progresso-item" style="margin-bottom:40px;">
+				<% percAcertoPreTesteEnfermagem = App.progresso.geral['percAcertoPreTeste'+nucleo].toFixed(1) %>
+				<h4>Teste Inicial</h4>
+				<p class="text-left">Média de acerto: <%- percAcertoPreTesteEnfermagem %>%</p>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="<%- percAcertoPreTesteEnfermagem %>" aria-valuemin="0" aria-valuemax="100" style="width: <%- percAcertoPreTesteEnfermagem %>%;">
+					<%- percAcertoPreTesteEnfermagem %>%
+					</div>
+				</div>  
+			</div>
+			<div class="progresso-item">
+				<% percCasos = App.progresso.geral['percCasosConcluNucleo'+nucleo].toFixed(1) %>
+				<h4>Casos Interativos</h4>
+				<p class="text-left">Casos concluídos com 70% de acerto ou mais: <%- percCasos %>%</p>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="<%- percCasos %>" aria-valuemin="0" aria-valuemax="100" style="width: <%- percCasos %>%;">
+					<%- percCasos %>%
+					</div>
+				</div>
+				<div class="progress-mark" style="width: 100%; padding-right: 30%;  ">
+					<label class=" indicador-objetivo">Ultrapasse 70% para desbloquear o Teste Final</label>
+				</div>
+			</div>
+			<div class="progresso-item">
+				<% percAcertoPosTeste = App.progresso.geral['percAcertoPosTeste'+nucleo].toFixed(1) %>
+				<h4><small><span class="mdi mdi-lock<%- lockTesteFinal?'':'-open' %>-outline" style="color: var(--corpadrao);"></span></small>Teste final</h4>
+				<p class="text-left">Média de acerto: <%- percAcertoPosTeste %>%</p>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="<%- percAcertoPosTeste %>" aria-valuemin="0" aria-valuemax="100" style="width: <%- percAcertoPosTeste %>%;">
+					<%- percAcertoPosTeste %>%
+					</div>
+				</div>
+				<div class="progress-mark" style="width: 100%; padding-right: 30%;  ">
+					<label class=" indicador-objetivo">Realize o teste final ultrapassando 70% de acerto.</label>
+				</div>
+			</div>
+			<%}%>
+			<div class="progresso-item">
+				<button class='btn btn-primary btn-emitir-desempenho' <%if(!elegivel && !fl_concluinte) {%> disabled <%}%> ><i class="mdi mdi-printer"></i> Imprimir Desempenho</button>
+				<div class="progress progresso-desempenho" style='display:none'>
+					<div id='progressbar-sinc' class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+					  <span class="sr-only"></span>
+					</div>
+				</div>
+			</div>
+			<div class="progresso-item criterios">
+				<h4> Critérios de certificação</h4>
+				<div class="checkbox checkbox-progresso check-box-inscrito">
+					<label class='check'>
+						<input type="checkbox" id="check-box-inscrito"> Estar inscrito <% if(!window.modulo.fl_por_unidade){%>no conteúdo<%}%> <!-- há <%= window.modulo.tempoMinimoParaCertificacao ?? 5 %> dias -->
+					</label>
+				</div>
+				<% if(!window.modulo.fl_por_unidade){%>
+					<div class="checkbox checkbox-progresso check-<% if(fl_cert_casos_clinicos == true){%>success<%}else{%>danger<%}%>">
+						<label class='check'>
+							<% if(modulo.fl_layout_alternativo) { %>
+								<input type="checkbox" id="check-box-casos-clinicos" > Concluir 70% dos casos interativos com 70% de acertos.
+							<% } else { %>
+								<input type="checkbox" id="check-box-casos-clinicos" > Concluir 70% dos casos clínicos de <%- nucleo %> com 70% de acertos.
+							<% } %>
+						</label>
+					</div>
+					<div class="checkbox checkbox-progresso check-<% if(fl_cert_pos_teste == true){%>success<%}else{%>danger<%}%>">
+						<label class='check'>
+							<input type="checkbox" id="check-box-pos-teste"   > Concluir o teste final de <%- nucleo %> com 70% de acertos
+						</label>
+					</div>
+				<%}else{%>
+					<div class="checkbox checkbox-progresso check-<% if(elegivel == true){%>success<%}else{%>danger<%}%>">
+						<label class='check'>
+							<input type="checkbox" id="check-box-todas-unidades" > Concluir todas as unidades
+						</label>
+					</div>
+				<%}%>
+				<div class="checkbox checkbox-progresso check-<% if(fl_cert_conectado == true){%>success<%}else{%>danger<%}%>">
+					<label class='check'>
+						<input type="checkbox" id="check-box-internet" class='conexao-internet'  > Estar conectado a internet
+					</label>
+				</div>
+			</div>
+			<div class="progresso-item concluinte " style="">
+				<h2>Parabéns!</h2> 
+				<h3>Você já concluiu este conteúdo, emita abaixo o seu certificado!</h3>
+			</div>
+			<div class="progresso-item">
+				<button class='btn btn-primary btn-emitir-certificado' <%if((!elegivel && !fl_concluinte) || !cumpriuTempoMinimoParaCertificacao) {%> disabled <%}%> ><i class="mdi mdi-certificate"></i> Gerar certificado</button>
+				<div class="progress progresso-certificado" style='display:none'>
+					<div id='progressbar-sinc' class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+					  <span class="sr-only"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		</div>
+			<% if(tipo == 'unidade'){%>
+			<%}%>
+		

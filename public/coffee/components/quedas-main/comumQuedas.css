@@ -1,0 +1,28 @@
+.popover-content{font-size:14px;}
+.item.quedas{max-width:960px;}.item.quedas .contador{padding:6px 12px;background-color:#f5821f;color:#67380e;bottom:-52px;position:relative;z-index:12;width:70px;border-bottom-right-radius:10px;}.item.quedas .contador .feitos{vertical-align:10px;font-weight:600;}
+.item.quedas .contador .barrinha{font-weight:200;}
+.item.quedas .contador .total{vertical-align:-10px;font-weight:600;}
+.item.quedas h3{margin-top:20px;}.item.quedas h3 small{display:block;margin-top:10px;margin-bottom:12px;line-height:24px;color:#808080;}
+.item.quedas .orientacao{display:none;background:#ededed;font-weight:400;padding-left:30px;}.item.quedas .orientacao h3{font-size:24px;font-weight:600;}
+.item.quedas div.descQueda{color:#808080;margin-bottom:-40px;line-height:1.4;letter-spacing:-0.1px;}
+.item.quedas .fundo{width:100%;}
+.item.quedas svg{width:100%;height:100%;}
+.item.quedas .orientacao{display:block;}
+.item.quedas .slices{position:absolute;top:0;left:0;z-index:999;width:100%;overflow:hidden;}
+.item.quedas .image-pile{position:relative;height:100%;padding:0;}.item.quedas .image-pile img{position:absolute;}
+.item.quedas .image-pile .prev-ori,.item.quedas .image-pile .prox-ori{position:absolute;top:calc(50% - 20px);padding:9px 16px;background:#eee;cursor:pointer;height:40px;width:40px;z-index:999;box-shadow:1px 1px #444;}
+.item.quedas .image-pile .prev-ori{left:-20px;}
+.item.quedas .image-pile .prox-ori{right:-20px;}
+.item.quedas .image-pile .fundo{position:relative;max-width:100%;}
+.item.quedas .pisca{-webkit-animation:piscar 1s ease-in -1s infinite alternate forwards;animation:piscar 1s ease-in -1s infinite alternate forwards;}
+.item.quedas .pisca.alt-1{-webkit-animation:alternareste 1s ease-in-out -1s infinite alternate-reverse forwards;animation:alternareste 1s ease-in-out -1s infinite alternate-reverse forwards;}
+.item.quedas .pisca.alt-0{-webkit-animation:alternaraquele 1s ease-in-out -1s infinite alternate-reverse forwards;animation:alternaraquele 1s ease-in-out -1s infinite alternate-reverse forwards;}
+@-webkit-keyframes alternareste{0%{opacity:0;} 100%{opacity:1;}}@keyframes alternareste{0%{opacity:0;} 100%{opacity:1;}}@-webkit-keyframes alternaraquele{0%{opacity:1;} 100%{opacity:0;}}@keyframes alternaraquele{0%{opacity:1;} 100%{opacity:0;}}@-webkit-keyframes piscar{0%{opacity:1;} 100%{opacity:0.25;}}@keyframes piscar{0%{opacity:1;} 100%{opacity:0.25;}}
+.item.quedas.banheiro .cortina{opacity:0;}
+.item.quedas.banheiro .fundo{width:100%;}
+.item.quedas.banheiro svg{width:100%;height:100%;}
+.item.quedas.banheiro .orientacao{display:block;}
+.item.quedas.banheiro .slices{position:absolute;top:0;left:0;z-index:999;width:100%;overflow:hidden;}
+.item.quedas.sala .adesivoantiderrapanteescada{opacity:0;}
+.item.quedas.patio .escadacorreta{opacity:0;}
+.item.quedas.corredor .sombra{width:100%;height:100%;background:rgba(0, 0, 0, 0.4);position:absolute;top:0;left:0;filter:brightness(-20%);}

@@ -1,0 +1,25 @@
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title h3"><%= municipio %> - <%= uf %> </h2>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div id="ubs-map-box"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <h5><%= tipo  %>  <%= esfera  %></h5>
+                        <div class="h2"><%- nome %></div>
+                        <div class=""><%- logradouro %>, <%- numero %></div>
+                        <div class="">Bairro <%- bairro %>&nbsp;&nbsp;&nbsp;CEP <%- cep.slice(0,5) + '-' + cep.slice(-3) %></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Selecionar esta UBS</button>
+            </div>
+        </div>
+    </div>

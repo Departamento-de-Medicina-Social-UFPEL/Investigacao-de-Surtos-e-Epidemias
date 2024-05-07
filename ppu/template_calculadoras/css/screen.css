@@ -1,0 +1,379 @@
+main {
+    min-height: calc(100vh - 90px);
+    padding-top: 55px;
+}
+@media (max-width:768px) {
+    .navbar-inverse-collapse-top.in .itemIcon {
+        color: white;
+    }
+    main {
+        min-height: calc(100vh - 90px);
+        padding-top: 55px;
+    }
+}
+@media (max-width:480px) {
+    .navbar-brand{
+        padding-right: 0;
+        margin-right: -40px;
+        font-size: .6rem;
+    }
+}
+a:visited, a:active, a:hover, a:focus{
+    color: #337ab7;
+}
+.logo-ufpel-cabeca{
+    position: relative;
+    height: 50px;
+    width: 240px;
+    left: -12px;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+@media (min-width:1200px) {
+    main {
+        min-height: calc(100vh - 90px);
+        padding-top: 65px;
+    }
+    .logo-ufpel-cabeca{
+        top: 5px;
+    }
+}
+#selUf, #selMun {
+    margin-bottom: 20px;
+}
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+}
+.display-1 {
+    font-size: 6rem;
+    font-weight: 300;
+}
+.display-2 {
+    font-size: 5.5rem;
+    font-weight: 300;
+}
+.display-3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+.ubsDeMunSel {
+}
+.biblioGeral ol {
+    padding-left: 40px;
+}
+.biblioGeral ol li {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+.big-footer {
+    margin-top: 0;
+    background-color: #333E6C;
+    padding: 30px;
+}
+.big-footer a {
+    color: #CFD9E2;
+    font-size: 0.9;
+}
+.big-footer a:hover {
+    color: #8CB8DE;
+}
+.big-footer .credito-box {
+    margin-bottom: 20px;
+}
+.big-footer h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.big-footer .logo {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.big-footer .logo img {
+    width: 100%;
+    padding-right: 0px;
+    max-width: 250px;
+    padding-top: 13px;
+    margin-left: 15px;
+}
+.big-footer .logo.ufpel {
+    min-width: 210px;
+}
+.big-footer .logo.unasus {
+    padding-top: 10px;
+    padding-left: 30px;
+    min-width: 200px;
+}
+.big-footer .logo.unasus img {
+    max-width: 100%;
+    min-width: 20%;
+}
+.big-footer .logo.ms {
+    padding-top: 3px;
+    padding-left: 40px;
+}
+.big-footer .logo.ms img {
+    max-width: 100%;
+    min-width: 20%;
+}
+.big-footer .logo.fiocruz {
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-top: -17px;
+}
+.big-footer .logo.fiocruz img {
+    max-width: 100%;
+    min-width: 20%;
+}
+.no-pad {
+    padding: 0;
+}
+.text-lg {
+    font-size: 1.4em;
+}
+.big-footer .logo {
+    margin-bottom: 12px;
+}
+.text-white {
+    color: #fefefe;
+}
+.tachado {
+    text-decoration: line-through;
+}
+.infoMunSel {
+    margin-bottom: 30px;
+}
+.bbm-modal .icon-badge {
+    margin-top: 1em;
+}
+.teste-final .teste-dica-inicial {
+    margin-left: 10px;
+}
+.progresso-testes-inicial {
+    padding: 20px 0;
+}
+.progresso-testes-inicial p {
+    margin-top: 0.5em;
+    text-align: left;
+    font-size: 1.4em;
+}
+.teste-final .teste-img-inicial-box span {
+    height: 100px;
+    width: 80px;
+    background-color: hsla(0, 0%, 0%, .5);
+    margin-right: -78px;
+    top: 7px;
+    position: relative;
+    border-radius: 3px;
+}
+.badge-row img {
+    width: 100px;
+    height: 100px;
+}
+.teste-final .teste-img-inicial-box span:before {
+    font-size: 3em;
+    position: absolute;
+    top: 29px;
+    left: 19px;
+    color: white;
+}
+.teste-img-inicial {
+    vertical-align: middle;
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+    display: inline-block;
+}
+.indicador-objetivo-pos-teste {
+    border-right: 1px solid #d3d3d3;
+    margin-top: -35px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: -5px;
+    padding-top: 31px;
+    min-height: 51px;
+    color: #8c8c8c;
+    max-height: 99px;
+}
+.progress-marker {
+    width: calc(100% - 6px);
+    padding-right: calc(30% - 6px);
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 11px;
+}
+.progress-marker label {
+    margin-right: -5px;
+    font-weight: 100;
+    padding-right: 5px;
+}
+.badge-inicial:before {
+    color: #f5821f;
+    font-size: 5em;
+    line-height: inherit;
+}
+.qtd-badges-modal {
+    position: relative;
+    top: -150px;
+    left: 40px;
+    font-size: 1em;
+    font-weight: 100;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+.carousel-control {
+    width: 3%;
+}
+.carousel-control .glyphicon-chevron-right {
+    right: 100%;
+    margin-right: -20px;
+}
+@media (min-width:768px) {
+    #ubs-map-box {
+        height: 280px;
+    }
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -10px;
+    }
+}
+@media (max-width:768px) {
+    #ubs-map-box {
+        height: 230px;
+    }
+}
+.ubs-main-container {
+    padding-top: 10px;
+}
+.break-all {
+    word-break: break-all;
+}
+@media (max-width:990px) {
+    .navbar-nav>li>a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.lista-ubs-container .list-group-item:hover {
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+}
+.modal-body {
+    overflow: hidden;
+    position: relative;
+}
+.modals-container {
+    z-index: 12;
+}
+.carousel-inner>.item {
+
+    /*text-align: center;*/
+}
+.carousel-inner>.item>img {
+    display: inline-block;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    font-size: 50px;
+    top: calc(50% - 25px);
+}
+@media (max-width:767px) {
+    .navbar-brand {
+        font-size: 16px;
+    }
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+        font-size: 30px;
+        top: calc(50% - 15px);
+    }
+}
+.carousel-caption {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: hsla(0, 0%, 0%, .4);
+}
+.carousel-indicators {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+#ubs-map-box {
+    width: 100%;
+    border: 1px solid grey;
+    min-height: 100px;
+}
+.modal-content .modal-body+.modal-footer {
+
+    /*padding-top: 25px;*/
+}
+.loc-controls {
+    margin-top: 12px;
+}
+.navbar-inverse-collapse-top .main-net-stats-ico {
+    line-height: 0;
+    vertical-align: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+    color: white;
+}
+.navbar-inverse-collapse-top .main-net-stats-ico::before {
+    font-size: 24px;
+}
+.navbar-inverse-collapse-top .itemIcon {
+    line-height: 2.3em;
+    vertical-align: 0px;
+    margin-right: 0px;
+    color: #5264AE;
+}
+@media (min-width:768px) {
+    .navbar-right.user-menu {
+        margin-right: 0 !important;
+    }
+}
+.item-lista-caso-selecao-progresso {
+    cursor: pointer;
+}
+.teste-final .teste-img-inicial-box span {
+    height: 100px;
+    width: 80px;
+    background-color: hsla(0, 0%, 0%, .5);
+    margin-right: -78px;
+    top: 7px;
+    position: relative;
+    border-radius: 3px;
+    z-index: 1
+}
+.small {
+    font-size: 0.90rem;
+}
+.x-small {
+    font-size: 0.80rem;
+}
+.xx-small {
+    font-size: 0.75rem;
+}
+.xxx-small {
+    font-size: 0.65rem;
+}
+.navbar-inverse-collapse-top .main-net-stats-ico.glow {
+    animation: glow .5s infinite alternate;
+}
+@keyframes glow {
+    to {
+        text-shadow: 0 0 10px #fef4f4;
+    }
+}

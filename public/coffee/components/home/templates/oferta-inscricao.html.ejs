@@ -1,0 +1,68 @@
+<% if(tipo == 'unidade'){%>
+    <b><%= nome %></b>
+<%}else if(tipo == 'integrador'){%>
+    <b>Módulo integral</b>
+<%}else{%>
+    <b>Conteúdo de <%= nucleo %></b>
+<%}%>
+<div id='fl-inscrito' class="checkbox fl-inscrito">
+    <label class='check-inscrito'>
+        <input class='conteudos' type="checkbox" disabled="disabled" value="<%= id_arouca %>" >
+         <b class="link-inscricao">Não </b> Inscrito.
+         <a class='link-inscricao' href="#comp/cadastro"><b>Inscreva-se aqui </b></a>
+    </label>
+</div>
+<div id='alert-certificado' class=" alert-certificado hide" role="alert" style='margin-bottom: 0px;margin-top:10px;'>
+    <strong>Atenção!</strong> Você já concluiu este conteúdo, acesse aqui para emitir o certificado!
+</div>
+<div id='alert-inscricao' class="alert-inscricao hide" role="alert" style='margin-bottom: 0px;margin-top:10px;'>
+    <strong>Atenção!</strong> Se você não realizar inscrição no conteúdo, não poderá certificar no mesmo!
+</div>
+<% if(tipo == 'integrador'){%>
+    <div id='alert-certificar' class="alert-certificar hide" role="alert" style='margin-bottom: 0px;margin-top:10px;'>
+        <strong>Dica!</strong> Obtenha seu certificado nessa modalidade, certificando em todas as unidades.
+    </div>
+<%}else{%>
+    <div id='alert-certificar' class="alert-certificar hide" role="alert" style='margin-bottom: 0px;margin-top:10px;'>
+        <strong>Dica!</strong> Para acompanhar seu progresso, use o menu <b>Meu progresso</b>!
+    </div>
+<%}%>
+<style type='text/css'>
+    .inscricoes-item {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+    .fl-inscrito{
+        margin-left: -7px;
+    }
+    .check-inscrito a.link-inscricao{
+        color: inherit;
+    }
+    .alert-inscricao{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        background: inherit;
+        padding: 15px;
+        color: black;
+        border: 1px solid #a94442;
+    }
+    .alert-certificar{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        background: inherit;
+        padding: 15px;
+        color: black;
+        border: 1px solid #03a9f4;
+    }
+    .alert-certificado{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        background: inherit;
+        padding: 15px;
+        color: black;
+        border: 1px solid #0f9d58;
+    }
+
+
+
+</style>

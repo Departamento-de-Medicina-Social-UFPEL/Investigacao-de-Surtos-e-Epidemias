@@ -1,0 +1,207 @@
+<div class="container">
+    <style type="text/css">
+
+
+.item.calculadoras.curb65 {
+
+    .checkbox label{
+        position: relative;
+        top: -3px;
+    }
+
+    .checkbox label.simples{
+        position: relative;
+        top: 0;
+        left: 60px;
+        margin-top: 12px;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .checkbox label.simples  input[type="checkbox"]{
+        position: relative;
+        top: -3px;
+    }
+
+    @media (min-width: 768px){
+      .escoreBox{
+        width: auto;
+        margin-left: -80px;
+      }
+    }
+
+
+    /*.checkbox.idade{
+        position: relative;
+        margin-left: 59px;
+    }*/
+
+    .checkbox {
+      margin: 10px 0px -7px;
+      padding: 0;
+    }
+    input[type="checkbox"]:focus {
+      outline: none;
+    }
+
+    input[type="checkbox"]{
+      /* float: none; */
+      /* vertical-align: -8px; */
+      margin-right: 10px;
+      position: relative;
+      top: 4px;
+    }
+    /*
+    label>input[type='checkbox'][disabled] {
+        opacity: .4;
+    }
+    */
+    label input[type='checkbox'][disabled] {
+        opacity: .4;
+    }
+
+    .checkbox label small {
+      white-space:pre;
+      position: relative;
+      top: -4px;
+    }
+    .item.calculadoras.curb65 .checkbox label small:before {
+      content: '\A';
+    }
+
+    .item.calculadoras.curb65 .titulo-calc{
+      color: #333 ;
+    }
+
+    .item.calculadoras.curb65 .escoreBox{
+      text-align: center;
+      margin-bottom: -40px;
+      margin-left: 0px;
+    }
+
+    .item.calculadoras.curb65 .condutaBox h4{
+      display: inline-block;
+    }
+
+    .curb-tag{
+      float: left;
+      font-size: 30px;
+      /* vertical-align: -4px; */
+      /* display: inline-block; */
+      margin-right: 38px;
+      position: relative;
+      top: -4px;
+    }
+
+    .curb-tag.idade{
+      float: left;
+      font-size: 18px;
+      /* vertical-align: -4px; */
+      /* display: inline-block; */
+      margin-right: 38px;
+      position: relative;
+      top: 5px;
+    }
+
+    .item.calculadoras.curb65 .panel-body{
+      /*padding: 0;*/
+    }
+
+    .item.calculadoras.curb65 .panel{
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .item.calculadoras.curb65 .titulo{
+      color: #333 ;
+    }
+
+
+
+}
+
+    </style>
+    <div class='panel panel-default'>
+        <div class='panel-heading'>
+            <h3 class="titulo-calc">
+                <span class="nomeCalc">CURB-65 / CRB-65</span>                
+            </h3>
+        </div>
+        <div class='panel-body'>                           
+
+          <div class="col-md-7 col-sm-8 col-xs-12">
+              <h3>Critérios</h3>
+          
+              <div class="checkbox">
+          
+                   <span class="curb-tag">C</span>
+                    <label>
+                    <input type="checkbox" id="confusao">Confusão mental
+                              <small>teste minimental &lt; 8</small>
+                            </label><BR>
+              </div>
+                      
+              <div id="divUreia" class="checkbox">                    
+                   <span class="curb-tag">U</span>
+                          <label>
+                            <input type="checkbox" id="ureia">Uréia
+                            <small>&gt; 50 mg/dL</small>
+                          </label>
+              </div>
+              
+              <div class="checkbox">                    
+                          <span class="curb-tag">R</span>
+                          <label>
+                            <input type="checkbox" id="respiratoria">Frequência respiratória
+                            <small>&gt;= 30/min</small>
+                          </label>
+              </div>
+              
+              <div class="checkbox">                    
+                    <span class="curb-tag">B</span>
+                          <label>
+                            <input type="checkbox" id="pressao">Pressão arterial
+                            <small>sistólica &lt; 90 mmHg ou diastólica &lt; 60 mmHg</small>
+                          </label>
+               </div>
+              
+              <div class="checkbox idade">                    
+                    <span class="curb-tag idade" style='margin-right: -6px;'>65</span>
+                          <label>
+                            <input type="checkbox" id="idade">Idade
+                            <small>&gt;= 65 anos</small>
+                          </label>
+              </div>
+              
+              <div class="checkbox">
+                    <span class="curb-tag" style='margin-right: 13px;'></span>
+                              <label class="semUreia simples">
+                                  <input type="checkbox" id="semureia">Sem dosagem de uréia
+                              </label>
+              </div>
+          </div>
+          <div class="col-md-5 col-sm-4 col-xs-12 " style="">
+            <div class="escoreBox">
+              <h3>Escore</h3>
+              <input class="grafResult" value="0">
+            </div>
+            <div class="condutaBox">
+              <h3 class="descricao"></h3>
+              <h4><span class="mortalidade"></span></h4>
+              <small>de risco de morte em 30 dias</small>
+              <p class="conduta"></p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<div class='container calc-footer'>
+    <div class="col-md-12">
+        <h4>Referências:</h4>
+        <dl>
+            <dt>BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica. Acolhimento à demanda espontânea: queixas mais comuns na Atenção Básica. Brasília: Ministério da Saúde, 2012. (Cadernos de Atenção Básica, n. 28, II Volume. Disponível em: http://189.28.128.100/dab/docs/publicacoes/cadernos_ab/caderno_28.pdf</dt>           
+        </dl>
+
+    </div>
+</div>

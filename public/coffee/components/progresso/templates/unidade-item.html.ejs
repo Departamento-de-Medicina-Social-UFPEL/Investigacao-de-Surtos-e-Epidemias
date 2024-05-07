@@ -1,0 +1,103 @@
+<style type='text/css'>
+	.unidade-color-<%=unidade %> {
+		background-color: #<%=corIntro %> !important;
+		color: <%=corFonte %> !important;
+	}
+</style>
+<!--Section Title -->
+<a href="#!">
+	<span class="circle primary-color z-depth-1-half unidade-color-<%=unidade %>">
+
+		<div class="checkbox checkbox-progresso" style='margin-top: -2px;'>
+			<label class='check' style='padding-left:18px'>
+				<input type="checkbox" id='checkbox-concluinte'>
+			</label>
+		</div>
+	</span>
+</a>
+
+<!-- Section Description -->
+<div class="step-content z-depth-1 p-4">
+	<div class="panel panel-default" style='margin-bottom: 0px;'>
+		<div class="panel-heading  unidade-color-<%=unidade %>">
+			<h4 class="font-weight-bold">
+				<%= nome %>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<% if(bloqueada){%>
+				<div class=" col-xs-12 col-sm-10 col-md-10 col-lg-10" style="padding-top: 10px;">
+					<b>Unidade ainda não disponível</b>
+					<p style="padding-top: 20px;">Esta unidade estará disponível em breve!</p>
+				</div>
+				<%}else{%>
+
+					<div class="progresso-item" style="margin-bottom:40px;">
+						<h4>Teste Inicial</h4>
+						<p class="text-left">Média de acerto: <%- percAcertoPreTeste %>%</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="<%- percAcertoPreTeste %>"
+								aria-valuemin="0" aria-valuemax="100" style="width: <%- percAcertoPreTeste %>%;">
+								<%- percAcertoPreTeste %>%
+							</div>
+						</div>
+					</div>
+					<% if(casos.length > 0){ %>
+					<div class="progresso-item">
+						<h4>Casos Interativos</h4>
+						<p class="text-left">Casos concluídos com 70% de acerto ou mais: <%- percCasos %>%</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="<%- percCasos %>"
+								aria-valuemin="0" aria-valuemax="100" style="width: <%- percCasos %>%;">
+								<%- percCasos %>%
+							</div>
+						</div>
+						<div class="progress-mark" style="width: 100%; padding-right: 30%;  ">
+							<label class=" indicador-objetivo">Ultrapasse 70% para desbloquear o Teste Final</label>
+						</div>
+					</div>
+					<%}%>
+					<div class="progresso-item">
+						<h4><small><span class="mdi mdi-lock<%- lockTesteFinal?'':'-open' %>-outline"
+									style="color: var(--corpadrao);"></span></small>Teste final</h4>
+						<p class="text-left">Média de acerto: <%- percAcertoPosTeste %>%</p>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="<%- percAcertoPosTeste %>"
+								aria-valuemin="0" aria-valuemax="100" style="width: <%- percAcertoPosTeste %>%;">
+								<%- percAcertoPosTeste %>%
+							</div>
+						</div>
+						<div class="progress-mark" style="width: 100%; padding-right: 30%;  ">
+							<label class=" indicador-objetivo">Realize o teste final ultrapassando 70% de
+								acerto.</label>
+						</div>
+					</div>
+					<div class="progresso-item criterios">
+						<h4> Critérios de certifcação</h4>
+						<% if(casos.length > 0){ %>
+						<div class="checkbox checkbox-progresso check-<% if(fl_cert_casos_clinicos == true){%>success<%}else{%>danger<%}%>">
+							<label class='check'>
+								<% if(modulo.fl_layout_alternativo) { %>
+									<input type="checkbox" id="check-box-casos-clinicos"> Concluir 70% dos casos interativos de com 70% de acertos.
+								<% } else { %>
+									<input type="checkbox" id="check-box-casos-clinicos"> Concluir 70% dos casos clínicos de
+									<%- nucleo %>
+										com 70% de acertos.
+								<% } %>
+							</label>
+						</div>
+						<%}%>
+						<div
+							class="checkbox checkbox-progresso check-<% if(fl_cert_pos_teste == true){%>success<%}else{%>danger<%}%>">
+							<label class='check'>
+								<input type="checkbox" id="check-box-pos-teste"> Concluir o teste final de <%- nucleo %>
+									com 70%
+									de
+									acertos
+							</label>
+						</div>
+					</div>
+					<%}%>
+		</div>
+	</div>
+</div>
