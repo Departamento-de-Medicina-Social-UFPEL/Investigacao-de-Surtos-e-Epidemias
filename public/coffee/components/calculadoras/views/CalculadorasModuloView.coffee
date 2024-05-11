@@ -6,6 +6,5 @@ define [
     className: 'container impressos-container'
 
     onRender: () ->
-    	console.log @model, 'model'
 
   CalculadorasView

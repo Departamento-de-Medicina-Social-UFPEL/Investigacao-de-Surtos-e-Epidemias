@@ -28,7 +28,7 @@ define [
         iconEl.attr 'title', "Conectado a #{@io.uri}"
 
     opt = 
-      'path': '/casca/ws'
+      'path': '/ws'
       'port': 50000
 
     socket = io window.location.host, opt

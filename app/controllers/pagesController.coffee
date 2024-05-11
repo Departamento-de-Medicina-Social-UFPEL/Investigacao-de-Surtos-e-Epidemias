@@ -13,7 +13,7 @@ path = require 'path'
 PagesController = new locomotive.Controller
 
 PagesController.main = ()->
-  dest = path.resolve "casca/modulos/5474EB2F70BF95195804F780"
+  dest = path.resolve "modulos/5474EB2F70BF95195804F780"
   @res.redirect dest
 
 PagesController.biblio = ()->

@@ -16,7 +16,8 @@ module.exports = ()->
     @use poweredBy 'Learning Locomotive.js by Adrian Neuhaus'
     # @use morgan 'tiny'
     # @use favIcon __dirname + '/../../public/fav.ico'
-    @use serverStatic path.resolve(__dirname + '/../../public')
+    @use serverStatic path.resolve('./')
+    console.log('resolve static _____________________', path.resolve('./public'))
     @use override 'X-HTTP-Method-Override'
     # @use parser.json()
     @use compression threshold: 1024
@@ -31,20 +32,21 @@ module.exports = ()->
 
     @enable 'trust proxy'
 
-    @use (req, res, next) ->
-        req.originalUrl = '/casca' + req.originalUrl
-        do next
+    # @use (req, res, next) ->
+    #     req.originalUrl = '/casca' + req.originalUrl
+    #     do next
 
     @use lti
         'consumer_key': 'cf4fd22b827516459623029711968ebbd258c558'
         'consumer_secret': '723d2fb3202c4f10368a9b6be1bd31a66973f109'
     console.log(__dirname, '__dirname')
-    @use offline
-        manifest_path: '/application.manifest'
-        files: [
-          { dir: path.resolve(__dirname + '/../../public/css'), prefix: '/css/' },
-          { dir: path.resolve(__dirname + '/../../public/js'), prefix: '/js/' }
-        ]
-        use_fs_watch: true
+    # @use offline
+    #     manifest_path: '/application.manifest'
+    #     files: [
+    #       { dir: path.resolve( './public/css'), prefix: '/css/' },
+    #       { dir: path.resolve( './public/lib'), prefix: '/lib/' },
+    #       { dir: path.resolve( './public/js'), prefix: '/js/' }
+    #     ]
+    #     use_fs_watch: true
 
     @use @router

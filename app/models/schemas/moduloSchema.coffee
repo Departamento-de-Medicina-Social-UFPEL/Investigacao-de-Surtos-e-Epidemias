@@ -105,6 +105,7 @@ ModuloSchema.statics.getTemplateFiles = (id, cb)->
 
   @findById id, (err, mod)->
     throw err if err
+    console.log id, mod, 'modulo'
 
     iterator = (tmplBuff, component, next) ->
       dir = "#{__dirname}/../../../public/coffee/components/#{component.folder}"

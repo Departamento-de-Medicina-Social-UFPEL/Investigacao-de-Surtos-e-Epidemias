@@ -1,6 +1,6 @@
 
 requirejs.config
-  'baseUrl': '/casca'
+  'baseUrl': '/public'
   'waitSeconds': 50
   'urlArgs': 'v=147'
   'paths':
