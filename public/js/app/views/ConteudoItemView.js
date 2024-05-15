@@ -4,6 +4,46 @@ define(['backbone.marionette', './ModalElegivel'], function(Marionette, ModalEle
   return ConteudoItemView = (function() {
     class ConteudoItemView extends Marionette.ItemView {
       initialize() {
+        var conteudo, elegivel, g, masterLock, nr_elegivel, ofertas, percAcertoPosTeste, percAcertoPreTeste, percCasos, sigla;
+        console.log(this.model, 'model');
+        conteudo = this.model.get('conteudo');
+        conteudo = conteudo[0].toUpperCase() + conteudo.slice(1);
+        g = App.progresso.geral;
+        sigla = '';
+        nr_elegivel = 0;
+        ofertas = [];
+        percAcertoPreTeste = g['percAcertoPreTeste' + conteudo].toFixed(1);
+        percCasos = g['percCasosConcluNucleo' + conteudo].toFixed(1);
+        percAcertoPosTeste = g['percAcertoPosTeste' + conteudo].toFixed(1);
+        elegivel = App["masterElegivelCert" + conteudo]();
+        masterLock = App["masterFinalLock" + conteudo]();
+        switch (conteudo) {
+          case 'Enfermagem':
+            sigla = '<span class=\'pro-tag enf\'>E</span>';
+            break;
+          case 'Medicina':
+            sigla = '<span class=\'pro-tag med\'>M</span>';
+            break;
+          case 'Odontologia':
+            sigla = '<span class=\'pro-tag odo\'>O</span>';
+            break;
+          case 'Interdisciplinar':
+            sigla = '<span class=\'pro-tag \' style=\'background: darkgoldenrod!important;\'>I</span>';
+            break;
+          default:
+            break;
+        }
+        this.model.set('nucleo', conteudo);
+        this.model.set('elegivel', elegivel);
+        this.model.set('categories', []);
+        this.model.set('lockTesteFinal', masterLock);
+        this.model.set('fl_cert_casos_clinicos', percCasos >= 70);
+        this.model.set('fl_cert_pos_teste', percAcertoPosTeste >= 70);
+        this.model.set('titulo', this.model.get('tipo') !== 'integrador' ? conteudo : 'Integral');
+        this.model.set('sigla', sigla);
+        this.model.set('percAcertoPreTeste', percAcertoPreTeste);
+        this.model.set('percCasos', percCasos);
+        this.model.set('percAcertoPosTeste', percAcertoPosTeste);
         if (!this.model.get('cor')) {
           this.model.set('corFonte', '#' + window.modulo.corPadrao);
           this.model.set('corIntro', 'eee');

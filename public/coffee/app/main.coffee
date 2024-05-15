@@ -22,12 +22,10 @@ define 'casca', [
       self.userMenu.show new MenuView
         model: new Backbone.Model self.user
         collection: new Backbone.Collection self.menuEntries
-
       dtAtual = new Date()
       ofertasAbertas = new Backbone.Collection window.modulo.ofertas.filter (o)->
         return (dtAtual >= (new Date(o.data_inicio)) and (new Date(o.data_fim_matricula)) >= dtAtual)
-        
-      
+      console.log 'inicio load menu 3', ofertasAbertas
       self.progressoLateral.show new ProgressoLateralView {collection: ofertasAbertas}
       console.log 'fim load menu'
 

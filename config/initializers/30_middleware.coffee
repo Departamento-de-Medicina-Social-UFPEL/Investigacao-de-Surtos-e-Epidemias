@@ -17,7 +17,8 @@ module.exports = ()->
     # @use morgan 'tiny'
     # @use favIcon __dirname + '/../../public/fav.ico'
     @use serverStatic path.resolve('./')
-    console.log('resolve static _____________________', path.resolve('./public'))
+   # @use serverStatic path.resolve('public/../')
+    #console.log('resolve static _____________________', path.resolve('./'), path.resolve('public/../'))
     @use override 'X-HTTP-Method-Override'
     # @use parser.json()
     @use compression threshold: 1024

@@ -80,7 +80,7 @@ ModuloSchema.statics.getClientRoutes = (id, cb) ->
     prepara = (routes, component, next) ->
       dir = "#{__dirname}/../../public/js/components/#{component}"
       definition = require "#{dir}/definition.json"
-      console.log definition
+      #console.log definition
       routes[component] = definition.routes
       next null, routes
 

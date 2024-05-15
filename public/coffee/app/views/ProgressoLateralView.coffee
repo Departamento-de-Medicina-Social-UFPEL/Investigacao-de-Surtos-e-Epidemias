@@ -14,13 +14,15 @@ define [
 
     initialize: ->
       self = @
+      console.log 'inicio prog lateral 3', @collection
       @model = new Backbone.Model({
         ofertas:@collection.map( (m)=>
           conteudo = m.get('conteudo')
-          #conteudo = conteudo[0].toUpperCase()+ conteudo.slice(1)
+          conteudo = conteudo[0].toUpperCase()+ conteudo.slice(1)
           conteudo
         )
       })
+      console.log 'inicio prog lateral 3.1', @model
 
     ui:
       'zero':'.progressoZero'
@@ -33,11 +35,12 @@ define [
       'click @ui.sinc':'sincroniza'
 
     childView:(arg)->
+      console.log 'child prog lateral 3', arg
       self = @
       conteudo = arg.model.get('conteudo')
       unidade = arg.model.get('unidade')
       conteudo = conteudo[0].toUpperCase()+ conteudo.slice(1)
-      # console.log(conteudo, 'conteudo')
+      console.log(conteudo, 'conteudo')
       g = App.progresso.geral
       sigla = ''
       nr_elegivel = 0
@@ -104,7 +107,7 @@ define [
           'percCasos': percCasos 
           'percAcertoPosTeste': percAcertoPosTeste 
         })
-        #console.log modelo, 'modelo lateral'
+        console.log modelo, 'modelo lateral'
         view = new ConteudoItemView({model:modelo})
       view
       # window.modulo.ofertasAbertas.forEach (o)->
@@ -112,87 +115,91 @@ define [
       #     self[o.conteudo].show view
 
     childViewContainer: '.progresso-conteudo'
-    # childView: ConteudoItemView
-    sincroniza:()->
-      self = @
-      # flag_inscrito = @estaInscrito()
-      flag_inscrito = true
+    childView: ConteudoItemView
+    # sincroniza:()->
+    #   console.log 'inicio sinc lateral 3', @model
+    #   self = @
+    #   # flag_inscrito = @estaInscrito()
+    #   flag_inscrito = true
 
-      self.ui.sincText.removeClass('alert').removeClass('alert-info').removeClass('alert-danger').html('')
-      self.ui.sincBar.parent().show()
-      setTimeout ()->
-        self.ui.sincBar.css('width':'50%')
-        if not navigator.onLine or not flag_inscrito or App.progresso.length is 0
-          mensagem = 'Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.'
-          # if not flag_inscrito
-          #   mensagem = 'Para sincronizar seu processo você precisa estar inscrito em um conteúdo!'
-          if App.progresso.length is 0
-            mensagem = 'Você ainda não possui progressos, faça alguma atividade e tente novamente!'
-          self.ui.sincText.addClass('alert alert-danger').html(mensagem)
-          self.ui.sincBar.parent().hide().children().css('width':'10%')
-        else
-          App.execute 'storeUser', App.user, (dataUser)->
-            console.log 'retorno store sincronize', dataUser
-            if !dataUser.ok and !dataUser.certificado
-              self.ui.sincBar.parent().hide().children().css('width':'10%')
-              self.ui.sincText.addClass('alert alert-danger').html('Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.')
-            else
-              dt = new Date()
-              mensagemErro = 'Progresso sincronizado em: '+ dt.toLocaleString()
-              if dataUser.certificado
-                mensagemErro = '<ul class="list-group">'
-                for c in dataUser.certificado
-                  console.log 'uma certificada', c
-                  mensagemErro += "<li class='list-group-item'><a class='list-group-item' href='"+c.url_certificado+"'> Clique aqui para obter certificado: "+c.conteudo+"</a></li>"
-                mensagemErro += '</ul>'
+    #   self.ui.sincText.removeClass('alert').removeClass('alert-info').removeClass('alert-danger').html('')
+    #   self.ui.sincBar.parent().show()
+    #   setTimeout ()->
+    #     self.ui.sincBar.css('width':'50%')
+    #     if not navigator.onLine or not flag_inscrito or App.progresso.length is 0
+    #       mensagem = 'Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.'
+    #       console.log 'inicio sinc lateral 4', mensagem
+    #       # if not flag_inscrito
+    #       #   mensagem = 'Para sincronizar seu processo você precisa estar inscrito em um conteúdo!'
+    #       if App.progresso.length is 0
+    #         mensagem = 'Você ainda não possui progressos, faça alguma atividade e tente novamente!'
+    #       self.ui.sincText.addClass('alert alert-danger').html(mensagem)
+    #       self.ui.sincBar.parent().hide().children().css('width':'10%')
+    #     else
+    #       console.log 'inicio sinc lateral 4 store user'
+    #       App.execute 'storeUser', App.user, (dataUser)->
+    #         console.log 'retorno store sincronize', dataUser
+    #         if !dataUser.ok and !dataUser.certificado
+    #           self.ui.sincBar.parent().hide().children().css('width':'10%')
+    #           self.ui.sincText.addClass('alert alert-danger').html('Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.')
+    #         else
+    #           dt = new Date()
+    #           mensagemErro = 'Progresso sincronizado em: '+ dt.toLocaleString()
+    #           if dataUser.certificado
+    #             mensagemErro = '<ul class="list-group">'
+    #             for c in dataUser.certificado
+    #               console.log 'uma certificada', c
+    #               mensagemErro += "<li class='list-group-item'><a class='list-group-item' href='"+c.url_certificado+"'> Clique aqui para obter certificado: "+c.conteudo+"</a></li>"
+    #             mensagemErro += '</ul>'
 
-              setTimeout ()->
-                self.ui.sincBar.css('width':'100%')
-              , 1000
-              setTimeout ()->
-                self.ui.sincBar.parent().hide().children().css('width':'10%')
+    #           setTimeout ()->
+    #             self.ui.sincBar.css('width':'100%')
+    #           , 1000
+    #           setTimeout ()->
+    #             self.ui.sincBar.parent().hide().children().css('width':'10%')
                 
-                self.ui.sincText.addClass('alert alert-info').html(mensagemErro)
-              , 1000
-      , 1000
+    #             self.ui.sincText.addClass('alert alert-info').html(mensagemErro)
+    #           , 1000
+    #   , 1000
 
-    estaInscrito:()->
-      self = @
-      hoje = new Date()
-      saida = false
-      if App.user.ofertas
-        App.user.ofertas.forEach (o)->
-          if o.modulo is App.moduloId and ( (new Date(o.data_inicio)) <= hoje and (new Date(o.data_fim_matricula)) >= hoje  )
-            saida =  true
-      saida
+    # estaInscrito:()->
+    #   self = @
+    #   hoje = new Date()
+    #   saida = false
+    #   if App.user.ofertas
+    #     App.user.ofertas.forEach (o)->
+    #       if o.modulo is App.moduloId and ( (new Date(o.data_inicio)) <= hoje and (new Date(o.data_fim_matricula)) >= hoje  )
+    #         saida =  true
+    #   saida
 
-    verificaInscricoesConcluintes: ()->
-      self = @
-      hoje = new Date()
-      fl_inscrito = false
-      numOfertasAbertas = window.modulo.ofertasAbertas.length
-      numOfertasConcluinte = 0
-      if App.user.ofertas
-        window.modulo.ofertasAbertas.forEach (oa)->
-          App.user.ofertas.forEach (o)->
-            if o.id_arouca is oa.id_arouca
-              fl_inscrito = true
-          if not fl_inscrito
-            App.user.ofertas.forEach (o)->
-              if o.modulo is App.moduloId and o.conteudo is oa.conteudo and o.dt_conclusao
-                numOfertasConcluinte++
-          if numOfertasAbertas is numOfertasConcluinte
-            self.ui.sinc.hide()
+    # verificaInscricoesConcluintes: ()->
+    #   self = @
+    #   hoje = new Date()
+    #   fl_inscrito = false
+    #   numOfertasAbertas = window.modulo.ofertasAbertas.length
+    #   numOfertasConcluinte = 0
+    #   if App.user.ofertas
+    #     window.modulo.ofertasAbertas.forEach (oa)->
+    #       App.user.ofertas.forEach (o)->
+    #         if o.id_arouca is oa.id_arouca
+    #           fl_inscrito = true
+    #       if not fl_inscrito
+    #         App.user.ofertas.forEach (o)->
+    #           if o.modulo is App.moduloId and o.conteudo is oa.conteudo and o.dt_conclusao
+    #             numOfertasConcluinte++
+    #       if numOfertasAbertas is numOfertasConcluinte
+    #         self.ui.sinc.hide()
 
     onRender: ->
-      @ui.zero.show()
-      @ui.progresso.hide()
-      @ui.sinc.hide()
-      if App.progresso
-        if App.progresso.length > 0
-          @ui.zero.hide()
-          @ui.progresso.show()
-          @ui.sinc.show()
-      $('.lista-conteudos').css({display:'block'})
-      @verificaInscricoesConcluintes()
+      console.log 'render'
+      # @ui.zero.show()
+      # @ui.progresso.hide()
+      # @ui.sinc.hide()
+      # if App.progresso
+      #   if App.progresso.length > 0
+      #     @ui.zero.hide()
+      #     @ui.progresso.show()
+      #     @ui.sinc.show()
+      # $('.lista-conteudos').css({display:'block'})
+      # @verificaInscricoesConcluintes()
 

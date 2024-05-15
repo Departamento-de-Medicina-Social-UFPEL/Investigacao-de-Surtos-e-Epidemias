@@ -6,23 +6,26 @@ define(['backbone.marionette', './ConteudoItemView', './UnidadesCollView'], func
       initialize() {
         var self;
         self = this;
-        return this.model = new Backbone.Model({
+        console.log('inicio prog lateral 3', this.collection);
+        this.model = new Backbone.Model({
           ofertas: this.collection.map((m) => {
             var conteudo;
             conteudo = m.get('conteudo');
-            //conteudo = conteudo[0].toUpperCase()+ conteudo.slice(1)
+            conteudo = conteudo[0].toUpperCase() + conteudo.slice(1);
             return conteudo;
           })
         });
+        return console.log('inicio prog lateral 3.1', this.model);
       }
 
       childView(arg) {
         var conteudo, elegivel, g, masterLock, modelo, nr_elegivel, ofertas, percAcertoPosTeste, percAcertoPreTeste, percCasos, self, sigla, titulo, unidade, unidades, view;
+        console.log('child prog lateral 3', arg);
         self = this;
         conteudo = arg.model.get('conteudo');
         unidade = arg.model.get('unidade');
         conteudo = conteudo[0].toUpperCase() + conteudo.slice(1);
-        // console.log(conteudo, 'conteudo')
+        console.log(conteudo, 'conteudo');
         g = App.progresso.geral;
         sigla = '';
         nr_elegivel = 0;
@@ -98,7 +101,7 @@ define(['backbone.marionette', './ConteudoItemView', './UnidadesCollView'], func
             'percCasos': percCasos,
             'percAcertoPosTeste': percAcertoPosTeste
           });
-          //console.log modelo, 'modelo lateral'
+          console.log(modelo, 'modelo lateral');
           view = new ConteudoItemView({
             model: modelo
           });
@@ -106,127 +109,81 @@ define(['backbone.marionette', './ConteudoItemView', './UnidadesCollView'], func
         return view;
       }
 
-      // childView: ConteudoItemView
-      sincroniza() {
-        var flag_inscrito, self;
-        self = this;
-        // flag_inscrito = @estaInscrito()
-        flag_inscrito = true;
-        self.ui.sincText.removeClass('alert').removeClass('alert-info').removeClass('alert-danger').html('');
-        self.ui.sincBar.parent().show();
-        return setTimeout(function() {
-          var mensagem;
-          self.ui.sincBar.css({
-            'width': '50%'
-          });
-          if (!navigator.onLine || !flag_inscrito || App.progresso.length === 0) {
-            mensagem = 'Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.';
-            // if not flag_inscrito
-            //   mensagem = 'Para sincronizar seu processo você precisa estar inscrito em um conteúdo!'
-            if (App.progresso.length === 0) {
-              mensagem = 'Você ainda não possui progressos, faça alguma atividade e tente novamente!';
-            }
-            self.ui.sincText.addClass('alert alert-danger').html(mensagem);
-            return self.ui.sincBar.parent().hide().children().css({
-              'width': '10%'
-            });
-          } else {
-            return App.execute('storeUser', App.user, function(dataUser) {
-              var c, dt, i, len, mensagemErro, ref;
-              console.log('retorno store sincronize', dataUser);
-              if (!dataUser.ok && !dataUser.certificado) {
-                self.ui.sincBar.parent().hide().children().css({
-                  'width': '10%'
-                });
-                return self.ui.sincText.addClass('alert alert-danger').html('Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.');
-              } else {
-                dt = new Date();
-                mensagemErro = 'Progresso sincronizado em: ' + dt.toLocaleString();
-                if (dataUser.certificado) {
-                  mensagemErro = '<ul class="list-group">';
-                  ref = dataUser.certificado;
-                  for (i = 0, len = ref.length; i < len; i++) {
-                    c = ref[i];
-                    console.log('uma certificada', c);
-                    mensagemErro += "<li class='list-group-item'><a class='list-group-item' href='" + c.url_certificado + "'> Clique aqui para obter certificado: " + c.conteudo + "</a></li>";
-                  }
-                  mensagemErro += '</ul>';
-                }
-                setTimeout(function() {
-                  return self.ui.sincBar.css({
-                    'width': '100%'
-                  });
-                }, 1000);
-                return setTimeout(function() {
-                  self.ui.sincBar.parent().hide().children().css({
-                    'width': '10%'
-                  });
-                  return self.ui.sincText.addClass('alert alert-info').html(mensagemErro);
-                }, 1000);
-              }
-            });
-          }
-        }, 1000);
-      }
+      // sincroniza:()->
+      //   console.log 'inicio sinc lateral 3', @model
+      //   self = @
+      //   # flag_inscrito = @estaInscrito()
+      //   flag_inscrito = true
 
-      estaInscrito() {
-        var hoje, saida, self;
-        self = this;
-        hoje = new Date();
-        saida = false;
-        if (App.user.ofertas) {
-          App.user.ofertas.forEach(function(o) {
-            if (o.modulo === App.moduloId && ((new Date(o.data_inicio)) <= hoje && (new Date(o.data_fim_matricula)) >= hoje)) {
-              return saida = true;
-            }
-          });
-        }
-        return saida;
-      }
+        //   self.ui.sincText.removeClass('alert').removeClass('alert-info').removeClass('alert-danger').html('')
+      //   self.ui.sincBar.parent().show()
+      //   setTimeout ()->
+      //     self.ui.sincBar.css('width':'50%')
+      //     if not navigator.onLine or not flag_inscrito or App.progresso.length is 0
+      //       mensagem = 'Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.'
+      //       console.log 'inicio sinc lateral 4', mensagem
+      //       # if not flag_inscrito
+      //       #   mensagem = 'Para sincronizar seu processo você precisa estar inscrito em um conteúdo!'
+      //       if App.progresso.length is 0
+      //         mensagem = 'Você ainda não possui progressos, faça alguma atividade e tente novamente!'
+      //       self.ui.sincText.addClass('alert alert-danger').html(mensagem)
+      //       self.ui.sincBar.parent().hide().children().css('width':'10%')
+      //     else
+      //       console.log 'inicio sinc lateral 4 store user'
+      //       App.execute 'storeUser', App.user, (dataUser)->
+      //         console.log 'retorno store sincronize', dataUser
+      //         if !dataUser.ok and !dataUser.certificado
+      //           self.ui.sincBar.parent().hide().children().css('width':'10%')
+      //           self.ui.sincText.addClass('alert alert-danger').html('Ocorreu um erro ao sincronizar seu progresso, verifique sua conexão e tente novamente.')
+      //         else
+      //           dt = new Date()
+      //           mensagemErro = 'Progresso sincronizado em: '+ dt.toLocaleString()
+      //           if dataUser.certificado
+      //             mensagemErro = '<ul class="list-group">'
+      //             for c in dataUser.certificado
+      //               console.log 'uma certificada', c
+      //               mensagemErro += "<li class='list-group-item'><a class='list-group-item' href='"+c.url_certificado+"'> Clique aqui para obter certificado: "+c.conteudo+"</a></li>"
+      //             mensagemErro += '</ul>'
 
-      verificaInscricoesConcluintes() {
-        var fl_inscrito, hoje, numOfertasAbertas, numOfertasConcluinte, self;
-        self = this;
-        hoje = new Date();
-        fl_inscrito = false;
-        numOfertasAbertas = window.modulo.ofertasAbertas.length;
-        numOfertasConcluinte = 0;
-        if (App.user.ofertas) {
-          return window.modulo.ofertasAbertas.forEach(function(oa) {
-            App.user.ofertas.forEach(function(o) {
-              if (o.id_arouca === oa.id_arouca) {
-                return fl_inscrito = true;
-              }
-            });
-            if (!fl_inscrito) {
-              App.user.ofertas.forEach(function(o) {
-                if (o.modulo === App.moduloId && o.conteudo === oa.conteudo && o.dt_conclusao) {
-                  return numOfertasConcluinte++;
-                }
-              });
-            }
-            if (numOfertasAbertas === numOfertasConcluinte) {
-              return self.ui.sinc.hide();
-            }
-          });
-        }
-      }
+        //           setTimeout ()->
+      //             self.ui.sincBar.css('width':'100%')
+      //           , 1000
+      //           setTimeout ()->
+      //             self.ui.sincBar.parent().hide().children().css('width':'10%')
 
+        //             self.ui.sincText.addClass('alert alert-info').html(mensagemErro)
+      //           , 1000
+      //   , 1000
+
+        // estaInscrito:()->
+      //   self = @
+      //   hoje = new Date()
+      //   saida = false
+      //   if App.user.ofertas
+      //     App.user.ofertas.forEach (o)->
+      //       if o.modulo is App.moduloId and ( (new Date(o.data_inicio)) <= hoje and (new Date(o.data_fim_matricula)) >= hoje  )
+      //         saida =  true
+      //   saida
+
+        // verificaInscricoesConcluintes: ()->
+      //   self = @
+      //   hoje = new Date()
+      //   fl_inscrito = false
+      //   numOfertasAbertas = window.modulo.ofertasAbertas.length
+      //   numOfertasConcluinte = 0
+      //   if App.user.ofertas
+      //     window.modulo.ofertasAbertas.forEach (oa)->
+      //       App.user.ofertas.forEach (o)->
+      //         if o.id_arouca is oa.id_arouca
+      //           fl_inscrito = true
+      //       if not fl_inscrito
+      //         App.user.ofertas.forEach (o)->
+      //           if o.modulo is App.moduloId and o.conteudo is oa.conteudo and o.dt_conclusao
+      //             numOfertasConcluinte++
+      //       if numOfertasAbertas is numOfertasConcluinte
+      //         self.ui.sinc.hide()
       onRender() {
-        this.ui.zero.show();
-        this.ui.progresso.hide();
-        this.ui.sinc.hide();
-        if (App.progresso) {
-          if (App.progresso.length > 0) {
-            this.ui.zero.hide();
-            this.ui.progresso.show();
-            this.ui.sinc.show();
-          }
-        }
-        $('.lista-conteudos').css({
-          display: 'block'
-        });
-        return this.verificaInscricoesConcluintes();
+        return console.log('render');
       }
 
     };
@@ -259,7 +216,20 @@ define(['backbone.marionette', './ConteudoItemView', './UnidadesCollView'], func
     //     self[o.conteudo].show view
     MenuView.prototype.childViewContainer = '.progresso-conteudo';
 
+    MenuView.prototype.childView = ConteudoItemView;
+
     return MenuView;
 
   }).call(this);
 });
+
+// @ui.zero.show()
+// @ui.progresso.hide()
+// @ui.sinc.hide()
+// if App.progresso
+//   if App.progresso.length > 0
+//     @ui.zero.hide()
+//     @ui.progresso.show()
+//     @ui.sinc.show()
+// $('.lista-conteudos').css({display:'block'})
+// @verificaInscricoesConcluintes()

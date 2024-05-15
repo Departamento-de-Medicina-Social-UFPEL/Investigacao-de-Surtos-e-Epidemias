@@ -21,6 +21,7 @@ define('casca', ['js/app/views/MenuView', 'js/app/views/ProgressoLateralView', '
         ofertasAbertas = new Backbone.Collection(window.modulo.ofertas.filter(function(o) {
           return dtAtual >= (new Date(o.data_inicio)) && (new Date(o.data_fim_matricula)) >= dtAtual;
         }));
+        console.log('inicio load menu 3', ofertasAbertas);
         self.progressoLateral.show(new ProgressoLateralView({
           collection: ofertasAbertas
         }));

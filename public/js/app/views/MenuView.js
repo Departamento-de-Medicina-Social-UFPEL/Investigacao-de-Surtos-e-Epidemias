@@ -21,9 +21,10 @@ define(['backbone.marionette', './MenuItem'], function(Marionette, MenuItemView)
       }
 
       onRender() {
-        return $('.lista-conteudos').css({
+        $('.lista-conteudos').css({
           display: 'block'
         });
+        return console.log('teste progres------------------------');
       }
 
     };
@@ -46,5 +47,3 @@ define(['backbone.marionette', './MenuItem'], function(Marionette, MenuItemView)
 
   }).call(this);
 });
-
-// console.log 'teste progres------------------------'

@@ -6,6 +6,40 @@ define [
     tagName: 'div'
     className: 'conteudo'
     initialize: () ->
+      console.log @model, 'model'
+      conteudo = @model.get('conteudo')
+      conteudo = conteudo[0].toUpperCase()+ conteudo.slice(1)
+      g = App.progresso.geral
+      sigla = ''
+      nr_elegivel = 0
+      ofertas = []
+      percAcertoPreTeste = g['percAcertoPreTeste'+conteudo].toFixed(1)
+      percCasos = g['percCasosConcluNucleo'+conteudo].toFixed(1)
+      percAcertoPosTeste = g['percAcertoPosTeste'+conteudo].toFixed(1)
+      elegivel =  App["masterElegivelCert"+conteudo]()
+      masterLock = App["masterFinalLock"+conteudo]()
+      switch conteudo
+        when 'Enfermagem'
+          sigla = '<span class=\'pro-tag enf\'>E</span>'
+        when 'Medicina'
+          sigla = '<span class=\'pro-tag med\'>M</span>'
+        when 'Odontologia'
+          sigla = '<span class=\'pro-tag odo\'>O</span>'
+        when 'Interdisciplinar'
+          sigla = '<span class=\'pro-tag \' style=\'background: darkgoldenrod!important;\'>I</span>'
+        else
+          break
+      @model.set 'nucleo', conteudo
+      @model.set 'elegivel', elegivel
+      @model.set 'categories', []
+      @model.set 'lockTesteFinal', masterLock
+      @model.set 'fl_cert_casos_clinicos', (percCasos >= 70 )
+      @model.set 'fl_cert_pos_teste', (percAcertoPosTeste >= 70 )
+      @model.set 'titulo', if @model.get('tipo') isnt 'integrador' then conteudo else 'Integral'
+      @model.set 'sigla',sigla
+      @model.set 'percAcertoPreTeste', percAcertoPreTeste 
+      @model.set 'percCasos', percCasos 
+      @model.set 'percAcertoPosTeste', percAcertoPosTeste 
       if not @model.get('cor')
         @model.set('corFonte', '#'+window.modulo.corPadrao)
         @model.set('corIntro', 'eee')

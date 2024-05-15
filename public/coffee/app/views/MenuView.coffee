@@ -27,4 +27,4 @@ define [
 
     onRender: ->
       $('.lista-conteudos').css({display:'block'});
-      # console.log 'teste progres------------------------'
+      console.log 'teste progres------------------------'

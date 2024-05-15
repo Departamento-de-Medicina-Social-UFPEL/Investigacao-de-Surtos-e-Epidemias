@@ -18,6 +18,8 @@ PagesController.main = ()->
 
 PagesController.biblio = ()->
   do @render
+PagesController.static = (id)->
+  @res.redirect 'public/'+@req.params[0]
 
 module.exports = PagesController
 

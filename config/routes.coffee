@@ -8,6 +8,7 @@ routes = ()->
 
   # Rotas de UBS
   @match 'casos/', 'casos#index', via: 'GET'
+  @match 'static/*', 'pages#static', via: 'GET'
   @match 'casos/getppu/:id', 'casos#show', via: 'GET'
   @match 'casos/makeppu/:id', 'casos#create', via: 'POST'
 

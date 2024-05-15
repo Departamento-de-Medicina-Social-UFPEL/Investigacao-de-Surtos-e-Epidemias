@@ -1,0 +1,2 @@
+{ "_id" : ObjectId("638041b0014ea877b6f547e8"), "modulo" : "63758ed55ebc0215731f6c36", "filesize" : "147 Kb", "tipo" : "Material", "nome" : "Definição de Termos - Investigação de Surtos e Epidemias", "url" : "investigacao_surtos_definicao_de_termos.pdf" }
+{ "_id" : ObjectId("638041d9014ea877b6f547e9"), "modulo" : "63758ed55ebc0215731f6c36", "filesize" : "132 Kb", "tipo" : "Material", "nome" : "10 Passos da Investigação de Surtos e Epidemias", "url" : "investigacao_surtos_10_passos_da_investigacao_de_surtos_e_epidemias.pdf" }
