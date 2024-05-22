@@ -42,10 +42,10 @@
 </p>
 
 <br>
-
+s
 ## Sobre ##
 
-Describe your project
+O curso de Investigação de Surtos e Epidemias é mais um módulo de autoaprendizagem encapsulado no framework chamado Casca que desenvolvido pelo Departamento de medicina Social da Universidade Federal de Pelotas para encapsular de forma genérica conteúdos de cursos de autoaprendizagem.
 
 ## Tecnologias ##
 
@@ -104,19 +104,12 @@ $ mongo mongodb://mamongo:mamongo@127.0.1.1:27017/admin?authSource=admin
 
 Alguns direitos reservados. É permitida a reprodução, disseminação e utilização dessa obra, em parte ou em sua totalidade, nos termos da licença para usuário final do Acervo de Recursos Educacionais em Saúde (ARES). Deve ser citada a fonte e é vedada sua utilização comercial.
 
+&#xa0;
 Desenvolvido por:
 
-&#xa0;
-<div style='background-color:#1961AC'>
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-02-Logo Abrasco.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-03-Logo UNASUS.svg">
-<img style='margin-right:20px;max-width:250px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-04-Logo Fiocruz.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-05-Logo UFPel.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-06-Logo UFSC.svg">
-		</div>
-
-
+<div align="center" id="footer"> 
+<img src="./public/img/autores.png">
+</div>
 &#xa0;
 
 
