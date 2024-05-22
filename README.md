@@ -105,7 +105,9 @@ $ mongo mongodb://mamongo:mamongo@127.0.1.1:27017/admin?authSource=admin
 Alguns direitos reservados. É permitida a reprodução, disseminação e utilização dessa obra, em parte ou em sua totalidade, nos termos da licença para usuário final do Acervo de Recursos Educacionais em Saúde (ARES). Deve ser citada a fonte e é vedada sua utilização comercial.
 
 Desenvolvido por:
-
+<picture>
+  <img  style='background-color:#1961AC' alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="./public/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg">
+</picture>
 &#xa0;
 <div style='background-color:#1961AC'>
 <img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg">
