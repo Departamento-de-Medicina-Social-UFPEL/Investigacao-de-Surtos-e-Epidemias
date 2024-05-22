@@ -106,27 +106,11 @@ Alguns direitos reservados. É permitida a reprodução, disseminação e utiliz
 
 &#xa0;
 Desenvolvido por:
-<<<<<<< HEAD
 
 <div align="center" id="footer"> 
 <img src="./public/img/autores.png">
 </div>
-=======
-<picture>
-  <img  style='background-color:#1961AC' alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="./public/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg">
-</picture>
-&#xa0;
-<div style='background-color:#1961AC'>
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-02-Logo Abrasco.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-03-Logo UNASUS.svg">
-<img style='margin-right:20px;max-width:250px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-04-Logo Fiocruz.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-05-Logo UFPel.svg">
-<img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-06-Logo UFSC.svg">
-		</div>
 
-
->>>>>>> 0bd6b6130a425cdfe1bcc2f80bca5d9913a9210e
 &#xa0;
 
 
