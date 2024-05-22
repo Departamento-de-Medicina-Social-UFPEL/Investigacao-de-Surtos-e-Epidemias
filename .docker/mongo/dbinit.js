@@ -5387,10 +5387,10 @@ db.modulos.insert({
       sources: [
         {
           filename: "apresentacao_surtos_epidemias",
-          resolution: "1080p",
+          resolution: "720p",
           extension: "mp4",
           mime: "video/mp4",
-          mediaQuery: "all and (min-width: 991px)",
+          mediaQuery: "all and (max-width: 990px)",
         },
       ],
       poster: "investigacao_surtos_capa_apresentacao.png",
@@ -5401,13 +5401,6 @@ db.modulos.insert({
       title: "Por que investigar surtos e pandemias ?",
       categories: ["infraestrutura"],
       sources: [
-        {
-          filename: "investigacao_surtos_aula_1",
-          resolution: "1080p",
-          extension: "mp4",
-          mime: "video/mp4",
-          mediaQuery: "all and (min-width: 991px)",
-        },
         {
           filename: "investigacao_surtos_aula_1",
           resolution: "720p",
@@ -5426,13 +5419,6 @@ db.modulos.insert({
       sources: [
         {
           filename: "investigacao_surtos_aula_2",
-          resolution: "1080p",
-          extension: "mp4",
-          mime: "video/mp4",
-          mediaQuery: "all and (min-width: 991px)",
-        },
-        {
-          filename: "investigacao_surtos_aula_2",
           resolution: "720p",
           extension: "mp4",
           mime: "video/mp4",
@@ -5447,13 +5433,6 @@ db.modulos.insert({
       title: "10 passos para a investigação de surtos e pandemias",
       categories: ["infraestrutura"],
       sources: [
-        {
-          filename: "investigacao_surtos_aula_3",
-          resolution: "1080p",
-          extension: "mp4",
-          mime: "video/mp4",
-          mediaQuery: "all and (min-width: 991px)",
-        },
         {
           filename: "investigacao_surtos_aula_3",
           resolution: "720p",

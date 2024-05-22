@@ -3,4 +3,3 @@ node_modules/
 app/scripts/makePpuConfigObjCasoAntesOnivaldo.coffee
 public/ppu/
 sftp-config.json
-public/video/
