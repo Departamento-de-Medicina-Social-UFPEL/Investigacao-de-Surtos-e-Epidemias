@@ -1,3 +1,4 @@
+
 <div align="center" id="top"> 
   <img src="./public/img/marcas/logo_cursosintegrados_ITPS_verde.svg" alt="Curso de Autoaprendizagem - Investigação de surtos e epidemias" />
 
@@ -106,14 +107,14 @@ Alguns direitos reservados. É permitida a reprodução, disseminação e utiliz
 Desenvolvido por:
 
 &#xa0;
-
+<div style='background-color:#1961AC'>
 <img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-01-Logo ITPS.svg">
 <img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-02-Logo Abrasco.svg">
 <img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-03-Logo UNASUS.svg">
 <img style='margin-right:20px;max-width:250px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-04-Logo Fiocruz.svg">
 <img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-05-Logo UFPel.svg">
 <img style='margin-right:20px;max-width:230px;max-height:60px' src="./public/img/marcas/Logos rodape Cursos ITPS-06-Logo UFSC.svg">
-		
+		</div>
 
 
 &#xa0;
