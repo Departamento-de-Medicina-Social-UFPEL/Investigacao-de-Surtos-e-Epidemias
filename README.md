@@ -1,11 +1,10 @@
 
 <div align="center" id="top"> 
-  <img src="./public/img/marcas/logo_cursosintegrados_ITPS_verde.svg" alt="Curso de Autoaprendizagem - Investigação de surtos e epidemias" />
+  <img src="./data/img/marcas/logo_cursosintegrados_ITPS_verde.svg" alt="Curso de Autoaprendizagem - Investigação de surtos e epidemias" />
 
   &#xa0;
 
-  <!-- <a href="https://appname.netlify.app">Demo</a> -->
-</div>
+ </div>
 
 <h1 align="center">Curso de Autoaprendizagem - Investigação de surtos e epidemias</h1>
 
@@ -16,21 +15,9 @@
 
   <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/Departamento-de-Medicina-Social-UFPEL/Investigacao-de-Surtos-e-Epidemias?color=56BEB8">
 
- 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/Departamento-de-Medicina-Social-UFPEL/Investigacao-de-Surtos-e-Epidemias?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/Departamento-de-Medicina-Social-UFPEL/Investigacao-de-Surtos-e-Epidemias?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/Departamento-de-Medicina-Social-UFPEL/Investigacao-de-Surtos-e-Epidemias?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  App Name 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
 
 <p align="center">
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
