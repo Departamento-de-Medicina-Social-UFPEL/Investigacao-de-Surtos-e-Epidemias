@@ -34,6 +34,7 @@
 
 <p align="center">
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#requisitos">Requisitos</a> &#xa0; | &#xa0;
   <a href="#começando">Começando</a> &#xa0; | &#xa0;
   <a href="#licença">Licença</a> &#xa0; | &#xa0;
@@ -41,22 +42,31 @@
 </p>
 
 <br>
-
+s
 ## Sobre ##
 
-**Título:** Investigação de Surtos e Epidemias
+O curso de Investigação de Surtos e Epidemias é mais um módulo de autoaprendizagem encapsulado no framework chamado Casca que desenvolvido pelo Departamento de medicina Social da Universidade Federal de Pelotas para encapsular de forma genérica conteúdos de cursos de autoaprendizagem.
 
-**Público-alvo:** Profissionais com atuação no controle a pandemia do COVID-19
+## Tecnologias ##
 
-**Formato:** Ensino a Distância
+As seguintes ferramentas foram usadas neste projeto:
 
-**Nível:** Educação Profissional e Tecnológica
+- [Node.js](https://nodejs.org/en/)
+- [MongoDB](https://www.mongodb.com/docs/v5.0/)
+- [Locomotivejs](https://www.mongodb.com/docs/v5.0/)
+- [Mongoose ODM](https://mongoosejs.com/)
+- [Less](https://lesscss.org/)
+- [jQuery](https://jquery.com/)
+- [Lo‑Dash](https://lodash.com/)
+- [Async](https://github.com/caolan/async)
+- [Backbone.js](https://backbonejs.org/)
+- [Marionette.js](https://marionettejs.com/)
+- [Twitter Bootstrap](https://getbootstrap.com)
+- [Google Material icons](https://fonts.google.com/icons)
+- [Material Design Icon](https://m2.material.io/design/iconography/system-icons.html)
 
-**Modalidade:** Qualificação Profissional
 
-**Resumo:** A pandemia de covid-19 evidenciou a importância da área de vigilância em saúde. Entretanto, esta área costuma ter alta rotatividade de profissionais que nem sempre contam com formação específica. O objetivo é abordar os aspectos epidemiológicos que norteiam a investigação de surtos e epidemias, bem como as etapas da realização da investigação, com ênfase na investigação de surtos e epidemias de doenças respiratórias como a covid-19, de doenças diarreicas agudas e doenças transmitidas pela água, de doenças exantemáticas e outras doenças como a leptospirose, toxoplasmose e hepatite A. Serão abordados pelo curso temas como a importância da investigação de surtos e epidemias, como realizar a investigação, os 10 passos da investigação e as particularidades da investigação em diversas situações problema. O curso conta com vídeos, casos interativos, guias de consulta rápida e bibliografia para aprofundamento do assunto. O Curso de Investigação de Surtos e Epidemias oportunizará ao profissional ampliar seus conhecimentos sobre como identificar a existência de surtos ou epidemias, a fonte de transmissão, o modo de propagação e o agente causador, para que, com base nessas informações, sejam estabelecidas estratégias de prevenção ou mitigação. A formação de profissionais para realizar investigação de surtos e epidemias pode apoiar a detecção precoce de situações de surtos e epidemias e de estratégias de prevenção e mitigação.
-
-## Requisitos para rodar localmente ##
+## Requisitos ##
 - [Docker compose](https://docs.docker.com/get-docker/)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
@@ -70,7 +80,7 @@ No terminal execute os comandos abaixo:
 $ git clone https://github.com/Departamento-de-Medicina-Social-UFPEL/Investigacao-de-Surtos-e-Epidemias.git
 
 # Access
-$ cd Investigacao-de-Surtos-e-Epidemias/src/
+$ cd Investigacao-de-Surtos-e-Epidemias
 
 # Run the project
 $ docker-compose up --remove-orphans
@@ -79,7 +89,7 @@ $ docker-compose up --remove-orphans
 # Para uma melhor experiência recomendamos o uso do navagador Mozila Firefox ou Chrome em suas versões mais recentes.
 
 ```
-### Acesso a base dados local ###
+### Acesso a base dados ###
 
 Eventualmente você pode precisar acessar os dados da base de dados para manutenção. Segue abaixo os comandos.
 
@@ -98,7 +108,7 @@ Alguns direitos reservados. É permitida a reprodução, disseminação e utiliz
 Desenvolvido por:
 
 <div align="center" id="footer"> 
-<img src="./data/img/autores.png">
+<img src="./public/img/autores.png">
 </div>
 
 &#xa0;
