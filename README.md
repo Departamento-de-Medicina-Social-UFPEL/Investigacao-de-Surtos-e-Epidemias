@@ -33,6 +33,8 @@
 
 **Título:** Investigação de Surtos e Epidemias
 
+**Carga horária:** 45 horas
+
 **Público-alvo:** Profissionais com atuação no controle a pandemia do COVID-19
 
 **Formato:** Ensino a Distância
